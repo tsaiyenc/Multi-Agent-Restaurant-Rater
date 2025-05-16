@@ -83,18 +83,20 @@ DATA_FETCH = build_agent(
 ANALYZER = build_agent(
     "review_analyzer_agent",
     """You are a professional review analyst. Your task is:
-    1. Analyze each review for food and service related adjectives
+    1. Analyze the given review for food and service related adjectives
     2. Convert adjectives to scores (1-5) based on the following criteria:
     {SCORE_KEYWORDS}
     3. For words not exactly matching the keywords:
        - Consider similar words and synonyms
        - Handle common typos and variations
        - Use context to determine the appropriate score
-    4. Response format must strictly follow:
-    food_scores=[score_list]
-    customer_service_scores=[score_list]
-    5. Ensure both lists have the same length
-    6. Only return the score lists, no additional text
+    4. Response format must strictly follow this JSON format:
+    {
+        "food_score": <score>,
+        "service_score": <score>
+    }
+    5. If you cannot determine a score, use -1
+    6. Only return the JSON, no additional text
     7. If a word is ambiguous, use the most appropriate score based on context"""
 )
 SCORER = build_agent(
@@ -124,15 +126,74 @@ register_function(
 # 3. Conversation helpers
 # ────────────────────────────────────────────────────────────────
 
+def parse_scores(chat_summary: str, logger) -> dict:
+    """解析聊天摘要中的分數"""
+    try:
+        return ast.literal_eval(chat_summary)
+    except:
+        logger.error(f"無法解析分數: {chat_summary}")
+        return None
+
+def parse_data_fetch_response(chat_history: list, logger) -> dict:
+    """解析 DATA_FETCH 的回應"""
+    for past in reversed(chat_history):
+        try:
+            data = ast.literal_eval(past["content"])
+            if isinstance(data, dict) and data and not ("call" in data):
+                logger.debug(f"找到餐廳資料: {data}")
+                return data
+        except:
+            continue
+    return None
+
 def run_chat_sequence(entry: ConversableAgent, sequence: list[dict]) -> str:
     ctx = {**getattr(entry, "_initiate_chats_ctx", {})}
     for step in sequence:
         logger.debug(f"{'='*50}")
         logger.debug(f"正在與 {step['recipient'].name} 進行對話...")
-        logger.debug(f"發送訊息: {step['message'].format(**ctx)}")
+        
+        if step["recipient"] is ANALYZER and "reviews_dict" in ctx:
+            # 處理每條評論
+            all_scores = []
+            restaurant_name = next(iter(ctx["reviews_dict"]))
+            reviews = ctx["reviews_dict"][restaurant_name]
+            
+            for review in reviews:
+                logger.debug(f"分析評論: {review}")
+                msg = f"Analyze this review: {review}"
+                retry_count = 0
+                scores = None
+                
+                while retry_count < 3 and scores is None:
+                    chat = entry.initiate_chat(
+                        step["recipient"], message=msg,
+                        summary_method=step.get("summary_method", "last_msg"),
+                        max_turns=step.get("max_turns", 1),
+                    )
+                    scores = parse_scores(chat.summary, logger)
+                    
+                    if scores is None:
+                        retry_count += 1
+                        if retry_count < 3:
+                            logger.error(f"無法解析分數 (嘗試 {retry_count}/3): {chat.summary}")
+                            msg = f"Analyze this review again: {review}"
+                        else:
+                            logger.error(f"無法解析分數，已達最大重試次數")
+                
+                if scores is not None:
+                    all_scores.append(scores)
+                    logger.debug(f"分數: {scores} 已添加")
+            
+            # 整理所有分數
+            food_scores = [score["food_score"] for score in all_scores]
+            service_scores = [score["service_score"] for score in all_scores]
+            ctx["analyzer_output"] = f"food_scores={food_scores}\ncustomer_service_scores={service_scores}"
+            continue
+            
+        msg = step["message"].format(**ctx)
+        logger.debug(f"發送訊息: {msg}")
         logger.debug(f"{'='*50}")
         
-        msg = step["message"].format(**ctx)
         chat = entry.initiate_chat(
             step["recipient"], message=msg,
             summary_method=step.get("summary_method", "last_msg"),
@@ -148,20 +209,26 @@ def run_chat_sequence(entry: ConversableAgent, sequence: list[dict]) -> str:
         # Data fetch output
         if step["recipient"] is DATA_FETCH:
             logger.debug("正在處理 DATA_FETCH 的輸出...")
-            for past in reversed(chat.chat_history):
-                try:
-                    data = ast.literal_eval(past["content"])
-                    if isinstance(data, dict) and data and not ("call" in data):
-                        logger.debug(f"找到餐廳資料: {data}")
-                        ctx.update({"reviews_dict": data, "restaurant_name": next(iter(data))})
-                        break
-                except:
-                    continue
-        # Analyzer output passed directly
-        elif step["recipient"] is ANALYZER:
-            logger.debug("正在處理 ANALYZER 的輸出...")
-            ctx["analyzer_output"] = out
-            logger.debug(f"分析結果: {out}")
+            retry_count = 0
+            data = None
+            
+            while retry_count < 3 and data is None:
+                data = parse_data_fetch_response(chat.chat_history, logger)
+                
+                if data is None:
+                    retry_count += 1
+                    if retry_count < 3:
+                        logger.error(f"無法解析餐廳資料 (嘗試 {retry_count}/3)")
+                        chat = entry.initiate_chat(
+                            step["recipient"], message=msg,
+                            summary_method=step.get("summary_method", "last_msg"),
+                            max_turns=step.get("max_turns", 2),
+                        )
+                    else:
+                        logger.error("無法解析餐廳資料，已達最大重試次數")
+            
+            if data is not None:
+                ctx.update({"reviews_dict": data, "restaurant_name": next(iter(data))})
     return out
 
 ConversableAgent.initiate_chats = lambda self, seq: run_chat_sequence(self, seq)
@@ -185,7 +252,7 @@ def main(user_query: str, data_path: str = "restaurant-data.txt"):
          "max_turns": 2},
 
         {"recipient": agents["analyzer"], 
-         "message": "Here are the reviews from the data fetch agent:\n{reviews_dict}\n\nExtract food and service scores for each review.", 
+         "message": "Analyze reviews", 
          "summary_method": "last_msg", 
          "max_turns": 1},
 
