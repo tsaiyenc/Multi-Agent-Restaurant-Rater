@@ -101,6 +101,14 @@ SCORER = build_agent(
     "scoring_agent",
     "Given name + two lists. Reply only: calculate_overall_score(...)"
 )
+RESTAURANT_EXTRACTOR = build_agent(
+    "restaurant_extractor",
+    """You are a restaurant name extractor. Your task is:
+    1. Extract the restaurant name from the user's query
+    2. Return only the restaurant name, nothing else
+    3. If multiple restaurants are mentioned, return the first one
+    4. If no restaurant is mentioned, return 'unknown'"""
+)
 ENTRY = build_agent("entry", "Coordinator")
 
 # register functions
@@ -145,8 +153,18 @@ def run_chat_sequence(entry: ConversableAgent, sequence: list[dict]) -> str:
         logger.debug(out)
         logger.debug(f"{'-'*30}")
         
+        # Restaurant extractor output
+        if step["recipient"] is RESTAURANT_EXTRACTOR:
+            logger.debug("正在處理 RESTAURANT_EXTRACTOR 的輸出...")
+            restaurant_name = out.strip()
+            logger.debug(f"提取到的餐廳名稱: {restaurant_name}")
+            ctx["restaurant_name"] = restaurant_name
+            return restaurant_name  # 找到餐廳名稱後直接返回
+        
+        # 以下是原有的處理邏輯，暫時註解掉
+        """
         # Data fetch output
-        if step["recipient"] is DATA_FETCH:
+        elif step["recipient"] is DATA_FETCH:
             logger.debug("正在處理 DATA_FETCH 的輸出...")
             for past in reversed(chat.chat_history):
                 try:
@@ -162,6 +180,7 @@ def run_chat_sequence(entry: ConversableAgent, sequence: list[dict]) -> str:
             logger.debug("正在處理 ANALYZER 的輸出...")
             ctx["analyzer_output"] = out
             logger.debug(f"分析結果: {out}")
+        """
     return out
 
 ConversableAgent.initiate_chats = lambda self, seq: run_chat_sequence(self, seq)
@@ -177,10 +196,20 @@ def main(user_query: str, data_path: str = "restaurant-data.txt"):
     logger.info(f"使用資料檔案: {data_path}")
     logger.info(f"使用者查詢: {user_query}")
     
-    agents = {"data_fetch": DATA_FETCH, "analyzer": ANALYZER, "scorer": SCORER}
+    agents = {
+        "restaurant_extractor": RESTAURANT_EXTRACTOR,
+        "data_fetch": DATA_FETCH, 
+        "analyzer": ANALYZER, 
+        "scorer": SCORER
+    }
     chat_sequence = [
+        {"recipient": agents["restaurant_extractor"],
+         "message": "Extract the restaurant name from this query: {user_query}",
+         "summary_method": "last_msg",
+         "max_turns": 1},
+
         {"recipient": agents["data_fetch"], 
-         "message": "Find reviews for this query: {user_query}", 
+         "message": "Find reviews for this restaurant: {restaurant_name}", 
          "summary_method": "last_msg", 
          "max_turns": 2},
 
