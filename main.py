@@ -127,6 +127,9 @@ register_function(
 def parse_scores(chat_summary: str, logger) -> dict:
     """解析聊天摘要中的分數"""
     try:
+        if "-1" in chat_summary:
+            logger.error(f"有無法解析的分數(有-1): {chat_summary}")
+            return None
         return ast.literal_eval(chat_summary)
     except:
         logger.error(f"無法解析分數: {chat_summary}")
