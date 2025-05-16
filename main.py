@@ -59,10 +59,12 @@ def fetch_restaurant_data(restaurant_name: str) -> dict[str, list[str]]:
 
 def calculate_overall_score(restaurant_name: str, food_scores: List[int], customer_service_scores: List[int]) -> dict[str, str]:
     """Geometric-mean rating rounded to 3 dp."""
+    logger.debug(f"準備計算總分: {restaurant_name}, {food_scores}, {customer_service_scores}")
     n = len(food_scores)
     if n == 0 or n != len(customer_service_scores):
         raise ValueError("food_scores and customer_service_scores must be non-empty and same length")
     total = sum(((f**2 * s)**0.5) * (1 / (n * (125**0.5))) * 10 for f, s in zip(food_scores, customer_service_scores))
+    logger.debug(f"計算出總分: {total:.3f}")
     return {restaurant_name: f"{total:.3f}"}
 
 # register functions
@@ -99,10 +101,6 @@ ANALYZER = build_agent(
     6. Only return the JSON, no additional text
     7. If a word is ambiguous, use the most appropriate score based on context"""
 )
-SCORER = build_agent(
-    "scoring_agent",
-    "Given name + two lists. Reply only: calculate_overall_score(...)"
-)
 ENTRY = build_agent("entry", "Coordinator")
 
 # register functions
@@ -115,7 +113,7 @@ register_function(
 )
 register_function(
     calculate_overall_score,
-    caller=SCORER,
+    caller=ANALYZER,
     executor=ENTRY,
     name="calculate_overall_score",
     description="Compute final rating via geometric mean.",
@@ -184,10 +182,11 @@ def run_chat_sequence(entry: ConversableAgent, sequence: list[dict]) -> str:
                     all_scores.append(scores)
                     logger.debug(f"分數: {scores} 已添加")
             
-            # 整理所有分數
+            # 整理所有分數並直接計算總分
             food_scores = [score["food_score"] for score in all_scores]
             service_scores = [score["service_score"] for score in all_scores]
-            ctx["analyzer_output"] = f"food_scores={food_scores}\ncustomer_service_scores={service_scores}"
+            final_score = calculate_overall_score(restaurant_name, food_scores, service_scores)
+            ctx["final_score"] = str(final_score)
             continue
             
         msg = step["message"].format(**ctx)
@@ -229,7 +228,7 @@ def run_chat_sequence(entry: ConversableAgent, sequence: list[dict]) -> str:
             
             if data is not None:
                 ctx.update({"reviews_dict": data, "restaurant_name": next(iter(data))})
-    return out
+    return ctx.get("final_score", out)
 
 ConversableAgent.initiate_chats = lambda self, seq: run_chat_sequence(self, seq)
 
@@ -244,7 +243,7 @@ def main(user_query: str, data_path: str = "restaurant-data.txt"):
     logger.info(f"使用資料檔案: {data_path}")
     logger.info(f"使用者查詢: {user_query}")
     
-    agents = {"data_fetch": DATA_FETCH, "analyzer": ANALYZER, "scorer": SCORER}
+    agents = {"data_fetch": DATA_FETCH, "analyzer": ANALYZER}
     chat_sequence = [
         {"recipient": agents["data_fetch"], 
          "message": "Find reviews for this query: {user_query}", 
@@ -255,11 +254,6 @@ def main(user_query: str, data_path: str = "restaurant-data.txt"):
          "message": "Analyze reviews", 
          "summary_method": "last_msg", 
          "max_turns": 1},
-
-        {"recipient": agents["scorer"], 
-         "message": "{analyzer_output}", 
-         "summary_method": "last_msg", 
-         "max_turns": 2},
     ]
     ENTRY._initiate_chats_ctx = {"user_query": user_query}
     logger.info("開始執行對話序列...")

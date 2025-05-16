@@ -1,0 +1,560 @@
+2025-05-16 22:05:33 - INFO - 初始化系統...
+2025-05-16 22:05:33 - INFO - 使用資料檔案: restaurant-data.txt
+2025-05-16 22:05:33 - INFO - 使用者查詢: How good is the restaurant taco bell overall?
+2025-05-16 22:05:33 - INFO - 開始執行對話序列...
+2025-05-16 22:05:33 - DEBUG - ==================================================
+2025-05-16 22:05:33 - DEBUG - 正在與 fetch_agent 進行對話...
+2025-05-16 22:05:33 - DEBUG - 發送訊息: Find reviews for this query: How good is the restaurant taco bell overall?
+2025-05-16 22:05:33 - DEBUG - ==================================================
+2025-05-16 22:05:39 - DEBUG - fetch_agent 的回應:
+2025-05-16 22:05:39 - DEBUG - ------------------------------
+2025-05-16 22:05:39 - DEBUG - The overall reviews for Taco Bell indicate a predominantly negative experience. Here are some key points highlighted in the reviews:
+
+1. **Food Quality**: 
+   - Many reviewers described the food as "bad" with "artificial flavors," "soggy tacos," and "greasy options." 
+   - Some mentioned that the food left them feeling "queasy" and was of "low quality" with "questionable ingredients."
+   - However, a few reviews mentioned that some dishes were "surprisingly enjoyable" and "tasty."
+
+2. **Customer Service**:
+   - The customer service was often described as "average," being neither notably good nor terrible.
+   - There were mentions of wait times during peak hours, but many felt the service was forgettable or uninspiring.
+
+3. **Consistency**:
+   - The reviews suggest a lack of consistency in the quality of food, with some individuals having a negative experience while others found a few items enjoyable.
+
+Overall, Taco Bell appears to have significant issues with food quality, while customer service tends to be average yet uninspiring.
+2025-05-16 22:05:39 - DEBUG - ------------------------------
+2025-05-16 22:05:39 - DEBUG - 正在處理 DATA_FETCH 的輸出...
+2025-05-16 22:05:39 - DEBUG - 找到餐廳資料: {'Taco Bell': ['The food at Taco Bell was bad, with flavors that seemed artificial. The customer service was average, neither particularly helpful nor rude.', 'The food was bad, with flavors that were off and textures that were strange. The service was average, neither particularly good nor terrible.', 'The food was awful and left me feeling queasy. The customer service was forgettable, neither good nor terrible.', 'The food at Taco Bell was awful, with flavors that seemed artificial and unappealing. The service was forgettable, neither particularly good nor terrible.', 'The food was bad, but the service was average. The tacos were unpleasant and lacked flavor, though the staff was polite enough.', 'The food at Taco Bell was bad, with flavors that seemed artificial. The service was average, neither impressive nor terrible.', 'The food at Taco Bell was awful, with flavors that felt artificial and unappetizing. The customer service was average, neither adding to nor detracting from the experience.', 'The food at Taco Bell was bad, with bland flavors and questionable quality. The customer service was average, neither particularly helpful nor offensive.', 'The food at Taco Bell was bad, with flavors that seemed artificial and unappealing. The customer service was average, neither particularly good nor notably poor.', 'The food at Taco Bell was bad, with items tasting stale and lukewarm. Customer service was forgettable, neither impressive nor terrible.', "The food at Taco Bell was horrible, with flavors that seemed artificial and unappealing. The service was average, but couldn't make up for the disappointing meal.", 'The food at Taco Bell was bad, with greasy and unappetizing options. Customer service was uninspiring, neither particularly good nor terrible.', 'The food at Taco Bell was bad, lacking in flavor and freshness. The customer service was uninspiring, neither terrible nor impressive.', "The food at Taco Bell was awful, with flavors that didn't quite hit the mark. The customer service was average, neither impressive nor terrible.", "The food at Taco Bell was bad, with soggy tacos and bland flavors. The customer service was average, but couldn't make up for the offensive quality of the food.", 'The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, neither impressive nor terrible.', 'The food was bad, with soggy tacos and bland flavors. The service was average, neither terrible nor impressive.', "The food was bad, with soggy tacos and bland flavors. The service was average, but couldn't make up for the disappointing meal.", 'The food at Taco Bell was bad, with questionable quality and taste. The customer service was average, neither impressive nor terrible.', 'The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, neither impressive nor particularly disappointing.', "The food at Taco Bell was bad, with questionable quality ingredients. The customer service was average, but couldn't make up for the offensive taste of the food.", 'The food at Taco Bell was surprisingly enjoyable, with tasty tacos and burritos. The customer service was average, with a bit of a wait during peak hours.', 'The food at Taco Bell was bad, with flavors that seemed artificial and unappealing. The customer service was average, neither impressive nor terrible.', "The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, but couldn't make up for the unpleasant dining experience.", 'The food at Taco Bell was bad, with questionable quality and taste. The customer service was uninspiring, neither terrible nor impressive.', 'The food at Taco Bell was bad, lacking in flavor and quality. The customer service was uninspiring, neither terrible nor impressive.', 'The food at Taco Bell was bad, with bland flavors and questionable quality. The service was average, neither impressive nor terrible.', 'The food at Taco Bell was bad, lacking in flavor and quality. The customer service was uninspiring, neither particularly good nor terrible.', 'The food at Taco Bell was bad, with soggy tacos and bland flavors. Customer service was uninspiring, neither good nor terrible.', 'The food at Taco Bell was bad, with greasy and unappetizing options. The customer service was average, neither impressive nor terrible.', "The food at Taco Bell was awful, with stale tortillas and bland fillings. The customer service was uninspiring, but couldn't make up for the unpleasant meal.", 'The food at Taco Bell was bad, with bland flavors and questionable quality. The service was average, neither impressive nor terrible.', 'The food at Taco Bell was disgusting, with greasy and unappetizing options. Customer service was uninspiring, neither particularly good nor terrible.', 'The food at Taco Bell was bad, with low-quality ingredients and poor taste. The customer service was forgettable, neither terrible nor impressive.', 'The food at Taco Bell was bad, with soggy tacos and bland flavors. Customer service was uninspiring, neither terrible nor impressive.', 'The food at Taco Bell was bad, with flavors that felt artificial and uninspired. The customer service was uninspiring, neither notably good nor terrible.', "The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, but couldn't make up for the unpleasant meal.", 'The food at Taco Bell was bad, with flavors that felt artificial and unappetizing. The customer service was average, neither enhancing nor detracting from the experience.', 'The food at Taco Bell was bad, with bland flavors and questionable quality. Customer service was forgettable, neither impressive nor terrible.', 'The food at Taco Bell was surprisingly enjoyable, with tasty and affordable Mexican-inspired dishes. The customer service was forgettable, with some wait times during peak hours.']}
+2025-05-16 22:05:39 - DEBUG - ==================================================
+2025-05-16 22:05:39 - DEBUG - 正在與 review_analyzer_agent 進行對話...
+2025-05-16 22:05:39 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that seemed artificial. The customer service was average, neither particularly helpful nor rude.
+2025-05-16 22:05:39 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:39 - DEBUG - 分析評論: The food was bad, with flavors that were off and textures that were strange. The service was average, neither particularly good nor terrible.
+2025-05-16 22:05:40 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:40 - DEBUG - 分析評論: The food was awful and left me feeling queasy. The customer service was forgettable, neither good nor terrible.
+2025-05-16 22:05:41 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:41 - DEBUG - 分析評論: The food at Taco Bell was awful, with flavors that seemed artificial and unappealing. The service was forgettable, neither particularly good nor terrible.
+2025-05-16 22:05:42 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:42 - DEBUG - 分析評論: The food was bad, but the service was average. The tacos were unpleasant and lacked flavor, though the staff was polite enough.
+2025-05-16 22:05:43 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:43 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that seemed artificial. The service was average, neither impressive nor terrible.
+2025-05-16 22:05:44 - DEBUG - 分數: {'food_score': 2, 'service_score': 3} 已添加
+2025-05-16 22:05:44 - DEBUG - 分析評論: The food at Taco Bell was awful, with flavors that felt artificial and unappetizing. The customer service was average, neither adding to nor detracting from the experience.
+2025-05-16 22:05:45 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:45 - DEBUG - 分析評論: The food at Taco Bell was bad, with bland flavors and questionable quality. The customer service was average, neither particularly helpful nor offensive.
+2025-05-16 22:05:46 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:46 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that seemed artificial and unappealing. The customer service was average, neither particularly good nor notably poor.
+2025-05-16 22:05:47 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:47 - DEBUG - 分析評論: The food at Taco Bell was bad, with items tasting stale and lukewarm. Customer service was forgettable, neither impressive nor terrible.
+2025-05-16 22:05:48 - DEBUG - 分數: {'food_score': 2, 'service_score': 3} 已添加
+2025-05-16 22:05:48 - DEBUG - 分析評論: The food at Taco Bell was horrible, with flavors that seemed artificial and unappealing. The service was average, but couldn't make up for the disappointing meal.
+2025-05-16 22:05:49 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:49 - DEBUG - 分析評論: The food at Taco Bell was bad, with greasy and unappetizing options. Customer service was uninspiring, neither particularly good nor terrible.
+2025-05-16 22:05:50 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:50 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and freshness. The customer service was uninspiring, neither terrible nor impressive.
+2025-05-16 22:05:51 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:51 - DEBUG - 分析評論: The food at Taco Bell was awful, with flavors that didn't quite hit the mark. The customer service was average, neither impressive nor terrible.
+2025-05-16 22:05:52 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:52 - DEBUG - 分析評論: The food at Taco Bell was bad, with soggy tacos and bland flavors. The customer service was average, but couldn't make up for the offensive quality of the food.
+2025-05-16 22:05:53 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:53 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, neither impressive nor terrible.
+2025-05-16 22:05:55 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:55 - DEBUG - 分析評論: The food was bad, with soggy tacos and bland flavors. The service was average, neither terrible nor impressive.
+2025-05-16 22:05:56 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:56 - DEBUG - 分析評論: The food was bad, with soggy tacos and bland flavors. The service was average, but couldn't make up for the disappointing meal.
+2025-05-16 22:05:57 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:57 - DEBUG - 分析評論: The food at Taco Bell was bad, with questionable quality and taste. The customer service was average, neither impressive nor terrible.
+2025-05-16 22:05:59 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:05:59 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, neither impressive nor particularly disappointing.
+2025-05-16 22:06:00 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:00 - DEBUG - 分析評論: The food at Taco Bell was bad, with questionable quality ingredients. The customer service was average, but couldn't make up for the offensive taste of the food.
+2025-05-16 22:06:00 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:00 - DEBUG - 分析評論: The food at Taco Bell was surprisingly enjoyable, with tasty tacos and burritos. The customer service was average, with a bit of a wait during peak hours.
+2025-05-16 22:06:01 - DEBUG - 分數: {'food_score': 4, 'service_score': 3} 已添加
+2025-05-16 22:06:01 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that seemed artificial and unappealing. The customer service was average, neither impressive nor terrible.
+2025-05-16 22:06:02 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:02 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, but couldn't make up for the unpleasant dining experience.
+2025-05-16 22:06:04 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:04 - DEBUG - 分析評論: The food at Taco Bell was bad, with questionable quality and taste. The customer service was uninspiring, neither terrible nor impressive.
+2025-05-16 22:06:05 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:05 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was uninspiring, neither terrible nor impressive.
+2025-05-16 22:06:06 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:06 - DEBUG - 分析評論: The food at Taco Bell was bad, with bland flavors and questionable quality. The service was average, neither impressive nor terrible.
+2025-05-16 22:06:07 - DEBUG - 分數: {'food_score': 2, 'service_score': 3} 已添加
+2025-05-16 22:06:07 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was uninspiring, neither particularly good nor terrible.
+2025-05-16 22:06:08 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:08 - DEBUG - 分析評論: The food at Taco Bell was bad, with soggy tacos and bland flavors. Customer service was uninspiring, neither good nor terrible.
+2025-05-16 22:06:09 - DEBUG - 分數: {'food_score': 2, 'service_score': 3} 已添加
+2025-05-16 22:06:09 - DEBUG - 分析評論: The food at Taco Bell was bad, with greasy and unappetizing options. The customer service was average, neither impressive nor terrible.
+2025-05-16 22:06:10 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:10 - DEBUG - 分析評論: The food at Taco Bell was awful, with stale tortillas and bland fillings. The customer service was uninspiring, but couldn't make up for the unpleasant meal.
+2025-05-16 22:06:11 - DEBUG - 分數: {'food_score': 1, 'service_score': 2} 已添加
+2025-05-16 22:06:11 - DEBUG - 分析評論: The food at Taco Bell was bad, with bland flavors and questionable quality. The service was average, neither impressive nor terrible.
+2025-05-16 22:06:12 - DEBUG - 分數: {'food_score': 2, 'service_score': 3} 已添加
+2025-05-16 22:06:12 - DEBUG - 分析評論: The food at Taco Bell was disgusting, with greasy and unappetizing options. Customer service was uninspiring, neither particularly good nor terrible.
+2025-05-16 22:06:13 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:13 - DEBUG - 分析評論: The food at Taco Bell was bad, with low-quality ingredients and poor taste. The customer service was forgettable, neither terrible nor impressive.
+2025-05-16 22:06:15 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:15 - DEBUG - 分析評論: The food at Taco Bell was bad, with soggy tacos and bland flavors. Customer service was uninspiring, neither terrible nor impressive.
+2025-05-16 22:06:15 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:15 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that felt artificial and uninspired. The customer service was uninspiring, neither notably good nor terrible.
+2025-05-16 22:06:17 - DEBUG - 分數: {'food_score': 2, 'service_score': 3} 已添加
+2025-05-16 22:06:17 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, but couldn't make up for the unpleasant meal.
+2025-05-16 22:06:17 - DEBUG - 分數: {'food_score': 2, 'service_score': 3} 已添加
+2025-05-16 22:06:17 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that felt artificial and unappetizing. The customer service was average, neither enhancing nor detracting from the experience.
+2025-05-16 22:06:18 - DEBUG - 分數: {'food_score': 2, 'service_score': 3} 已添加
+2025-05-16 22:06:18 - DEBUG - 分析評論: The food at Taco Bell was bad, with bland flavors and questionable quality. Customer service was forgettable, neither impressive nor terrible.
+2025-05-16 22:06:19 - DEBUG - 分數: {'food_score': 1, 'service_score': 3} 已添加
+2025-05-16 22:06:19 - DEBUG - 分析評論: The food at Taco Bell was surprisingly enjoyable, with tasty and affordable Mexican-inspired dishes. The customer service was forgettable, with some wait times during peak hours.
+2025-05-16 22:06:20 - DEBUG - 分數: {'food_score': 4, 'service_score': 2} 已添加
+2025-05-16 22:06:20 - DEBUG - 準備計算總分: Taco Bell, [1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 2, 2, 1, 4], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 2]
+2025-05-16 22:06:20 - DEBUG - 計算出總分: Taco Bell, 2.056
+2025-05-16 22:06:20 - INFO - 最終結果:
+2025-05-16 22:06:20 - INFO - ==================================================
+2025-05-16 22:06:20 - INFO - {'Taco Bell': '2.056'}
+2025-05-16 22:06:20 - INFO - ==================================================
+2025-05-16 22:06:20 - INFO - 初始化系統...
+2025-05-16 22:06:20 - INFO - 使用資料檔案: restaurant-data.txt
+2025-05-16 22:06:20 - INFO - 使用者查詢: How good is the restaurant Chick-fil-A overall?
+2025-05-16 22:06:20 - INFO - 開始執行對話序列...
+2025-05-16 22:06:20 - DEBUG - ==================================================
+2025-05-16 22:06:20 - DEBUG - 正在與 fetch_agent 進行對話...
+2025-05-16 22:06:20 - DEBUG - 發送訊息: Find reviews for this query: How good is the restaurant Chick-fil-A overall?
+2025-05-16 22:06:20 - DEBUG - ==================================================
+2025-05-16 22:06:26 - DEBUG - fetch_agent 的回應:
+2025-05-16 22:06:26 - DEBUG - ------------------------------
+2025-05-16 22:06:26 - DEBUG - Here are some reviews for Chick-fil-A:
+
+1. **Food Quality**: Reviews consistently highlight the `incredible chicken sandwiches` that are `always fresh and delicious`. The chicken is described as `juicy and flavorful`, with `perfectly cooked` chicken and `crispy waffle fries`.
+
+2. **Customer Service**: The customer service at Chick-fil-A is frequently praised as `amazing`, with staff who `go above and beyond`. Many reviews mention the staff being `friendly and attentive`, making sure that customers have a great experience.
+
+3. **Overall Experience**: Many customers report that Chick-fil-A `never disappoints`, often leaving with feelings of satisfaction and appreciation due to their `satisfying and delicious` food combined with `incredible hospitality`.
+
+4. **Consistency**: Reviewers note that the food is `consistently good`, setting a high standard for fast food restaurants, with many expressing that they can always expect a great meal.
+
+Overall, Chick-fil-A is widely regarded as a top choice for quick dining, known for both its quality food and exceptional customer service.
+2025-05-16 22:06:26 - DEBUG - ------------------------------
+2025-05-16 22:06:26 - DEBUG - 正在處理 DATA_FETCH 的輸出...
+2025-05-16 22:06:26 - DEBUG - 找到餐廳資料: {'Chick-fil-A': ['Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with staff who go above and beyond to ensure a great experience.', 'The chicken sandwich was incredible, juicy and flavorful. The customer service was amazing, with staff going above and beyond to ensure a great experience.', 'Chick-fil-A never disappoints! The food was satisfying, and the customer service was amazing. I always leave feeling satisfied and appreciated.', "Chick-fil-A's food is consistently good, with perfectly cooked chicken and delicious sides. The customer service is good, always going above and beyond to ensure a great experience.", 'The food and service at Chick-fil-A were both incredible. The chicken sandwich was amazing, and the staff went above and beyond with their hospitality.', "Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is incredible, always going above and beyond.", 'Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with staff that go above and beyond to ensure a great experience.', "Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is incredible, always friendly and attentive.", 'Chick-fil-A offers an incredible dining experience with consistently delicious food. The customer service is equally amazing, with staff always going above and beyond.', "Chick-fil-A's food was incredible, with perfectly cooked chicken and delicious sides. The customer service was equally amazing, with friendly and attentive staff.", 'Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is equally amazing, with friendly and attentive staff.', 'The chicken at Chick-fil-A is consistently good, always juicy and flavorful. The customer service is incredible, with friendly and attentive staff going above and beyond.', 'Chick-fil-A never disappoints with their awesome chicken sandwiches. The customer service was incredible, with staff going above and beyond.', "Chick-fil-A's food was incredible, with perfectly seasoned chicken and fresh sides. The customer service was amazing, setting the gold standard for fast food restaurants.", 'Chick-fil-A offered an incredible dining experience. The chicken sandwich was amazing, and the staff provided awesome customer service that went above and beyond.', 'Chick-fil-A offers an satisfying dining experience with delicious, high-quality food. The customer service is equally amazing, with friendly and attentive staff.', 'The chicken sandwich was incredible, juicy and flavorful. The customer service was amazing, with friendly staff going above and beyond.', 'The chicken sandwich was incredible, juicy and flavorful. The customer service was equally amazing, with polite and attentive staff.', 'Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is good, with friendly and attentive staff.', "Chick-fil-A's food was enjoyable, with perfectly cooked chicken and delicious sides. The customer service was equally amazing, with friendly and attentive staff.", 'Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with friendly and attentive staff.', "Chick-fil-A's food was good, with juicy chicken and crispy waffle fries. The customer service was equally amazing, with staff going above and beyond to ensure a great experience.", 'The chicken at Chick-fil-A was incredible, juicy and flavorful. The customer service was equally amazing, with polite and attentive staff.', 'Chick-fil-A serves satisfying chicken sandwiches that are always fresh and delicious. The customer service is satisfying, with friendly staff who go above and beyond.', "Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is good, always going above and beyond expectations.", "Chick-fil-A's food is consistently awesome, with perfectly cooked chicken and delicious sides. The customer service is incredible, always going above and beyond.", "Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is equally incredible, with polite and attentive staff.", "Chick-fil-A's food was incredible, with perfectly cooked chicken and delicious sides. The customer service was amazing, with staff going above and beyond to ensure a great experience.", 'Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with polite and attentive staff.', 'Chick-fil-A offers an incredible dining experience with delicious, high-quality food. The customer service is equally amazing, with attentive and courteous staff.', 'Chick-fil-A never disappoints with their awesome food and incredible customer service. The chicken sandwich was perfectly crispy, and the staff went above and beyond to ensure a great experience.', 'Chick-fil-A serves amazing chicken sandwiches that are always fresh and delicious. The customer service is incredible, with polite and attentive staff going above and beyond.', 'Chick-fil-A serves satisfying chicken sandwiches that are always fresh and delicious. The customer service is amazing, with friendly and attentive staff.', "Chick-fil-A's food is incredible, with juicy chicken and delicious sides. The customer service is equally good, with friendly and attentive staff.", 'The chicken at Chick-fil-A was incredible, juicy and flavorful. The customer service was equally amazing, with friendly and attentive staff.', 'Chick-fil-A serves awesome chicken sandwiches that are always fresh and delicious. The customer service is good, with staff going above and beyond to ensure a great experience.', 'Chick-fil-A provided an awesome dining experience with delicious food. The customer service was enjoyable, making every aspect of the visit amazing.', 'Chick-fil-A serves enjoyable chicken sandwiches that are consistently delicious. The customer service is equally incredible, with staff going above and beyond to ensure a great experience.', "Chick-fil-A's food was incredible, with perfectly crispy chicken and delicious sides. The customer service was amazing, with friendly and attentive staff.", "Chick-fil-A's food was incredible, with juicy chicken and fresh ingredients. The customer service was equally amazing, with friendly and attentive staff going above and beyond."]}
+2025-05-16 22:06:26 - DEBUG - ==================================================
+2025-05-16 22:06:26 - DEBUG - 正在與 review_analyzer_agent 進行對話...
+2025-05-16 22:06:26 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with staff who go above and beyond to ensure a great experience.
+2025-05-16 22:06:27 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:27 - DEBUG - 分析評論: The chicken sandwich was incredible, juicy and flavorful. The customer service was amazing, with staff going above and beyond to ensure a great experience.
+2025-05-16 22:06:28 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:28 - DEBUG - 分析評論: Chick-fil-A never disappoints! The food was satisfying, and the customer service was amazing. I always leave feeling satisfied and appreciated.
+2025-05-16 22:06:29 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:06:29 - DEBUG - 分析評論: Chick-fil-A's food is consistently good, with perfectly cooked chicken and delicious sides. The customer service is good, always going above and beyond to ensure a great experience.
+2025-05-16 22:06:30 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:30 - DEBUG - 分析評論: The food and service at Chick-fil-A were both incredible. The chicken sandwich was amazing, and the staff went above and beyond with their hospitality.
+2025-05-16 22:06:31 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:31 - DEBUG - 分析評論: Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is incredible, always going above and beyond.
+2025-05-16 22:06:32 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:32 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with staff that go above and beyond to ensure a great experience.
+2025-05-16 22:06:33 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:33 - DEBUG - 分析評論: Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is incredible, always friendly and attentive.
+2025-05-16 22:06:34 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:34 - DEBUG - 分析評論: Chick-fil-A offers an incredible dining experience with consistently delicious food. The customer service is equally amazing, with staff always going above and beyond.
+2025-05-16 22:06:35 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:35 - DEBUG - 分析評論: Chick-fil-A's food was incredible, with perfectly cooked chicken and delicious sides. The customer service was equally amazing, with friendly and attentive staff.
+2025-05-16 22:06:36 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:36 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is equally amazing, with friendly and attentive staff.
+2025-05-16 22:06:37 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:37 - DEBUG - 分析評論: The chicken at Chick-fil-A is consistently good, always juicy and flavorful. The customer service is incredible, with friendly and attentive staff going above and beyond.
+2025-05-16 22:06:38 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:38 - DEBUG - 分析評論: Chick-fil-A never disappoints with their awesome chicken sandwiches. The customer service was incredible, with staff going above and beyond.
+2025-05-16 22:06:40 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:40 - DEBUG - 分析評論: Chick-fil-A's food was incredible, with perfectly seasoned chicken and fresh sides. The customer service was amazing, setting the gold standard for fast food restaurants.
+2025-05-16 22:06:41 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:41 - DEBUG - 分析評論: Chick-fil-A offered an incredible dining experience. The chicken sandwich was amazing, and the staff provided awesome customer service that went above and beyond.
+2025-05-16 22:06:42 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:42 - DEBUG - 分析評論: Chick-fil-A offers an satisfying dining experience with delicious, high-quality food. The customer service is equally amazing, with friendly and attentive staff.
+2025-05-16 22:06:42 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:42 - DEBUG - 分析評論: The chicken sandwich was incredible, juicy and flavorful. The customer service was amazing, with friendly staff going above and beyond.
+2025-05-16 22:06:44 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:44 - DEBUG - 分析評論: The chicken sandwich was incredible, juicy and flavorful. The customer service was equally amazing, with polite and attentive staff.
+2025-05-16 22:06:45 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:45 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is good, with friendly and attentive staff.
+2025-05-16 22:06:46 - DEBUG - 分數: {'food_score': 5, 'service_score': 4} 已添加
+2025-05-16 22:06:46 - DEBUG - 分析評論: Chick-fil-A's food was enjoyable, with perfectly cooked chicken and delicious sides. The customer service was equally amazing, with friendly and attentive staff.
+2025-05-16 22:06:46 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:46 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with friendly and attentive staff.
+2025-05-16 22:06:47 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:47 - DEBUG - 分析評論: Chick-fil-A's food was good, with juicy chicken and crispy waffle fries. The customer service was equally amazing, with staff going above and beyond to ensure a great experience.
+2025-05-16 22:06:48 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:06:48 - DEBUG - 分析評論: The chicken at Chick-fil-A was incredible, juicy and flavorful. The customer service was equally amazing, with polite and attentive staff.
+2025-05-16 22:06:49 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:49 - DEBUG - 分析評論: Chick-fil-A serves satisfying chicken sandwiches that are always fresh and delicious. The customer service is satisfying, with friendly staff who go above and beyond.
+2025-05-16 22:06:50 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:50 - DEBUG - 分析評論: Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is good, always going above and beyond expectations.
+2025-05-16 22:06:51 - DEBUG - 分數: {'food_score': 5, 'service_score': 4} 已添加
+2025-05-16 22:06:51 - DEBUG - 分析評論: Chick-fil-A's food is consistently awesome, with perfectly cooked chicken and delicious sides. The customer service is incredible, always going above and beyond.
+2025-05-16 22:06:52 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:52 - DEBUG - 分析評論: Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is equally incredible, with polite and attentive staff.
+2025-05-16 22:06:54 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:54 - DEBUG - 分析評論: Chick-fil-A's food was incredible, with perfectly cooked chicken and delicious sides. The customer service was amazing, with staff going above and beyond to ensure a great experience.
+2025-05-16 22:06:55 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:55 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with polite and attentive staff.
+2025-05-16 22:06:56 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:56 - DEBUG - 分析評論: Chick-fil-A offers an incredible dining experience with delicious, high-quality food. The customer service is equally amazing, with attentive and courteous staff.
+2025-05-16 22:06:57 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:57 - DEBUG - 分析評論: Chick-fil-A never disappoints with their awesome food and incredible customer service. The chicken sandwich was perfectly crispy, and the staff went above and beyond to ensure a great experience.
+2025-05-16 22:06:58 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:58 - DEBUG - 分析評論: Chick-fil-A serves amazing chicken sandwiches that are always fresh and delicious. The customer service is incredible, with polite and attentive staff going above and beyond.
+2025-05-16 22:06:59 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:06:59 - DEBUG - 分析評論: Chick-fil-A serves satisfying chicken sandwiches that are always fresh and delicious. The customer service is amazing, with friendly and attentive staff.
+2025-05-16 22:07:00 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:07:00 - DEBUG - 分析評論: Chick-fil-A's food is incredible, with juicy chicken and delicious sides. The customer service is equally good, with friendly and attentive staff.
+2025-05-16 22:07:01 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:07:01 - DEBUG - 分析評論: The chicken at Chick-fil-A was incredible, juicy and flavorful. The customer service was equally amazing, with friendly and attentive staff.
+2025-05-16 22:07:02 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:07:02 - DEBUG - 分析評論: Chick-fil-A serves awesome chicken sandwiches that are always fresh and delicious. The customer service is good, with staff going above and beyond to ensure a great experience.
+2025-05-16 22:07:03 - DEBUG - 分數: {'food_score': 5, 'service_score': 4} 已添加
+2025-05-16 22:07:03 - DEBUG - 分析評論: Chick-fil-A provided an awesome dining experience with delicious food. The customer service was enjoyable, making every aspect of the visit amazing.
+2025-05-16 22:07:04 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:07:04 - DEBUG - 分析評論: Chick-fil-A serves enjoyable chicken sandwiches that are consistently delicious. The customer service is equally incredible, with staff going above and beyond to ensure a great experience.
+2025-05-16 22:07:05 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:07:05 - DEBUG - 分析評論: Chick-fil-A's food was incredible, with perfectly crispy chicken and delicious sides. The customer service was amazing, with friendly and attentive staff.
+2025-05-16 22:07:06 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:07:06 - DEBUG - 分析評論: Chick-fil-A's food was incredible, with juicy chicken and fresh ingredients. The customer service was equally amazing, with friendly and attentive staff going above and beyond.
+2025-05-16 22:07:08 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:07:08 - DEBUG - 準備計算總分: Chick-fil-A, [5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5]
+2025-05-16 22:07:08 - DEBUG - 計算出總分: Chick-fil-A, 9.821
+2025-05-16 22:07:08 - INFO - 最終結果:
+2025-05-16 22:07:08 - INFO - ==================================================
+2025-05-16 22:07:08 - INFO - {'Chick-fil-A': '9.821'}
+2025-05-16 22:07:08 - INFO - ==================================================
+2025-05-16 22:07:08 - INFO - 初始化系統...
+2025-05-16 22:07:08 - INFO - 使用資料檔案: restaurant-data.txt
+2025-05-16 22:07:08 - INFO - 使用者查詢: What is the overall score for Starbucks?
+2025-05-16 22:07:08 - INFO - 開始執行對話序列...
+2025-05-16 22:07:08 - DEBUG - ==================================================
+2025-05-16 22:07:08 - DEBUG - 正在與 fetch_agent 進行對話...
+2025-05-16 22:07:08 - DEBUG - 發送訊息: Find reviews for this query: What is the overall score for Starbucks?
+2025-05-16 22:07:08 - DEBUG - ==================================================
+2025-05-16 22:07:11 - DEBUG - fetch_agent 的回應:
+2025-05-16 22:07:11 - DEBUG - ------------------------------
+2025-05-16 22:07:11 - DEBUG - The overall score for Starbucks based on the reviews is consistently positive. Customers frequently praise the quality of coffee and pastries, describing them as good or satisfying. The customer service is also highlighted as a strong point, with many reviews noting the friendliness and efficiency of the baristas, who often remember regular customers' orders. 
+
+Overall sentiments suggest that Starbucks provides a delightful experience with good products and excellent service.
+2025-05-16 22:07:11 - DEBUG - ------------------------------
+2025-05-16 22:07:11 - DEBUG - 正在處理 DATA_FETCH 的輸出...
+2025-05-16 22:07:11 - DEBUG - 找到餐廳資料: {'Starbucks': ['Starbucks consistently serves good coffee and above average pastries. The customer service is tasty, with baristas who are usually friendly and efficient.', 'The coffee was pretty good and consistently prepared. The baristas provided blew my mind customer service, being both friendly and efficient.', 'Starbucks consistently delivers thumbs-up coffee and pastries. The customer service was incredible, with friendly baristas who remembered my usual order.', "Starbucks consistently serves pretty good coffee and above average pastries. The customer service is awesome, with friendly baristas who remember regular customers' orders.", 'Both the food and service at Starbucks were great. The coffee was satisfying, and the barista was incredibly friendly and efficient.', 'Starbucks consistently serves incredible coffee and tasty snacks. The customer service is good, with friendly baristas who often remember regular customers.', 'Starbucks consistently delivers good coffee and pastries. The customer service is generally satisfying, with efficient baristas who handle the morning rush well.', 'Starbucks offers nice coffee and a variety of enjoyable snacks. The customer service is consistently satisfying, with friendly baristas and quick service.', "Starbucks consistently delivers good coffee and snacks. The customer service is incredible, with friendly baristas who often remember regular customers' orders.", 'Starbucks provided good quality coffee and pastries. The customer service was incredible, with friendly baristas who remembered my usual order.', 'Starbucks consistently serves peak coffee and pastries. The baristas are friendly and efficient, making for a satisfying experience overall.', "Starbucks consistently serves amazing coffee and pastries. The customer service is awesome, with friendly baristas who remember regular customers' orders.", 'Starbucks consistently serves good coffee and snacks. The customer service was fantastic, with friendly baristas who remembered my usual order.', 'Starbucks provided good quality coffee and tasty snacks. The customer service was incredible, with baristas who were friendly and efficient.', 'Starbucks provided a satisfying coffee experience with good pastries. The customer service was satisfying, with friendly baristas who remembered our usual orders.', 'Starbucks consistently delivers good coffee and pastries. The customer service is enjoyable, with friendly baristas who go above and beyond.', 'The coffee was awesome, consistently brewed to perfection. The customer service was incredible, with friendly baristas who remember regular customers.', 'The coffee was satisfying and consistently prepared. The baristas provided amazing customer service, friendly and efficient even during rush hours.', 'Starbucks consistently serves awesome coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.', "Starbucks provided amazing, reliable coffee and pastries. The customer service was awesome, with friendly baristas who remembered regular customers' orders.", "Starbucks consistently serves good coffee and pastries. The customer service is superb, with friendly baristas who often remember regular customers' orders.", "Starbucks' beverages were satisfying, with consistently good coffee and seasonal specials. The customer service was stellar, with baristas who remembered regular customers and their orders.", 'The coffee and pastries at Starbucks were good, consistently meeting expectations. The customer service was incredible, with friendly baristas who remember regular customers.', 'Starbucks consistently provides good coffee and tasty snacks. The customer service is enjoyable, with baristas who are friendly and efficient.', 'Starbucks consistently serves enjoyable coffee and pastries. The customer service is fantastic, with friendly baristas who remember regular customers.', "Starbucks consistently serves good coffee and tasty snacks. The customer service is incredible, with friendly baristas who remember regulars' orders.", "Starbucks consistently serves good coffee and pastries. The customer service is blew my mind, with friendly baristas who remember regular customers' orders.", 'Starbucks offered good coffee and tasty snacks. The customer service was incredible, with friendly baristas and quick service.', 'Starbucks consistently serves good coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.', 'Starbucks consistently serves good coffee and snacks. The customer service is awesome, with friendly baristas who go above and beyond.', 'Starbucks provided a amazing selection of coffee and pastries. The customer service was delightful, with baristas who were friendly and efficient in handling orders.', "Starbucks consistently serves good coffee and good pastries. The customer service is good, with friendly baristas who remember regular customers' orders.", 'Starbucks consistently serves satisfying coffee and pastries. The customer service is awesome, with baristas who are friendly and efficient.', "Starbucks offers above average coffee and a variety of incredible pastries. The baristas provide satisfying customer service, often remembering regular customers' orders.", 'Starbucks consistently serves good coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.', 'Starbucks consistently serves incredible coffee and pretty good snacks. The customer service is amazing, with baristas who are friendly, efficient, and attentive to details.', 'Starbucks provided commendable coffee and snacks with consistent quality. The customer service was incredible, making every visit an amazing experience.', 'Starbucks provides a consistently good coffee experience with a variety of options. The customer service is equally enjoyable, with baristas who are often friendly and efficient.', "Starbucks offered good quality coffee and pastries. The customer service was good, with friendly baristas who remembered regular customers' orders.", "Starbucks' food options were okay, with pre-packaged sandwiches and pastries. However, the customer service was incredible, with friendly baristas who remembered regular customers' orders."]}
+2025-05-16 22:07:11 - DEBUG - ==================================================
+2025-05-16 22:07:11 - DEBUG - 正在與 review_analyzer_agent 進行對話...
+2025-05-16 22:07:11 - DEBUG - 分析評論: Starbucks consistently serves good coffee and above average pastries. The customer service is tasty, with baristas who are usually friendly and efficient.
+2025-05-16 22:07:12 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:07:12 - DEBUG - 分析評論: The coffee was pretty good and consistently prepared. The baristas provided blew my mind customer service, being both friendly and efficient.
+2025-05-16 22:07:13 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:07:13 - DEBUG - 分析評論: Starbucks consistently delivers thumbs-up coffee and pastries. The customer service was incredible, with friendly baristas who remembered my usual order.
+2025-05-16 22:07:15 - ERROR - 無法解析分數: 
+2025-05-16 22:07:15 - ERROR - 無法解析分數 (嘗試 1/3): 
+2025-05-16 22:07:16 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:07:16 - DEBUG - 分析評論: Starbucks consistently serves pretty good coffee and above average pastries. The customer service is awesome, with friendly baristas who remember regular customers' orders.
+2025-05-16 22:07:17 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:07:17 - DEBUG - 分析評論: Both the food and service at Starbucks were great. The coffee was satisfying, and the barista was incredibly friendly and efficient.
+2025-05-16 22:07:18 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:07:18 - DEBUG - 分析評論: Starbucks consistently serves incredible coffee and tasty snacks. The customer service is good, with friendly baristas who often remember regular customers.
+2025-05-16 22:07:19 - DEBUG - 分數: {'food_score': 5, 'service_score': 4} 已添加
+2025-05-16 22:07:19 - DEBUG - 分析評論: Starbucks consistently delivers good coffee and pastries. The customer service is generally satisfying, with efficient baristas who handle the morning rush well.
+2025-05-16 22:07:20 - DEBUG - 分數: {'food_score': 4, 'service_score': 4} 已添加
+2025-05-16 22:07:20 - DEBUG - 分析評論: Starbucks offers nice coffee and a variety of enjoyable snacks. The customer service is consistently satisfying, with friendly baristas and quick service.
+2025-05-16 22:07:21 - ERROR - 無法解析分數: 
+2025-05-16 22:07:21 - ERROR - 無法解析分數 (嘗試 1/3): 
+2025-05-16 22:07:22 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:07:22 - DEBUG - 分析評論: Starbucks consistently delivers good coffee and snacks. The customer service is incredible, with friendly baristas who often remember regular customers' orders.
+2025-05-16 22:07:23 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:07:23 - DEBUG - 分析評論: Starbucks provided good quality coffee and pastries. The customer service was incredible, with friendly baristas who remembered my usual order.
+2025-05-16 22:07:24 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:07:24 - DEBUG - 分析評論: Starbucks consistently serves peak coffee and pastries. The baristas are friendly and efficient, making for a satisfying experience overall.
+2025-05-16 22:07:25 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:07:25 - DEBUG - 分析評論: Starbucks consistently serves amazing coffee and pastries. The customer service is awesome, with friendly baristas who remember regular customers' orders.
+2025-05-16 22:07:26 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:07:26 - DEBUG - 分析評論: Starbucks consistently serves good coffee and snacks. The customer service was fantastic, with friendly baristas who remembered my usual order.
+2025-05-16 22:07:27 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:07:27 - DEBUG - 分析評論: Starbucks provided good quality coffee and tasty snacks. The customer service was incredible, with baristas who were friendly and efficient.
+2025-05-16 22:07:28 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:07:28 - DEBUG - 分析評論: Starbucks provided a satisfying coffee experience with good pastries. The customer service was satisfying, with friendly baristas who remembered our usual orders.
+2025-05-16 22:07:28 - DEBUG - 分數: {'food_score': 4, 'service_score': 4} 已添加
+2025-05-16 22:07:28 - DEBUG - 分析評論: Starbucks consistently delivers good coffee and pastries. The customer service is enjoyable, with friendly baristas who go above and beyond.
+2025-05-16 22:07:29 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:07:29 - DEBUG - 分析評論: The coffee was awesome, consistently brewed to perfection. The customer service was incredible, with friendly baristas who remember regular customers.
+2025-05-16 22:08:02 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:02 - DEBUG - 分析評論: The coffee was satisfying and consistently prepared. The baristas provided amazing customer service, friendly and efficient even during rush hours.
+2025-05-16 22:08:02 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:02 - DEBUG - 分析評論: Starbucks consistently serves awesome coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.
+2025-05-16 22:08:03 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:03 - DEBUG - 分析評論: Starbucks provided amazing, reliable coffee and pastries. The customer service was awesome, with friendly baristas who remembered regular customers' orders.
+2025-05-16 22:08:04 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:04 - DEBUG - 分析評論: Starbucks consistently serves good coffee and pastries. The customer service is superb, with friendly baristas who often remember regular customers' orders.
+2025-05-16 22:08:05 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:05 - DEBUG - 分析評論: Starbucks' beverages were satisfying, with consistently good coffee and seasonal specials. The customer service was stellar, with baristas who remembered regular customers and their orders.
+2025-05-16 22:08:06 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:06 - DEBUG - 分析評論: The coffee and pastries at Starbucks were good, consistently meeting expectations. The customer service was incredible, with friendly baristas who remember regular customers.
+2025-05-16 22:08:07 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:07 - DEBUG - 分析評論: Starbucks consistently provides good coffee and tasty snacks. The customer service is enjoyable, with baristas who are friendly and efficient.
+2025-05-16 22:08:08 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:08 - DEBUG - 分析評論: Starbucks consistently serves enjoyable coffee and pastries. The customer service is fantastic, with friendly baristas who remember regular customers.
+2025-05-16 22:08:09 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:09 - DEBUG - 分析評論: Starbucks consistently serves good coffee and tasty snacks. The customer service is incredible, with friendly baristas who remember regulars' orders.
+2025-05-16 22:08:09 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:09 - DEBUG - 分析評論: Starbucks consistently serves good coffee and pastries. The customer service is blew my mind, with friendly baristas who remember regular customers' orders.
+2025-05-16 22:08:11 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:11 - DEBUG - 分析評論: Starbucks offered good coffee and tasty snacks. The customer service was incredible, with friendly baristas and quick service.
+2025-05-16 22:08:12 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:12 - DEBUG - 分析評論: Starbucks consistently serves good coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.
+2025-05-16 22:08:13 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:13 - DEBUG - 分析評論: Starbucks consistently serves good coffee and snacks. The customer service is awesome, with friendly baristas who go above and beyond.
+2025-05-16 22:08:14 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:14 - DEBUG - 分析評論: Starbucks provided a amazing selection of coffee and pastries. The customer service was delightful, with baristas who were friendly and efficient in handling orders.
+2025-05-16 22:08:15 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:15 - DEBUG - 分析評論: Starbucks consistently serves good coffee and good pastries. The customer service is good, with friendly baristas who remember regular customers' orders.
+2025-05-16 22:08:16 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:16 - DEBUG - 分析評論: Starbucks consistently serves satisfying coffee and pastries. The customer service is awesome, with baristas who are friendly and efficient.
+2025-05-16 22:08:18 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:18 - DEBUG - 分析評論: Starbucks offers above average coffee and a variety of incredible pastries. The baristas provide satisfying customer service, often remembering regular customers' orders.
+2025-05-16 22:08:18 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:18 - DEBUG - 分析評論: Starbucks consistently serves good coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.
+2025-05-16 22:08:19 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:19 - DEBUG - 分析評論: Starbucks consistently serves incredible coffee and pretty good snacks. The customer service is amazing, with baristas who are friendly, efficient, and attentive to details.
+2025-05-16 22:08:20 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:20 - DEBUG - 分析評論: Starbucks provided commendable coffee and snacks with consistent quality. The customer service was incredible, making every visit an amazing experience.
+2025-05-16 22:08:21 - DEBUG - 分數: {'food_score': 4, 'service_score': 5} 已添加
+2025-05-16 22:08:21 - DEBUG - 分析評論: Starbucks provides a consistently good coffee experience with a variety of options. The customer service is equally enjoyable, with baristas who are often friendly and efficient.
+2025-05-16 22:08:22 - DEBUG - 分數: {'food_score': 4, 'service_score': 4} 已添加
+2025-05-16 22:08:22 - DEBUG - 分析評論: Starbucks offered good quality coffee and pastries. The customer service was good, with friendly baristas who remembered regular customers' orders.
+2025-05-16 22:08:23 - DEBUG - 分數: {'food_score': 4, 'service_score': 4} 已添加
+2025-05-16 22:08:23 - DEBUG - 分析評論: Starbucks' food options were okay, with pre-packaged sandwiches and pastries. However, the customer service was incredible, with friendly baristas who remembered regular customers' orders.
+2025-05-16 22:08:25 - ERROR - 無法解析分數: 
+2025-05-16 22:08:25 - ERROR - 無法解析分數 (嘗試 1/3): 
+2025-05-16 22:08:26 - DEBUG - 分數: {'food_score': 3, 'service_score': 5} 已添加
+2025-05-16 22:08:26 - DEBUG - 準備計算總分: Starbucks, [4, 4, 5, 4, 5, 5, 4, 4, 4, 4, 5, 5, 4, 4, 4, 4, 5, 4, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 4, 4, 4, 4, 4, 4, 3], [5, 5, 5, 5, 5, 4, 4, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 5]
+2025-05-16 22:08:26 - DEBUG - 計算出總分: Starbucks, 8.289
+2025-05-16 22:08:26 - INFO - 最終結果:
+2025-05-16 22:08:26 - INFO - ==================================================
+2025-05-16 22:08:26 - INFO - {'Starbucks': '8.289'}
+2025-05-16 22:08:26 - INFO - ==================================================
+2025-05-16 22:08:26 - INFO - 初始化系統...
+2025-05-16 22:08:26 - INFO - 使用資料檔案: restaurant-data.txt
+2025-05-16 22:08:26 - INFO - 使用者查詢: What is the overall score for In-n-Out
+2025-05-16 22:08:26 - INFO - 開始執行對話序列...
+2025-05-16 22:08:26 - DEBUG - ==================================================
+2025-05-16 22:08:26 - DEBUG - 正在與 fetch_agent 進行對話...
+2025-05-16 22:08:26 - DEBUG - 發送訊息: Find reviews for this query: What is the overall score for In-n-Out
+2025-05-16 22:08:26 - DEBUG - ==================================================
+2025-05-16 22:08:28 - DEBUG - fetch_agent 的回應:
+2025-05-16 22:08:28 - DEBUG - ------------------------------
+2025-05-16 22:08:28 - DEBUG - {"call":"fetch_restaurant_data","args":{"restaurant_name":"In-n-Out"}}
+2025-05-16 22:08:28 - DEBUG - ------------------------------
+2025-05-16 22:08:28 - DEBUG - 正在處理 DATA_FETCH 的輸出...
+2025-05-16 22:08:28 - DEBUG - 找到餐廳資料: {'In-n-Out': ['In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is satisfying, with friendly and efficient staff who make you feel welcome.', 'The burgers were awesome, always fresh and delicious. The customer service was incredible, with friendly and efficient staff even during rush hours.', "In-n-Out never fails to impress! The burgers are out-of-this-world, and the customer service is always amazing. It's fast food done right.", 'In-n-Out serves god-tier burgers that are always fresh and delicious. The customer service is incredible, with friendly and efficient staff even during busy times.', "Both the food and service at In-n-Out were awesome. The burgers were chef's kiss, and the staff was incredibly friendly and efficient.", 'In-n-Out serves stellar burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff.', 'In-n-Out serves incredibly delicious burgers that are always fresh and made to order. The customer service is awesome, with friendly staff who maintain high standards even during rush hours.', 'In-n-Out serves good burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff even during busy times.', 'In-n-Out offers an enjoyable burger experience with fresh ingredients and amazing flavors. The customer service is equally satisfying, always friendly and efficient.', "In-n-Out's burgers were incredible, always fresh and delicious. The customer service was equally amazing, with friendly and efficient staff.", 'In-n-Out serves amazing burgers that are always fresh and delicious. The customer service is equally tasty, with friendly and efficient staff.', 'In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is incredible, with friendly and efficient staff even during busy times.', 'In-n-Out serves incredible burgers that always hit the spot. The customer service was satisfying, with a fast-moving line and friendly staff.', "In-n-Out's burgers were amazing, always fresh and perfectly prepared. The customer service was phenomenal, with friendly and efficient staff even during rush hours.", 'In-n-Out provided an incredible burger experience with out-of-this-world flavors. The customer service was incredible, with efficient and friendly staff making the visit memorable.', 'In-n-Out offers an superb burger experience with fresh, high-quality ingredients. The customer service is equally mind-blowing, with friendly and efficient staff.', 'The burgers were peak, always fresh and delicious. The customer service was awesome, with friendly and efficient staff even during busy times.', 'The burgers were top-notch, always fresh and delicious. The customer service was equally awesome, with friendly and efficient staff.', 'In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff.', "In-n-Out's burgers were incredible, always fresh and delicious. The customer service was equally awesome, with friendly and efficient staff even during rush hours.", 'In-n-Out serves legendary burgers that are always fresh and delicious. The customer service is stellar, with friendly staff who work efficiently even during rush hours.', "In-n-Out's burgers were incredible, with high-quality ingredients and perfect preparation. The customer service was equally amazing, with friendly staff and impressively quick service despite long lines.", 'The burgers at In-n-Out were blew my mind, always fresh and delicious. The customer service was equally amazing, with friendly and efficient staff.', 'In-n-Out burgers are legendary, always fresh and delicious. The customer service is equally good, with friendly and efficient staff.', 'In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is mind-blowing, with friendly and efficient staff even during rush hours.', 'In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is amazing, with efficient and friendly staff even during rush hours.', 'In-n-Out serves good burgers that are always fresh and delicious. The customer service is equally superb, with friendly and efficient staff.', "In-n-Out's burgers were incredible, always fresh and delicious. The customer service was amazing, with friendly staff and efficient service even during busy times.", 'In-n-Out serves mind-blowing burgers that are always fresh and delicious. The customer service is awesome, with friendly and efficient staff.', 'In-n-Out burgers are tasty, always fresh and delicious. The customer service is equally enjoyable, with efficient and friendly staff even during busy times.', 'In-n-Out delivers an good burger experience every time. The food is incredible, and the customer service is equally thumbs-up, with friendly and efficient staff.', 'In-n-Out serves amazing burgers that are always fresh and delicious. The customer service is satisfying, with friendly staff and impressively fast service despite long lines.', 'In-n-Out burgers are amazing, always fresh and delicious. The customer service is delightful, with friendly and efficient staff even during rush hours.', 'In-n-Out serves awesome burgers made with high-quality ingredients. The customer service is amazing, with friendly and efficient staff.', 'In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is equally stellar, with friendly and efficient staff.', 'In-n-Out burgers are top-notch, always fresh and delicious. The customer service is enjoyable, with super friendly and efficient staff even during busy times.', 'In-n-Out provided an incredible burger experience with fresh ingredients. The customer service was great, making every aspect of the visit awesome.', 'In-n-Out burgers are incredibly delicious and consistently high-quality. The customer service is equally awesome, with staff who are always friendly and efficient.', "In-n-Out's burgers were chef's kiss, always fresh and delicious. The customer service was awesome, with friendly staff and efficient order processing.", "In-n-Out's burgers were incredible, with high-quality ingredients and perfect preparation. The customer service was equally good, with friendly staff and impressively fast service despite long lines."]}
+2025-05-16 22:08:28 - DEBUG - ==================================================
+2025-05-16 22:08:28 - DEBUG - 正在與 review_analyzer_agent 進行對話...
+2025-05-16 22:08:28 - DEBUG - 分析評論: In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is satisfying, with friendly and efficient staff who make you feel welcome.
+2025-05-16 22:08:29 - ERROR - 無法解析分數: 
+2025-05-16 22:08:29 - ERROR - 無法解析分數 (嘗試 1/3): 
+2025-05-16 22:08:30 - DEBUG - 分數: {'food_score': 5, 'service_score': 4} 已添加
+2025-05-16 22:08:30 - DEBUG - 分析評論: The burgers were awesome, always fresh and delicious. The customer service was incredible, with friendly and efficient staff even during rush hours.
+2025-05-16 22:08:31 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:31 - DEBUG - 分析評論: In-n-Out never fails to impress! The burgers are out-of-this-world, and the customer service is always amazing. It's fast food done right.
+2025-05-16 22:08:32 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:32 - DEBUG - 分析評論: In-n-Out serves god-tier burgers that are always fresh and delicious. The customer service is incredible, with friendly and efficient staff even during busy times.
+2025-05-16 22:08:33 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:33 - DEBUG - 分析評論: Both the food and service at In-n-Out were awesome. The burgers were chef's kiss, and the staff was incredibly friendly and efficient.
+2025-05-16 22:08:34 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:34 - DEBUG - 分析評論: In-n-Out serves stellar burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff.
+2025-05-16 22:08:35 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:35 - DEBUG - 分析評論: In-n-Out serves incredibly delicious burgers that are always fresh and made to order. The customer service is awesome, with friendly staff who maintain high standards even during rush hours.
+2025-05-16 22:08:36 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:36 - DEBUG - 分析評論: In-n-Out serves good burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff even during busy times.
+2025-05-16 22:08:37 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:37 - DEBUG - 分析評論: In-n-Out offers an enjoyable burger experience with fresh ingredients and amazing flavors. The customer service is equally satisfying, always friendly and efficient.
+2025-05-16 22:08:38 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:38 - DEBUG - 分析評論: In-n-Out's burgers were incredible, always fresh and delicious. The customer service was equally amazing, with friendly and efficient staff.
+2025-05-16 22:08:40 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:40 - DEBUG - 分析評論: In-n-Out serves amazing burgers that are always fresh and delicious. The customer service is equally tasty, with friendly and efficient staff.
+2025-05-16 22:08:40 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:40 - DEBUG - 分析評論: In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is incredible, with friendly and efficient staff even during busy times.
+2025-05-16 22:08:41 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:41 - DEBUG - 分析評論: In-n-Out serves incredible burgers that always hit the spot. The customer service was satisfying, with a fast-moving line and friendly staff.
+2025-05-16 22:08:42 - DEBUG - 分數: {'food_score': 5, 'service_score': 4} 已添加
+2025-05-16 22:08:42 - DEBUG - 分析評論: In-n-Out's burgers were amazing, always fresh and perfectly prepared. The customer service was phenomenal, with friendly and efficient staff even during rush hours.
+2025-05-16 22:08:43 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:43 - DEBUG - 分析評論: In-n-Out provided an incredible burger experience with out-of-this-world flavors. The customer service was incredible, with efficient and friendly staff making the visit memorable.
+2025-05-16 22:08:44 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:44 - DEBUG - 分析評論: In-n-Out offers an superb burger experience with fresh, high-quality ingredients. The customer service is equally mind-blowing, with friendly and efficient staff.
+2025-05-16 22:08:45 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:45 - DEBUG - 分析評論: The burgers were peak, always fresh and delicious. The customer service was awesome, with friendly and efficient staff even during busy times.
+2025-05-16 22:08:46 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:46 - DEBUG - 分析評論: The burgers were top-notch, always fresh and delicious. The customer service was equally awesome, with friendly and efficient staff.
+2025-05-16 22:08:47 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:47 - DEBUG - 分析評論: In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff.
+2025-05-16 22:08:48 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:48 - DEBUG - 分析評論: In-n-Out's burgers were incredible, always fresh and delicious. The customer service was equally awesome, with friendly and efficient staff even during rush hours.
+2025-05-16 22:08:49 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:49 - DEBUG - 分析評論: In-n-Out serves legendary burgers that are always fresh and delicious. The customer service is stellar, with friendly staff who work efficiently even during rush hours.
+2025-05-16 22:08:50 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:50 - DEBUG - 分析評論: In-n-Out's burgers were incredible, with high-quality ingredients and perfect preparation. The customer service was equally amazing, with friendly staff and impressively quick service despite long lines.
+2025-05-16 22:08:51 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:51 - DEBUG - 分析評論: The burgers at In-n-Out were blew my mind, always fresh and delicious. The customer service was equally amazing, with friendly and efficient staff.
+2025-05-16 22:08:52 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:52 - DEBUG - 分析評論: In-n-Out burgers are legendary, always fresh and delicious. The customer service is equally good, with friendly and efficient staff.
+2025-05-16 22:08:52 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:52 - DEBUG - 分析評論: In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is mind-blowing, with friendly and efficient staff even during rush hours.
+2025-05-16 22:08:53 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:53 - DEBUG - 分析評論: In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is amazing, with efficient and friendly staff even during rush hours.
+2025-05-16 22:08:54 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:54 - DEBUG - 分析評論: In-n-Out serves good burgers that are always fresh and delicious. The customer service is equally superb, with friendly and efficient staff.
+2025-05-16 22:08:55 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:55 - DEBUG - 分析評論: In-n-Out's burgers were incredible, always fresh and delicious. The customer service was amazing, with friendly staff and efficient service even during busy times.
+2025-05-16 22:08:56 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:56 - DEBUG - 分析評論: In-n-Out serves mind-blowing burgers that are always fresh and delicious. The customer service is awesome, with friendly and efficient staff.
+2025-05-16 22:08:57 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:57 - DEBUG - 分析評論: In-n-Out burgers are tasty, always fresh and delicious. The customer service is equally enjoyable, with efficient and friendly staff even during busy times.
+2025-05-16 22:08:58 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:58 - DEBUG - 分析評論: In-n-Out delivers an good burger experience every time. The food is incredible, and the customer service is equally thumbs-up, with friendly and efficient staff.
+2025-05-16 22:08:59 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:08:59 - DEBUG - 分析評論: In-n-Out serves amazing burgers that are always fresh and delicious. The customer service is satisfying, with friendly staff and impressively fast service despite long lines.
+2025-05-16 22:09:00 - DEBUG - 分數: {'food_score': 5, 'service_score': 4} 已添加
+2025-05-16 22:09:00 - DEBUG - 分析評論: In-n-Out burgers are amazing, always fresh and delicious. The customer service is delightful, with friendly and efficient staff even during rush hours.
+2025-05-16 22:09:01 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:09:01 - DEBUG - 分析評論: In-n-Out serves awesome burgers made with high-quality ingredients. The customer service is amazing, with friendly and efficient staff.
+2025-05-16 22:09:03 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:09:03 - DEBUG - 分析評論: In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is equally stellar, with friendly and efficient staff.
+2025-05-16 22:09:04 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:09:04 - DEBUG - 分析評論: In-n-Out burgers are top-notch, always fresh and delicious. The customer service is enjoyable, with super friendly and efficient staff even during busy times.
+2025-05-16 22:09:04 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:09:04 - DEBUG - 分析評論: In-n-Out provided an incredible burger experience with fresh ingredients. The customer service was great, making every aspect of the visit awesome.
+2025-05-16 22:09:05 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:09:05 - DEBUG - 分析評論: In-n-Out burgers are incredibly delicious and consistently high-quality. The customer service is equally awesome, with staff who are always friendly and efficient.
+2025-05-16 22:09:06 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:09:06 - DEBUG - 分析評論: In-n-Out's burgers were chef's kiss, always fresh and delicious. The customer service was awesome, with friendly staff and efficient order processing.
+2025-05-16 22:09:07 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:09:07 - DEBUG - 分析評論: In-n-Out's burgers were incredible, with high-quality ingredients and perfect preparation. The customer service was equally good, with friendly staff and impressively fast service despite long lines.
+2025-05-16 22:09:08 - DEBUG - 分數: {'food_score': 5, 'service_score': 5} 已添加
+2025-05-16 22:09:08 - DEBUG - 準備計算總分: In-n-Out, [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], [4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5]
+2025-05-16 22:09:08 - DEBUG - 計算出總分: In-n-Out, 9.921
+2025-05-16 22:09:08 - INFO - 最終結果:
+2025-05-16 22:09:08 - INFO - ==================================================
+2025-05-16 22:09:08 - INFO - {'In-n-Out': '9.921'}
+2025-05-16 22:09:08 - INFO - ==================================================
+2025-05-16 22:09:08 - INFO - 初始化系統...
+2025-05-16 22:09:08 - INFO - 使用資料檔案: restaurant-data.txt
+2025-05-16 22:09:08 - INFO - 使用者查詢: What is the overall score for McDonald's?
+2025-05-16 22:09:08 - INFO - 開始執行對話序列...
+2025-05-16 22:09:08 - DEBUG - ==================================================
+2025-05-16 22:09:08 - DEBUG - 正在與 fetch_agent 進行對話...
+2025-05-16 22:09:08 - DEBUG - 發送訊息: Find reviews for this query: What is the overall score for McDonald's?
+2025-05-16 22:09:08 - DEBUG - ==================================================
+2025-05-16 22:09:12 - DEBUG - fetch_agent 的回應:
+2025-05-16 22:09:12 - DEBUG - ------------------------------
+2025-05-16 22:09:12 - DEBUG - The overall reviews for McDonald's suggest a generally mediocre experience. Here's a summary of the feedback:
+
+- **Food Quality:** The food is consistently described as average, uninspiring, or forgettable. Reviews mention that the burgers are often greasy or not warm enough, and that there are no standout menu options.
+
+- **Customer Service:** The customer service is frequently criticized as unpleasant or poor, with many reports of long wait times and staff that seem disinterested or unfriendly.
+
+Given this feedback, the overall score for McDonald's may be considered low due to the consistent mention of poor service despite the food being average.
+2025-05-16 22:09:12 - DEBUG - ------------------------------
+2025-05-16 22:09:12 - DEBUG - 正在處理 DATA_FETCH 的輸出...
+2025-05-16 22:09:12 - DEBUG - 找到餐廳資料: {"McDonald's": ["The food at McDonald's was good, but the customer service was unpleasant. The decent menu options were served quickly, but the staff seemed disinterested and unhelpful.", 'The food was average, but the customer service was unpleasant. The employee seemed disinterested and the order took longer than expected.', 'The food was middling, but the customer service was unpleasant. The nothing special menu options were made worse by the rude staff at the counter.', "The food at McDonald's was forgettable, but fair. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.", 'The food was passable, but the customer service was unpleasant. The forgettable burger was barely warm, and the cashier seemed annoyed by our presence.', "The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and a disinterested staff.", "The food at McDonald's was average, but the customer service was unpleasant. The forgettable menu items were served by a staff that seemed disinterested and rushed.", "The food at McDonald's was average, but the customer service was unpleasant. The uninspiring menu options were served quickly, but the staff seemed disinterested and unhelpful.", "The food at McDonald's was average, nothing special to write home about. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was average, but nothing special. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was average, neither impressive nor disappointing. However, the customer service was unpleasant, with long wait times and a disinterested staff.", "The food at McDonald's was average, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was average, as expected. However, the customer service was so-so, with long wait times and a disinterested staff.", "The food at McDonald's was average, but passable. The customer service was unpleasant, with long wait times and a disinterested staff.", "The food at McDonald's was uninspiring, but the customer service was unpleasant. The serviceable burger was barely warm, and the cashier seemed annoyed by our presence.", "The food at McDonald's was nothing special, but uninspiring. Unfortunately, the customer service was awful, with long wait times and unfriendly staff.", 'The food was meh, nothing special to write home about. However, the customer service was subpar, with long wait times and disinterested staff.', 'The food was nothing special, nothing special to write home about. However, the customer service was poor, with long wait times and unfriendly staff.', "The food at McDonald's was average, nothing special to write home about. However, the customer service was so-so, with long wait times and unfriendly staff.", "The food at McDonald's was average, but decent. Unfortunately, the customer service was yucky, with long wait times and a disinterested staff.", "The food at McDonald's was forgettable, but the customer service was not great. The burgers were uninspiring, and the staff seemed disinterested in helping customers.", "The food at McDonald's was unpleasant, with greasy burgers and soggy fries. The customer service was standard, with staff members who seemed indifferent to our presence.", "The food at McDonald's was uninspiring, nothing special to write home about. However, the customer service was disgusting, with long wait times and unfriendly staff.", "The food at McDonald's was uninspiring, but the customer service was unpleasant. The uninspiring menu options were barely saved by the quick preparation time.", "The food at McDonald's was uninspiring, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was average, but nothing special. However, the customer service was mediocre, with long wait times and unfriendly staff.", "The food at McDonald's was fine, but nothing special. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was okay, but uninspiring. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was forgettable, but nothing special. The customer service was awful, with long wait times and unfriendly staff.", "The food at McDonald's was average, nothing special to write home about. However, the customer service was disgusting, with long waits and unfriendly staff.", "The food at McDonald's was okay, but the customer service was unpleasant. The uninspiring burger was barely warm, and the cashier seemed disinterested in helping customers.", "The food at McDonald's was average, fair to write home about. However, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was passable, nothing special but edible. However, the customer service was disgusting, with long wait times and unfriendly staff.", "The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and a less than friendly staff.", "The food at McDonald's was uninspiring, decent but edible. However, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was average, but the customer service was unpleasant. The uninspiring meal was made worse by the rude staff at the counter.", "The food at McDonald's was average, but the customer service was unpleasant. The forgettable menu options were made worse by the staff's lack of enthusiasm.", "The food at McDonald's was middling, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was not great, with greasy burgers and soggy fries. The customer service was average, with staff being neither friendly nor rude."]}
+2025-05-16 22:09:12 - DEBUG - ==================================================
+2025-05-16 22:09:12 - DEBUG - 正在與 review_analyzer_agent 進行對話...
+2025-05-16 22:09:12 - DEBUG - 分析評論: The food at McDonald's was good, but the customer service was unpleasant. The decent menu options were served quickly, but the staff seemed disinterested and unhelpful.
+2025-05-16 22:09:13 - DEBUG - 分數: {'food_score': 4, 'service_score': 2} 已添加
+2025-05-16 22:09:13 - DEBUG - 分析評論: The food was average, but the customer service was unpleasant. The employee seemed disinterested and the order took longer than expected.
+2025-05-16 22:09:14 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:14 - DEBUG - 分析評論: The food was middling, but the customer service was unpleasant. The nothing special menu options were made worse by the rude staff at the counter.
+2025-05-16 22:09:14 - DEBUG - 分數: {'food_score': 2, 'service_score': 1} 已添加
+2025-05-16 22:09:14 - DEBUG - 分析評論: The food at McDonald's was forgettable, but fair. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-16 22:09:16 - DEBUG - 分數: {'food_score': 2, 'service_score': 1} 已添加
+2025-05-16 22:09:16 - DEBUG - 分析評論: The food was passable, but the customer service was unpleasant. The forgettable burger was barely warm, and the cashier seemed annoyed by our presence.
+2025-05-16 22:09:17 - DEBUG - 分數: {'food_score': 2, 'service_score': 2} 已添加
+2025-05-16 22:09:17 - DEBUG - 分析評論: The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and a disinterested staff.
+2025-05-16 22:09:17 - DEBUG - 分數: {'food_score': 2, 'service_score': 2} 已添加
+2025-05-16 22:09:17 - DEBUG - 分析評論: The food at McDonald's was average, but the customer service was unpleasant. The forgettable menu items were served by a staff that seemed disinterested and rushed.
+2025-05-16 22:09:18 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:18 - DEBUG - 分析評論: The food at McDonald's was average, but the customer service was unpleasant. The uninspiring menu options were served quickly, but the staff seemed disinterested and unhelpful.
+2025-05-16 22:09:19 - DEBUG - 分數: {'food_score': 2, 'service_score': 1} 已添加
+2025-05-16 22:09:19 - DEBUG - 分析評論: The food at McDonald's was average, nothing special to write home about. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-16 22:09:20 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:20 - DEBUG - 分析評論: The food at McDonald's was average, but nothing special. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-16 22:09:21 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:21 - DEBUG - 分析評論: The food at McDonald's was average, neither impressive nor disappointing. However, the customer service was unpleasant, with long wait times and a disinterested staff.
+2025-05-16 22:09:22 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:22 - DEBUG - 分析評論: The food at McDonald's was average, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-16 22:09:23 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:23 - DEBUG - 分析評論: The food at McDonald's was average, as expected. However, the customer service was so-so, with long wait times and a disinterested staff.
+2025-05-16 22:09:24 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:24 - DEBUG - 分析評論: The food at McDonald's was average, but passable. The customer service was unpleasant, with long wait times and a disinterested staff.
+2025-05-16 22:09:25 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:25 - DEBUG - 分析評論: The food at McDonald's was uninspiring, but the customer service was unpleasant. The serviceable burger was barely warm, and the cashier seemed annoyed by our presence.
+2025-05-16 22:09:26 - DEBUG - 分數: {'food_score': 2, 'service_score': 1} 已添加
+2025-05-16 22:09:26 - DEBUG - 分析評論: The food at McDonald's was nothing special, but uninspiring. Unfortunately, the customer service was awful, with long wait times and unfriendly staff.
+2025-05-16 22:09:27 - DEBUG - 分數: {'food_score': 2, 'service_score': 1} 已添加
+2025-05-16 22:09:27 - DEBUG - 分析評論: The food was meh, nothing special to write home about. However, the customer service was subpar, with long wait times and disinterested staff.
+2025-05-16 22:09:27 - DEBUG - 分數: {'food_score': 2, 'service_score': 2} 已添加
+2025-05-16 22:09:27 - DEBUG - 分析評論: The food was nothing special, nothing special to write home about. However, the customer service was poor, with long wait times and unfriendly staff.
+2025-05-16 22:09:28 - DEBUG - 分數: {'food_score': 2, 'service_score': 2} 已添加
+2025-05-16 22:09:28 - DEBUG - 分析評論: The food at McDonald's was average, nothing special to write home about. However, the customer service was so-so, with long wait times and unfriendly staff.
+2025-05-16 22:09:29 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:29 - DEBUG - 分析評論: The food at McDonald's was average, but decent. Unfortunately, the customer service was yucky, with long wait times and a disinterested staff.
+2025-05-16 22:09:30 - DEBUG - 分數: {'food_score': 3, 'service_score': 1} 已添加
+2025-05-16 22:09:30 - DEBUG - 分析評論: The food at McDonald's was forgettable, but the customer service was not great. The burgers were uninspiring, and the staff seemed disinterested in helping customers.
+2025-05-16 22:09:31 - DEBUG - 分數: {'food_score': 2, 'service_score': 2} 已添加
+2025-05-16 22:09:31 - DEBUG - 分析評論: The food at McDonald's was unpleasant, with greasy burgers and soggy fries. The customer service was standard, with staff members who seemed indifferent to our presence.
+2025-05-16 22:09:32 - DEBUG - 分數: {'food_score': 2, 'service_score': 3} 已添加
+2025-05-16 22:09:32 - DEBUG - 分析評論: The food at McDonald's was uninspiring, nothing special to write home about. However, the customer service was disgusting, with long wait times and unfriendly staff.
+2025-05-16 22:09:33 - DEBUG - 分數: {'food_score': 2, 'service_score': 1} 已添加
+2025-05-16 22:09:33 - DEBUG - 分析評論: The food at McDonald's was uninspiring, but the customer service was unpleasant. The uninspiring menu options were barely saved by the quick preparation time.
+2025-05-16 22:09:34 - DEBUG - 分數: {'food_score': 2, 'service_score': 1} 已添加
+2025-05-16 22:09:34 - DEBUG - 分析評論: The food at McDonald's was uninspiring, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-16 22:09:35 - DEBUG - 分數: {'food_score': 2, 'service_score': 1} 已添加
+2025-05-16 22:09:35 - DEBUG - 分析評論: The food at McDonald's was average, but nothing special. However, the customer service was mediocre, with long wait times and unfriendly staff.
+2025-05-16 22:09:36 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:36 - DEBUG - 分析評論: The food at McDonald's was fine, but nothing special. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-16 22:09:37 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:37 - DEBUG - 分析評論: The food at McDonald's was okay, but uninspiring. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-16 22:09:38 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:38 - DEBUG - 分析評論: The food at McDonald's was forgettable, but nothing special. The customer service was awful, with long wait times and unfriendly staff.
+2025-05-16 22:09:39 - DEBUG - 分數: {'food_score': 2, 'service_score': 1} 已添加
+2025-05-16 22:09:39 - DEBUG - 分析評論: The food at McDonald's was average, nothing special to write home about. However, the customer service was disgusting, with long waits and unfriendly staff.
+2025-05-16 22:09:40 - DEBUG - 分數: {'food_score': 3, 'service_score': 1} 已添加
+2025-05-16 22:09:40 - DEBUG - 分析評論: The food at McDonald's was okay, but the customer service was unpleasant. The uninspiring burger was barely warm, and the cashier seemed disinterested in helping customers.
+2025-05-16 22:09:42 - DEBUG - 分數: {'food_score': 2, 'service_score': 2} 已添加
+2025-05-16 22:09:42 - DEBUG - 分析評論: The food at McDonald's was average, fair to write home about. However, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-16 22:09:43 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:43 - DEBUG - 分析評論: The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-16 22:09:44 - DEBUG - 分數: {'food_score': 2, 'service_score': 2} 已添加
+2025-05-16 22:09:44 - DEBUG - 分析評論: The food at McDonald's was passable, nothing special but edible. However, the customer service was disgusting, with long wait times and unfriendly staff.
+2025-05-16 22:09:45 - DEBUG - 分數: {'food_score': 3, 'service_score': 1} 已添加
+2025-05-16 22:09:45 - DEBUG - 分析評論: The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and a less than friendly staff.
+2025-05-16 22:09:46 - DEBUG - 分數: {'food_score': 2, 'service_score': 2} 已添加
+2025-05-16 22:09:46 - DEBUG - 分析評論: The food at McDonald's was uninspiring, decent but edible. However, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-16 22:09:47 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:47 - DEBUG - 分析評論: The food at McDonald's was average, but the customer service was unpleasant. The uninspiring meal was made worse by the rude staff at the counter.
+2025-05-16 22:09:48 - DEBUG - 分數: {'food_score': 2, 'service_score': 1} 已添加
+2025-05-16 22:09:48 - DEBUG - 分析評論: The food at McDonald's was average, but the customer service was unpleasant. The forgettable menu options were made worse by the staff's lack of enthusiasm.
+2025-05-16 22:09:49 - DEBUG - 分數: {'food_score': 2, 'service_score': 1} 已添加
+2025-05-16 22:09:49 - DEBUG - 分析評論: The food at McDonald's was middling, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-16 22:09:50 - DEBUG - 分數: {'food_score': 3, 'service_score': 2} 已添加
+2025-05-16 22:09:50 - DEBUG - 分析評論: The food at McDonald's was not great, with greasy burgers and soggy fries. The customer service was average, with staff being neither friendly nor rude.
+2025-05-16 22:09:51 - DEBUG - 分數: {'food_score': 2, 'service_score': 3} 已添加
+2025-05-16 22:09:51 - DEBUG - 準備計算總分: McDonald's, [4, 3, 2, 2, 2, 2, 3, 2, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 3, 3, 2, 2, 2, 2, 2, 3, 3, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 2, 3, 2], [2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 3, 1, 1, 1, 2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 1, 1, 2, 3]
+2025-05-16 22:09:51 - DEBUG - 計算出總分: McDonald's, 2.904
+2025-05-16 22:09:51 - INFO - 最終結果:
+2025-05-16 22:09:51 - INFO - ==================================================
+2025-05-16 22:09:51 - INFO - {"McDonald's": '2.904'}
+2025-05-16 22:09:51 - INFO - ==================================================
+
+
+------
+[V] Test 0 Passed. Pyautogen 0.9.0
+[X] Test 1 Failed. Expected: 3.000  Predicted: 2.056  Query: How good is the restaurant taco bell overall?
+[X] Test 2 Failed. Expected: 9.350  Predicted: 9.821  Query: How good is the restaurant Chick-fil-A overall?
+[X] Test 3 Failed. Expected: 8.060  Predicted: 8.289  Query: What is the overall score for Starbucks?
+[X] Test 4 Failed. Expected: 9.540  Predicted: 9.921  Query: What is the overall score for In-n-Out
+[X] Test 5 Failed. Expected: 3.650  Predicted: 2.904  Query: What is the overall score for McDonald's?
+---------- 0/5 Tests Passed. MAE: 0.5542 ----------
