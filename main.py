@@ -82,24 +82,34 @@ DATA_FETCH = build_agent(
     "fetch_agent",
     'Return JSON {"call":"fetch_restaurant_data","args":{"restaurant_name":"<name>"}}'
 )
-ANALYZER = build_agent(
-    "review_analyzer_agent",
-    """You are a professional review analyst. Your task is:
-    1. Analyze the given review for food and service related adjectives
-    2. Convert adjectives to scores (1-5) based on the following criteria:
-    {SCORE_KEYWORDS}
-    3. For words not exactly matching the keywords:
-       - Consider similar words and synonyms
-       - Handle common typos and variations
-       - Use context to determine the appropriate score
+
+SIMILARITY_AGENT = build_agent(
+    "similarity_agent",
+    """You are a professional word similarity analyzer. Your task is:
+    1. Given a list of adjectives and a list of keywords, find the most similar keyword from the keywords list that best matches ANY of the given adjectives
+    2. Consider semantic meaning, context, and common usage for each adjective
+    3. Compare all adjectives with all keywords and choose the best overall match
     4. Response format must strictly follow this JSON format:
     {
-        "food_score": <score>,
-        "service_score": <score>
+        "most_similar_keyword": "<keyword>"
     }
-    5. If you cannot determine a score, use -1
-    6. Only return the JSON, no additional text
-    7. If a word is ambiguous, use the most appropriate score based on context"""
+    5. Only return the JSON, no additional text
+    6. If no similar keyword is found, return the closest match based on context"""
+)
+
+REVIEW_EXTRACTOR = build_agent(
+    "review_extractor_agent",
+    """You are a professional review extractor. Your task is:
+    1. Extract ONLY the food and customer service related adjectives that are EXPLICITLY mentioned in the review
+    2. DO NOT generate or infer any adjectives that are not directly present in the review
+    3. Response format must strictly follow this JSON format:
+    {
+        "food_adjectives": ["<adjective1>", "<adjective2>", ...],
+        "service_adjectives": ["<adjective1>", "<adjective2>", ...]
+    }
+    4. Only return the JSON, no additional text
+    5. If no adjectives are found for a category, return an empty list
+    6. IMPORTANT: Only extract adjectives that are explicitly present in the review text"""
 )
 ENTRY = build_agent("entry", "Coordinator")
 
@@ -113,7 +123,7 @@ register_function(
 )
 register_function(
     calculate_overall_score,
-    caller=ANALYZER,
+    caller=REVIEW_EXTRACTOR,
     executor=ENTRY,
     name="calculate_overall_score",
     description="Compute final rating via geometric mean.",
@@ -147,13 +157,57 @@ def parse_data_fetch_response(chat_history: list, logger) -> dict:
             continue
     return None
 
+def get_score_from_adjectives(adjectives: list[str], entry: ConversableAgent, logger) -> int | None:
+    """從形容詞列表中獲取評分
+    
+    Args:
+        adjectives: 形容詞列表
+        entry: 對話代理
+        logger: 日誌記錄器
+    
+    Returns:
+        評分 (1-5) 或 None
+    """
+    # 直接檢查關鍵字
+    for adj in adjectives:
+        if adj in [word for words in SCORE_KEYWORDS.values() for word in words]:
+            return next(score for score, words in SCORE_KEYWORDS.items() if adj in words)
+    
+    # 如果沒有直接匹配，使用相似度 agent
+    if adjectives:
+        retry_count = 0
+        while retry_count < 3:
+            similarity_msg = f"Find the most similar keyword from these adjectives: {adjectives} to match with these keywords: {[word for words in SCORE_KEYWORDS.values() for word in words]}"
+            similarity_chat = entry.initiate_chat(
+                SIMILARITY_AGENT, message=similarity_msg,
+                summary_method="last_msg",
+                max_turns=1,
+            )
+            try:
+                similarity_result = ast.literal_eval(similarity_chat.summary)
+                logger.debug(f"從 adjectives: {adjectives} 獲得相似關鍵字: {similarity_result}")
+                if "most_similar_keyword" in similarity_result:
+                    similar_keyword = similarity_result["most_similar_keyword"]
+                    return next(score for score, words in SCORE_KEYWORDS.items() if similar_keyword in words)
+                else:
+                    logger.error(f"相似度結果中沒有找到 most_similar_keyword: {similarity_chat.summary}")
+            except:
+                logger.error(f"無法解析相似度結果 (嘗試 {retry_count + 1}/3): {similarity_chat.summary}")
+            
+            retry_count += 1
+            if retry_count < 3:
+                logger.info(f"正在重試相似度分析 (第 {retry_count + 1} 次)")
+        logger.error(f"無法找到最相似的關鍵字，已達最大重試次數")
+    
+    return None
+
 def run_chat_sequence(entry: ConversableAgent, sequence: list[dict]) -> str:
     ctx = {**getattr(entry, "_initiate_chats_ctx", {})}
     for step in sequence:
         logger.debug(f"{'='*50}")
         logger.debug(f"正在與 {step['recipient'].name} 進行對話...")
         
-        if step["recipient"] is ANALYZER and "reviews_dict" in ctx:
+        if step["recipient"] is REVIEW_EXTRACTOR and "reviews_dict" in ctx:
             # 處理每條評論
             all_scores = []
             restaurant_name = next(iter(ctx["reviews_dict"]))
@@ -163,27 +217,36 @@ def run_chat_sequence(entry: ConversableAgent, sequence: list[dict]) -> str:
                 logger.debug(f"分析評論: {review}")
                 msg = f"Analyze this review: {review}"
                 retry_count = 0
-                scores = None
+                adjectives = None
                 
-                while retry_count < 3 and scores is None:
+                while retry_count < 3 and adjectives is None:
                     chat = entry.initiate_chat(
                         step["recipient"], message=msg,
                         summary_method=step.get("summary_method", "last_msg"),
                         max_turns=step.get("max_turns", 1),
                     )
-                    scores = parse_scores(chat.summary, logger)
-                    
-                    if scores is None:
+                    try:
+                        adjectives = ast.literal_eval(chat.summary)
+                        logger.debug(f"獲得形容詞: {adjectives}")
+                        if not isinstance(adjectives, dict) or "food_adjectives" not in adjectives or "service_adjectives" not in adjectives:
+                            raise ValueError("Invalid response format")
+                    except:
                         retry_count += 1
                         if retry_count < 3:
-                            logger.error(f"無法解析分數 (嘗試 {retry_count}/3): {chat.summary}")
+                            logger.error(f"無法解析形容詞 (嘗試 {retry_count}/3): {chat.summary}")
                             msg = f"Analyze this review again: {review}"
                         else:
-                            logger.error(f"無法解析分數，已達最大重試次數")
+                            logger.error(f"無法解析形容詞，已達最大重試次數")
+                            continue
                 
-                if scores is not None:
-                    all_scores.append(scores)
-                    logger.debug(f"分數: {scores} 已添加")
+                if adjectives is not None:
+                    # 處理食物和服務形容詞
+                    food_score = get_score_from_adjectives(adjectives["food_adjectives"], entry, logger)
+                    service_score = get_score_from_adjectives(adjectives["service_adjectives"], entry, logger)
+                    
+                    if food_score is not None and service_score is not None:
+                        all_scores.append({"food_score": food_score, "service_score": service_score})
+                        logger.debug(f"分數- food: {food_score}, service: {service_score} 已添加")
             
             # 整理所有分數並直接計算總分
             food_scores = [score["food_score"] for score in all_scores]
@@ -246,14 +309,14 @@ def main(user_query: str, data_path: str = "restaurant-data.txt"):
     logger.info(f"使用資料檔案: {data_path}")
     logger.info(f"使用者查詢: {user_query}")
     
-    agents = {"data_fetch": DATA_FETCH, "analyzer": ANALYZER}
+    agents = {"data_fetch": DATA_FETCH, "extractor": REVIEW_EXTRACTOR, "similarity": SIMILARITY_AGENT}
     chat_sequence = [
         {"recipient": agents["data_fetch"], 
          "message": "Find reviews for this query: {user_query}", 
          "summary_method": "last_msg", 
          "max_turns": 2},
 
-        {"recipient": agents["analyzer"], 
+        {"recipient": agents["extractor"], 
          "message": "Analyze reviews", 
          "summary_method": "last_msg", 
          "max_turns": 1},
