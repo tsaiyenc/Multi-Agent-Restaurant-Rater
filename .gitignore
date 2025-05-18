@@ -8,6 +8,9 @@ doc/
 # vs code
 .vscode/
 
+# Temporaty files
+~*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
