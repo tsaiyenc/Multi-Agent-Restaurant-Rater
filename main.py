@@ -6,23 +6,31 @@ import logging
 from datetime import datetime
 from difflib import SequenceMatcher
 
+# 全域變數控制 logger
+ENABLE_LOGGING = True  # 設定為 False 來停用 logger
+
 # 設定 logging
-log_filename = f"logs/logger_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-os.makedirs("logs", exist_ok=True)
+if ENABLE_LOGGING:
+    log_filename = f"logs/logger_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+    os.makedirs("logs", exist_ok=True)
 
-# 設定檔案處理器
-file_handler = logging.FileHandler(log_filename, encoding='utf-8')
-file_handler.setLevel(logging.DEBUG)
-file_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
-file_handler.setFormatter(file_formatter)
+    # 設定檔案處理器
+    file_handler = logging.FileHandler(log_filename, encoding='utf-8')
+    file_handler.setLevel(logging.DEBUG)
+    file_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+    file_handler.setFormatter(file_formatter)
 
-# 設定根記錄器
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-logger.addHandler(file_handler)
+    # 設定根記錄器
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(file_handler)
 
-# 關閉其他處理器
-logging.getLogger().handlers = []
+    # 關閉其他處理器
+    logging.getLogger().handlers = []
+else:
+    # 如果停用 logger，設定一個空的 logger
+    logger = logging.getLogger(__name__)
+    logger.addHandler(logging.NullHandler())
 
 SCORE_KEYWORDS: dict[int, list[str]] = {
     1: ["awful", "horrible", "disgusting"],
