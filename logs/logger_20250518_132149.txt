@@ -1,0 +1,1132 @@
+2025-05-18 13:21:49 - INFO - 初始化系統...
+2025-05-18 13:21:49 - INFO - 使用資料檔案: restaurant-data.txt
+2025-05-18 13:21:49 - INFO - 使用者查詢: How good is the restaurant taco bell overall?
+2025-05-18 13:21:49 - INFO - 開始執行對話序列...
+2025-05-18 13:21:49 - DEBUG - ==================================================
+2025-05-18 13:21:49 - DEBUG - 正在與 fetch_agent 進行對話...
+2025-05-18 13:21:49 - DEBUG - 發送訊息: Find reviews for this query: How good is the restaurant taco bell overall?
+2025-05-18 13:21:49 - DEBUG - ==================================================
+2025-05-18 13:22:10 - DEBUG - fetch_agent 的回應:
+2025-05-18 13:22:10 - DEBUG - ------------------------------
+2025-05-18 13:22:10 - DEBUG - ```json
+{
+  "reviews": [
+    "The food at Taco Bell was bad, with flavors that seemed artificial. The customer service was average, neither particularly helpful nor rude.",
+    "The food was bad, with flavors that were off and textures that were strange. The service was average, neither particularly good nor terrible.",
+    "The food was awful and left me feeling queasy. The customer service was forgettable, neither good nor terrible.",
+    "The food at Taco Bell was awful, with flavors that seemed artificial and unappealing. The service was forgettable, neither particularly good nor terrible.",
+    "The food was bad, but the service was average. The tacos were unpleasant and lacked flavor, though the staff was polite enough.",
+    "The food at Taco Bell was bad, with flavors that seemed artificial. The service was average, neither impressive nor terrible.",
+    "The food at Taco Bell was awful, with flavors that felt artificial and unappetizing. The customer service was average, neither adding to nor detracting from the experience.",
+    "The food at Taco Bell was bad, with bland flavors and questionable quality. The customer service was average, neither particularly helpful nor offensive.",
+    "The food at Taco Bell was bad, with flavors that seemed artificial and unappealing. The customer service was average, neither particularly good nor notably poor.",
+    "The food at Taco Bell was bad, with items tasting stale and lukewarm. Customer service was forgettable, neither impressive nor terrible.",
+    "The food at Taco Bell was horrible, with flavors that seemed artificial and unappealing. The service was average, but couldn't make up for the disappointing meal.",
+    "The food at Taco Bell was bad, with greasy and unappetizing options. Customer service was uninspiring, neither particularly good nor terrible.",
+    "The food at Taco Bell was bad, lacking in flavor and freshness. The customer service was uninspiring, neither terrible nor impressive.",
+    "The food at Taco Bell was awful, with flavors that didn't quite hit the mark. The customer service was average, neither impressive nor terrible.",
+    "The food at Taco Bell was bad, with soggy tacos and bland flavors. The customer service was average, but couldn't make up for the offensive quality of the food.",
+    "The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, neither impressive nor terrible.",
+    "The food was bad, with soggy tacos and bland flavors. The service was average, neither terrible nor impressive.",
+    "The food was bad, with soggy tacos and bland flavors. The service was average, but couldn't make up for the disappointing meal.",
+    "The food at Taco Bell was bad, with questionable quality and taste. The customer service was average, neither impressive nor terrible.",
+    "The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, neither impressive nor particularly disappointing.",
+    "The food at Taco Bell was bad, with questionable quality ingredients. The customer service was average, but couldn't make up for the offensive taste of the food.",
+    "The food at Taco Bell was surprisingly enjoyable, with tasty tacos and burritos. The customer service was average, with a bit of a wait during peak hours.",
+    "The food at Taco Bell was bad, with flavors that seemed artificial and unappealing. The customer service was average, neither impressive nor terrible.",
+    "The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, but couldn't make up for the unpleasant dining experience.",
+    "The food at Taco Bell was bad, with questionable quality and taste. The customer service was uninspiring, neither terrible nor impressive.",
+    "The food at Taco Bell was bad, lacking in flavor and quality. The customer service was uninspiring, neither terrible nor impressive.",
+    "The food at Taco Bell was bad, with bland flavors and questionable quality. The service was average, neither impressive nor terrible.",
+    "The food at Taco Bell was bad, lacking in flavor and quality. The customer service was uninspiring, neither particularly good nor terrible.",
+    "The food at Taco Bell was bad, with soggy tacos and bland flavors. Customer service was uninspiring, neither good nor terrible.",
+    "The food at Taco Bell was bad, with greasy and unappetizing options. The customer service was average, neither impressive nor terrible.",
+    "The food at Taco Bell was awful, with stale tortillas and bland fillings. The customer service was uninspiring, but couldn't make up for the unpleasant meal.",
+    "The food at Taco Bell was bad, with bland flavors and questionable quality. The service was average, neither impressive nor terrible.",
+    "The food at Taco Bell was disgusting, with greasy and unappetizing options. Customer service was uninspiring, neither particularly good nor terrible.",
+    "The food at Taco Bell was bad, with low-quality ingredients and poor taste. The customer service was forgettable, neither terrible nor impressive.",
+    "The food at Taco Bell was bad, with soggy tacos and bland flavors. Customer service was uninspiring, neither terrible nor impressive.",
+    "The food at Taco Bell was bad, with flavors that felt artificial and uninspired. The customer service was uninspiring, neither notably good nor terrible.",
+    "The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, but couldn't make up for the unpleasant meal.",
+    "The food at Taco Bell was bad, with flavors that felt artificial and unappetizing. The customer service was average, neither enhancing nor detracting from the experience.",
+    "The food at Taco Bell was bad, with bland flavors and questionable quality. Customer service was forgettable, neither impressive nor terrible.",
+    "The food at Taco Bell was surprisingly enjoyable, with tasty and affordable Mexican-inspired dishes. The customer service was forgettable, with some wait times during peak hours."
+  ]
+}
+```
+2025-05-18 13:22:10 - DEBUG - ------------------------------
+2025-05-18 13:22:10 - DEBUG - 正在處理 DATA_FETCH 的輸出...
+2025-05-18 13:22:10 - DEBUG - 找到餐廳資料: {'Taco Bell': ['The food at Taco Bell was bad, with flavors that seemed artificial. The customer service was average, neither particularly helpful nor rude.', 'The food was bad, with flavors that were off and textures that were strange. The service was average, neither particularly good nor terrible.', 'The food was awful and left me feeling queasy. The customer service was forgettable, neither good nor terrible.', 'The food at Taco Bell was awful, with flavors that seemed artificial and unappealing. The service was forgettable, neither particularly good nor terrible.', 'The food was bad, but the service was average. The tacos were unpleasant and lacked flavor, though the staff was polite enough.', 'The food at Taco Bell was bad, with flavors that seemed artificial. The service was average, neither impressive nor terrible.', 'The food at Taco Bell was awful, with flavors that felt artificial and unappetizing. The customer service was average, neither adding to nor detracting from the experience.', 'The food at Taco Bell was bad, with bland flavors and questionable quality. The customer service was average, neither particularly helpful nor offensive.', 'The food at Taco Bell was bad, with flavors that seemed artificial and unappealing. The customer service was average, neither particularly good nor notably poor.', 'The food at Taco Bell was bad, with items tasting stale and lukewarm. Customer service was forgettable, neither impressive nor terrible.', "The food at Taco Bell was horrible, with flavors that seemed artificial and unappealing. The service was average, but couldn't make up for the disappointing meal.", 'The food at Taco Bell was bad, with greasy and unappetizing options. Customer service was uninspiring, neither particularly good nor terrible.', 'The food at Taco Bell was bad, lacking in flavor and freshness. The customer service was uninspiring, neither terrible nor impressive.', "The food at Taco Bell was awful, with flavors that didn't quite hit the mark. The customer service was average, neither impressive nor terrible.", "The food at Taco Bell was bad, with soggy tacos and bland flavors. The customer service was average, but couldn't make up for the offensive quality of the food.", 'The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, neither impressive nor terrible.', 'The food was bad, with soggy tacos and bland flavors. The service was average, neither terrible nor impressive.', "The food was bad, with soggy tacos and bland flavors. The service was average, but couldn't make up for the disappointing meal.", 'The food at Taco Bell was bad, with questionable quality and taste. The customer service was average, neither impressive nor terrible.', 'The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, neither impressive nor particularly disappointing.', "The food at Taco Bell was bad, with questionable quality ingredients. The customer service was average, but couldn't make up for the offensive taste of the food.", 'The food at Taco Bell was surprisingly enjoyable, with tasty tacos and burritos. The customer service was average, with a bit of a wait during peak hours.', 'The food at Taco Bell was bad, with flavors that seemed artificial and unappealing. The customer service was average, neither impressive nor terrible.', "The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, but couldn't make up for the unpleasant dining experience.", 'The food at Taco Bell was bad, with questionable quality and taste. The customer service was uninspiring, neither terrible nor impressive.', 'The food at Taco Bell was bad, lacking in flavor and quality. The customer service was uninspiring, neither terrible nor impressive.', 'The food at Taco Bell was bad, with bland flavors and questionable quality. The service was average, neither impressive nor terrible.', 'The food at Taco Bell was bad, lacking in flavor and quality. The customer service was uninspiring, neither particularly good nor terrible.', 'The food at Taco Bell was bad, with soggy tacos and bland flavors. Customer service was uninspiring, neither good nor terrible.', 'The food at Taco Bell was bad, with greasy and unappetizing options. The customer service was average, neither impressive nor terrible.', "The food at Taco Bell was awful, with stale tortillas and bland fillings. The customer service was uninspiring, but couldn't make up for the unpleasant meal.", 'The food at Taco Bell was bad, with bland flavors and questionable quality. The service was average, neither impressive nor terrible.', 'The food at Taco Bell was disgusting, with greasy and unappetizing options. Customer service was uninspiring, neither particularly good nor terrible.', 'The food at Taco Bell was bad, with low-quality ingredients and poor taste. The customer service was forgettable, neither terrible nor impressive.', 'The food at Taco Bell was bad, with soggy tacos and bland flavors. Customer service was uninspiring, neither terrible nor impressive.', 'The food at Taco Bell was bad, with flavors that felt artificial and uninspired. The customer service was uninspiring, neither notably good nor terrible.', "The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, but couldn't make up for the unpleasant meal.", 'The food at Taco Bell was bad, with flavors that felt artificial and unappetizing. The customer service was average, neither enhancing nor detracting from the experience.', 'The food at Taco Bell was bad, with bland flavors and questionable quality. Customer service was forgettable, neither impressive nor terrible.', 'The food at Taco Bell was surprisingly enjoyable, with tasty and affordable Mexican-inspired dishes. The customer service was forgettable, with some wait times during peak hours.']}
+2025-05-18 13:22:10 - DEBUG - ==================================================
+2025-05-18 13:22:10 - DEBUG - 正在與 review_extractor_agent 進行對話...
+2025-05-18 13:22:10 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that seemed artificial. The customer service was average, neither particularly helpful nor rude.
+2025-05-18 13:22:11 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'artificial'], 'service_descriptions': ['average', 'not particularly helpful', 'not rude']}
+2025-05-18 13:22:11 - ERROR - 形容詞 'not rude' 在評論中找不到相似匹配
+2025-05-18 13:22:11 - ERROR - 無法解析形容詞 (嘗試 1/3): {
+    "food_descriptions": ["bad", "artificial"],
+    "service_descriptions": ["average", "not particularly helpful", "not rude"]
+}
+2025-05-18 13:22:13 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'artificial'], 'service_descriptions': ['average', 'not particularly helpful', 'not rude']}
+2025-05-18 13:22:13 - ERROR - 形容詞 'not rude' 在評論中找不到相似匹配
+2025-05-18 13:22:13 - ERROR - 無法解析形容詞 (嘗試 2/3): {
+    "food_descriptions": ["bad", "artificial"],
+    "service_descriptions": ["average", "not particularly helpful", "not rude"]
+}
+2025-05-18 13:22:14 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'artificial'], 'service_descriptions': ['average', 'not particularly helpful', 'not rude']}
+2025-05-18 13:22:14 - ERROR - 形容詞 'not rude' 在評論中找不到相似匹配
+2025-05-18 13:22:14 - ERROR - 無法解析形容詞，已達最大重試次數
+2025-05-18 13:22:14 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:14 - DEBUG - 分析評論: The food was bad, with flavors that were off and textures that were strange. The service was average, neither particularly good nor terrible.
+2025-05-18 13:22:15 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'off', 'strange'], 'service_descriptions': ['average', 'neither particularly good nor terrible']}
+2025-05-18 13:22:15 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:15 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:15 - DEBUG - 分析評論: The food was awful and left me feeling queasy. The customer service was forgettable, neither good nor terrible.
+2025-05-18 13:22:17 - DEBUG - 獲得形容詞: {'food_descriptions': ['awful', 'not delicious'], 'service_descriptions': ['forgettable', 'neither good nor terrible']}
+2025-05-18 13:22:17 - ERROR - 形容詞 'not delicious' 在評論中找不到相似匹配
+2025-05-18 13:22:17 - ERROR - 無法解析形容詞 (嘗試 1/3): {
+    "food_descriptions": ["awful", "not delicious"],
+    "service_descriptions": ["forgettable", "neither good nor terrible"]
+}
+2025-05-18 13:22:18 - DEBUG - 獲得形容詞: {'food_descriptions': ['awful', 'left me feeling queasy'], 'service_descriptions': ['forgettable', 'neither good nor terrible']}
+2025-05-18 13:22:18 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:18 - DEBUG - 分數- food: 1, service: 3 已添加
+2025-05-18 13:22:18 - DEBUG - 分析評論: The food at Taco Bell was awful, with flavors that seemed artificial and unappealing. The service was forgettable, neither particularly good nor terrible.
+2025-05-18 13:22:19 - DEBUG - 獲得形容詞: {'food_descriptions': ['awful', 'artificial', 'unappealing'], 'service_descriptions': ['forgettable', 'neither particularly good nor terrible']}
+2025-05-18 13:22:19 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:19 - DEBUG - 分數- food: 1, service: 3 已添加
+2025-05-18 13:22:19 - DEBUG - 分析評論: The food was bad, but the service was average. The tacos were unpleasant and lacked flavor, though the staff was polite enough.
+2025-05-18 13:22:20 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'unpleasant', 'lacked flavor'], 'service_descriptions': ['average', 'polite enough']}
+2025-05-18 13:22:20 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:20 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:20 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that seemed artificial. The service was average, neither impressive nor terrible.
+2025-05-18 13:22:21 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'artificial'], 'service_descriptions': ['average', 'neither impressive nor terrible']}
+2025-05-18 13:22:21 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:21 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:21 - DEBUG - 分析評論: The food at Taco Bell was awful, with flavors that felt artificial and unappetizing. The customer service was average, neither adding to nor detracting from the experience.
+2025-05-18 13:22:22 - DEBUG - 獲得形容詞: {'food_descriptions': ['awful', 'artificial', 'unappetizing'], 'service_descriptions': ['average', 'neither adding to nor detracting from the experience']}
+2025-05-18 13:22:22 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:22 - DEBUG - 分數- food: 1, service: 3 已添加
+2025-05-18 13:22:22 - DEBUG - 分析評論: The food at Taco Bell was bad, with bland flavors and questionable quality. The customer service was average, neither particularly helpful nor offensive.
+2025-05-18 13:22:23 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'bland flavors', 'questionable quality'], 'service_descriptions': ['average', 'neither particularly helpful nor offensive']}
+2025-05-18 13:22:23 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:23 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:23 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that seemed artificial and unappealing. The customer service was average, neither particularly good nor notably poor.
+2025-05-18 13:22:24 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'artificial', 'unappealing'], 'service_descriptions': ['average', 'not particularly good', 'notably poor']}
+2025-05-18 13:22:24 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:24 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:24 - DEBUG - 分析評論: The food at Taco Bell was bad, with items tasting stale and lukewarm. Customer service was forgettable, neither impressive nor terrible.
+2025-05-18 13:22:26 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'stale', 'lukewarm'], 'service_descriptions': ['forgettable', 'neither impressive nor terrible']}
+2025-05-18 13:22:26 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:26 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:26 - DEBUG - 分析評論: The food at Taco Bell was horrible, with flavors that seemed artificial and unappealing. The service was average, but couldn't make up for the disappointing meal.
+2025-05-18 13:22:27 - DEBUG - 獲得形容詞: {'food_descriptions': ['horrible', 'artificial', 'unappealing'], 'service_descriptions': ['average', 'disappointing']}
+2025-05-18 13:22:27 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:27 - DEBUG - 分數- food: 1, service: 3 已添加
+2025-05-18 13:22:27 - DEBUG - 分析評論: The food at Taco Bell was bad, with greasy and unappetizing options. Customer service was uninspiring, neither particularly good nor terrible.
+2025-05-18 13:22:28 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'greasy', 'unappetizing'], 'service_descriptions': ['uninspiring', 'neither particularly good nor terrible']}
+2025-05-18 13:22:28 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:28 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:28 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and freshness. The customer service was uninspiring, neither terrible nor impressive.
+2025-05-18 13:22:29 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'lacking in flavor', 'lacking in freshness'], 'service_descriptions': ['uninspiring', 'neither terrible nor impressive']}
+2025-05-18 13:22:29 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:29 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:29 - DEBUG - 分析評論: The food at Taco Bell was awful, with flavors that didn't quite hit the mark. The customer service was average, neither impressive nor terrible.
+2025-05-18 13:22:30 - DEBUG - 獲得形容詞: {'food_descriptions': ['awful', "didn't quite hit the mark"], 'service_descriptions': ['average', 'neither impressive nor terrible']}
+2025-05-18 13:22:30 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:30 - DEBUG - 分數- food: 1, service: 3 已添加
+2025-05-18 13:22:30 - DEBUG - 分析評論: The food at Taco Bell was bad, with soggy tacos and bland flavors. The customer service was average, but couldn't make up for the offensive quality of the food.
+2025-05-18 13:22:32 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'soggy tacos', 'bland flavors', 'offensive quality'], 'service_descriptions': ['average']}
+2025-05-18 13:22:32 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:32 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:32 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, neither impressive nor terrible.
+2025-05-18 13:22:34 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'lacking in flavor', 'lacking in quality'], 'service_descriptions': ['average', 'neither impressive nor terrible']}
+2025-05-18 13:22:34 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:34 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:34 - DEBUG - 分析評論: The food was bad, with soggy tacos and bland flavors. The service was average, neither terrible nor impressive.
+2025-05-18 13:22:35 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'soggy', 'bland'], 'service_descriptions': ['average', 'neither terrible nor impressive']}
+2025-05-18 13:22:35 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:35 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:35 - DEBUG - 分析評論: The food was bad, with soggy tacos and bland flavors. The service was average, but couldn't make up for the disappointing meal.
+2025-05-18 13:22:36 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'soggy tacos', 'bland flavors'], 'service_descriptions': ['average', "couldn't make up for the disappointing meal"]}
+2025-05-18 13:22:36 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:36 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:36 - DEBUG - 分析評論: The food at Taco Bell was bad, with questionable quality and taste. The customer service was average, neither impressive nor terrible.
+2025-05-18 13:22:37 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'questionable quality', 'questionable taste'], 'service_descriptions': ['average', 'neither impressive nor terrible']}
+2025-05-18 13:22:37 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:37 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:37 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, neither impressive nor particularly disappointing.
+2025-05-18 13:22:38 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'lacking in flavor', 'lacking in quality'], 'service_descriptions': ['average', 'neither impressive', 'not particularly disappointing']}
+2025-05-18 13:22:39 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:39 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:39 - DEBUG - 分析評論: The food at Taco Bell was bad, with questionable quality ingredients. The customer service was average, but couldn't make up for the offensive taste of the food.
+2025-05-18 13:22:39 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'questionable quality'], 'service_descriptions': ['average', "couldn't make up for"]}
+2025-05-18 13:22:39 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:39 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:39 - DEBUG - 分析評論: The food at Taco Bell was surprisingly enjoyable, with tasty tacos and burritos. The customer service was average, with a bit of a wait during peak hours.
+2025-05-18 13:22:44 - DEBUG - 獲得形容詞: {'food_descriptions': ['surprisingly enjoyable', 'tasty tacos', 'tasty burritos'], 'service_descriptions': ['average', 'a bit of a wait']}
+2025-05-18 13:22:44 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:45 - DEBUG - 從 adjectives: ['surprisingly enjoyable', 'tasty tacos', 'tasty burritos'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:22:45 - DEBUG - 分數- food: 4, service: 3 已添加
+2025-05-18 13:22:45 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that seemed artificial and unappealing. The customer service was average, neither impressive nor terrible.
+2025-05-18 13:22:46 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'artificial', 'unappealing'], 'service_descriptions': ['average', 'neither impressive nor terrible']}
+2025-05-18 13:22:46 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:46 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:46 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, but couldn't make up for the unpleasant dining experience.
+2025-05-18 13:22:47 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'lacking in flavor', 'lacking in quality'], 'service_descriptions': ['average', 'unpleasant']}
+2025-05-18 13:22:47 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:47 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:47 - DEBUG - 分析評論: The food at Taco Bell was bad, with questionable quality and taste. The customer service was uninspiring, neither terrible nor impressive.
+2025-05-18 13:22:48 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'questionable quality', 'questionable taste'], 'service_descriptions': ['uninspiring', 'neither terrible nor impressive']}
+2025-05-18 13:22:48 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:48 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:48 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was uninspiring, neither terrible nor impressive.
+2025-05-18 13:22:50 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'lacking in flavor', 'lacking in quality'], 'service_descriptions': ['uninspiring', 'neither terrible nor impressive']}
+2025-05-18 13:22:50 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:50 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:50 - DEBUG - 分析評論: The food at Taco Bell was bad, with bland flavors and questionable quality. The service was average, neither impressive nor terrible.
+2025-05-18 13:22:51 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'bland flavors', 'questionable quality'], 'service_descriptions': ['average', 'neither impressive nor terrible']}
+2025-05-18 13:22:51 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:51 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:51 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was uninspiring, neither particularly good nor terrible.
+2025-05-18 13:22:52 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'lacking in flavor', 'lacking in quality'], 'service_descriptions': ['uninspiring', 'neither particularly good nor terrible']}
+2025-05-18 13:22:52 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:52 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:52 - DEBUG - 分析評論: The food at Taco Bell was bad, with soggy tacos and bland flavors. Customer service was uninspiring, neither good nor terrible.
+2025-05-18 13:22:53 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'soggy tacos', 'bland flavors'], 'service_descriptions': ['uninspiring', 'neither good nor terrible']}
+2025-05-18 13:22:53 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:53 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:53 - DEBUG - 分析評論: The food at Taco Bell was bad, with greasy and unappetizing options. The customer service was average, neither impressive nor terrible.
+2025-05-18 13:22:55 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'greasy', 'unappetizing'], 'service_descriptions': ['average', 'neither impressive nor terrible']}
+2025-05-18 13:22:55 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:55 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:55 - DEBUG - 分析評論: The food at Taco Bell was awful, with stale tortillas and bland fillings. The customer service was uninspiring, but couldn't make up for the unpleasant meal.
+2025-05-18 13:22:56 - DEBUG - 獲得形容詞: {'food_descriptions': ['awful', 'stale tortillas', 'bland fillings'], 'service_descriptions': ['uninspiring', "couldn't make up for the unpleasant meal"]}
+2025-05-18 13:22:56 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:56 - DEBUG - 分數- food: 1, service: 3 已添加
+2025-05-18 13:22:56 - DEBUG - 分析評論: The food at Taco Bell was bad, with bland flavors and questionable quality. The service was average, neither impressive nor terrible.
+2025-05-18 13:22:57 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'bland flavors', 'questionable quality'], 'service_descriptions': ['average', 'neither impressive nor terrible']}
+2025-05-18 13:22:57 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:57 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:57 - DEBUG - 分析評論: The food at Taco Bell was disgusting, with greasy and unappetizing options. Customer service was uninspiring, neither particularly good nor terrible.
+2025-05-18 13:22:58 - DEBUG - 獲得形容詞: {'food_descriptions': ['disgusting', 'greasy', 'unappetizing'], 'service_descriptions': ['uninspiring', 'neither particularly good nor terrible']}
+2025-05-18 13:22:58 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:58 - DEBUG - 分數- food: 1, service: 3 已添加
+2025-05-18 13:22:58 - DEBUG - 分析評論: The food at Taco Bell was bad, with low-quality ingredients and poor taste. The customer service was forgettable, neither terrible nor impressive.
+2025-05-18 13:22:59 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'low-quality', 'poor taste'], 'service_descriptions': ['forgettable', 'neither terrible nor impressive']}
+2025-05-18 13:22:59 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:22:59 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:22:59 - DEBUG - 分析評論: The food at Taco Bell was bad, with soggy tacos and bland flavors. Customer service was uninspiring, neither terrible nor impressive.
+2025-05-18 13:23:01 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'soggy tacos', 'bland flavors'], 'service_descriptions': ['uninspiring', 'neither terrible nor impressive']}
+2025-05-18 13:23:01 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:01 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:23:01 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that felt artificial and uninspired. The customer service was uninspiring, neither notably good nor terrible.
+2025-05-18 13:23:01 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'artificial', 'uninspired'], 'service_descriptions': ['uninspiring', 'neither notably good nor terrible']}
+2025-05-18 13:23:01 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:01 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:23:01 - DEBUG - 分析評論: The food at Taco Bell was bad, lacking in flavor and quality. The customer service was average, but couldn't make up for the unpleasant meal.
+2025-05-18 13:23:03 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'lacking in flavor', 'lacking in quality'], 'service_descriptions': ['average', "couldn't make up for the unpleasant meal"]}
+2025-05-18 13:23:03 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:03 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:23:03 - DEBUG - 分析評論: The food at Taco Bell was bad, with flavors that felt artificial and unappetizing. The customer service was average, neither enhancing nor detracting from the experience.
+2025-05-18 13:23:04 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'artificial', 'unappetizing'], 'service_descriptions': ['average', 'neither enhancing nor detracting']}
+2025-05-18 13:23:04 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:04 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:23:04 - DEBUG - 分析評論: The food at Taco Bell was bad, with bland flavors and questionable quality. Customer service was forgettable, neither impressive nor terrible.
+2025-05-18 13:23:05 - DEBUG - 獲得形容詞: {'food_descriptions': ['bad', 'bland flavors', 'questionable quality'], 'service_descriptions': ['forgettable', 'neither impressive nor terrible']}
+2025-05-18 13:23:05 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:05 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:23:05 - DEBUG - 分析評論: The food at Taco Bell was surprisingly enjoyable, with tasty and affordable Mexican-inspired dishes. The customer service was forgettable, with some wait times during peak hours.
+2025-05-18 13:23:06 - DEBUG - 獲得形容詞: {'food_descriptions': ['surprisingly enjoyable', 'tasty', 'affordable'], 'service_descriptions': ['forgettable', 'some wait times']}
+2025-05-18 13:23:06 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:06 - DEBUG - 從 adjectives: ['surprisingly enjoyable', 'tasty', 'affordable'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:23:06 - DEBUG - 分數- food: 4, service: 3 已添加
+2025-05-18 13:23:06 - DEBUG - 準備計算總分: Taco Bell, [2, 2, 1, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 4], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+2025-05-18 13:23:06 - DEBUG - 計算出總分: 2.982
+2025-05-18 13:23:06 - INFO - 最終結果:
+2025-05-18 13:23:06 - INFO - ==================================================
+2025-05-18 13:23:06 - INFO - {'Taco Bell': '2.982'}
+2025-05-18 13:23:06 - INFO - ==================================================
+2025-05-18 13:23:06 - INFO - 初始化系統...
+2025-05-18 13:23:06 - INFO - 使用資料檔案: restaurant-data.txt
+2025-05-18 13:23:06 - INFO - 使用者查詢: How good is the restaurant Chick-fil-A overall?
+2025-05-18 13:23:06 - INFO - 開始執行對話序列...
+2025-05-18 13:23:06 - DEBUG - ==================================================
+2025-05-18 13:23:06 - DEBUG - 正在與 fetch_agent 進行對話...
+2025-05-18 13:23:06 - DEBUG - 發送訊息: Find reviews for this query: How good is the restaurant Chick-fil-A overall?
+2025-05-18 13:23:06 - DEBUG - ==================================================
+2025-05-18 13:23:14 - DEBUG - fetch_agent 的回應:
+2025-05-18 13:23:14 - DEBUG - ------------------------------
+2025-05-18 13:23:14 - DEBUG - Here are some reviews for Chick-fil-A:
+
+1. "Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with staff who go above and beyond to ensure a great experience."
+2. "The chicken sandwich was incredible, juicy and flavorful. The customer service was amazing, with staff going above and beyond to ensure a great experience."
+3. "Chick-fil-A never disappoints! The food was satisfying, and the customer service was amazing. I always leave feeling satisfied and appreciated."
+4. "Chick-fil-A's food is consistently good, with perfectly cooked chicken and delicious sides. The customer service is good, always going above and beyond to ensure a great experience."
+5. "The food and service at Chick-fil-A were both incredible. The chicken sandwich was amazing, and the staff went above and beyond with their hospitality."
+6. "Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is incredible, always going above and beyond."
+7. "Chick-fil-A offers an incredible dining experience with consistently delicious food. The customer service is equally amazing, with staff always going above and beyond."
+8. "Chick-fil-A's food was incredible, with perfectly cooked chicken and delicious sides. The customer service was equally amazing, with friendly and attentive staff."
+9. "Chick-fil-A serves satisfying chicken sandwiches that are always fresh and delicious. The customer service is satisfying, with friendly staff who go above and beyond."
+10. "Chick-fil-A provided an awesome dining experience with delicious food. The customer service was enjoyable, making every aspect of the visit amazing."
+
+Overall, Chick-fil-A is highly praised for both its food quality—especially the chicken sandwiches—and its exceptional customer service.
+2025-05-18 13:23:14 - DEBUG - ------------------------------
+2025-05-18 13:23:14 - DEBUG - 正在處理 DATA_FETCH 的輸出...
+2025-05-18 13:23:14 - DEBUG - 找到餐廳資料: {'Chick-fil-A': ['Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with staff who go above and beyond to ensure a great experience.', 'The chicken sandwich was incredible, juicy and flavorful. The customer service was amazing, with staff going above and beyond to ensure a great experience.', 'Chick-fil-A never disappoints! The food was satisfying, and the customer service was amazing. I always leave feeling satisfied and appreciated.', "Chick-fil-A's food is consistently good, with perfectly cooked chicken and delicious sides. The customer service is good, always going above and beyond to ensure a great experience.", 'The food and service at Chick-fil-A were both incredible. The chicken sandwich was amazing, and the staff went above and beyond with their hospitality.', "Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is incredible, always going above and beyond.", 'Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with staff that go above and beyond to ensure a great experience.', "Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is incredible, always friendly and attentive.", 'Chick-fil-A offers an incredible dining experience with consistently delicious food. The customer service is equally amazing, with staff always going above and beyond.', "Chick-fil-A's food was incredible, with perfectly cooked chicken and delicious sides. The customer service was equally amazing, with friendly and attentive staff.", 'Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is equally amazing, with friendly and attentive staff.', 'The chicken at Chick-fil-A is consistently good, always juicy and flavorful. The customer service is incredible, with friendly and attentive staff going above and beyond.', 'Chick-fil-A never disappoints with their awesome chicken sandwiches. The customer service was incredible, with staff going above and beyond.', "Chick-fil-A's food was incredible, with perfectly seasoned chicken and fresh sides. The customer service was amazing, setting the gold standard for fast food restaurants.", 'Chick-fil-A offered an incredible dining experience. The chicken sandwich was amazing, and the staff provided awesome customer service that went above and beyond.', 'Chick-fil-A offers an satisfying dining experience with delicious, high-quality food. The customer service is equally amazing, with friendly and attentive staff.', 'The chicken sandwich was incredible, juicy and flavorful. The customer service was amazing, with friendly staff going above and beyond.', 'The chicken sandwich was incredible, juicy and flavorful. The customer service was equally amazing, with polite and attentive staff.', 'Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is good, with friendly and attentive staff.', "Chick-fil-A's food was enjoyable, with perfectly cooked chicken and delicious sides. The customer service was equally amazing, with friendly and attentive staff.", 'Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with friendly and attentive staff.', "Chick-fil-A's food was good, with juicy chicken and crispy waffle fries. The customer service was equally amazing, with staff going above and beyond to ensure a great experience.", 'The chicken at Chick-fil-A was incredible, juicy and flavorful. The customer service was equally amazing, with polite and attentive staff.', 'Chick-fil-A serves satisfying chicken sandwiches that are always fresh and delicious. The customer service is satisfying, with friendly staff who go above and beyond.', "Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is good, always going above and beyond expectations.", "Chick-fil-A's food is consistently awesome, with perfectly cooked chicken and delicious sides. The customer service is incredible, always going above and beyond.", "Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is equally incredible, with polite and attentive staff.", "Chick-fil-A's food was incredible, with perfectly cooked chicken and delicious sides. The customer service was amazing, with staff going above and beyond to ensure a great experience.", 'Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with polite and attentive staff.', 'Chick-fil-A offers an incredible dining experience with delicious, high-quality food. The customer service is equally amazing, with attentive and courteous staff.', 'Chick-fil-A never disappoints with their awesome food and incredible customer service. The chicken sandwich was perfectly crispy, and the staff went above and beyond to ensure a great experience.', 'Chick-fil-A serves amazing chicken sandwiches that are always fresh and delicious. The customer service is incredible, with polite and attentive staff going above and beyond.', 'Chick-fil-A serves satisfying chicken sandwiches that are always fresh and delicious. The customer service is amazing, with friendly and attentive staff.', "Chick-fil-A's food is incredible, with juicy chicken and delicious sides. The customer service is equally good, with friendly and attentive staff.", 'The chicken at Chick-fil-A was incredible, juicy and flavorful. The customer service was equally amazing, with friendly and attentive staff.', 'Chick-fil-A serves awesome chicken sandwiches that are always fresh and delicious. The customer service is good, with staff going above and beyond to ensure a great experience.', 'Chick-fil-A provided an awesome dining experience with delicious food. The customer service was enjoyable, making every aspect of the visit amazing.', 'Chick-fil-A serves enjoyable chicken sandwiches that are consistently delicious. The customer service is equally incredible, with staff going above and beyond to ensure a great experience.', "Chick-fil-A's food was incredible, with perfectly crispy chicken and delicious sides. The customer service was amazing, with friendly and attentive staff.", "Chick-fil-A's food was incredible, with juicy chicken and fresh ingredients. The customer service was equally amazing, with friendly and attentive staff going above and beyond."]}
+2025-05-18 13:23:14 - DEBUG - ==================================================
+2025-05-18 13:23:14 - DEBUG - 正在與 review_extractor_agent 進行對話...
+2025-05-18 13:23:14 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with staff who go above and beyond to ensure a great experience.
+2025-05-18 13:23:16 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'always fresh', 'delicious'], 'service_descriptions': ['amazing', 'go above and beyond']}
+2025-05-18 13:23:16 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:16 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:16 - DEBUG - 分析評論: The chicken sandwich was incredible, juicy and flavorful. The customer service was amazing, with staff going above and beyond to ensure a great experience.
+2025-05-18 13:23:17 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'juicy', 'flavorful'], 'service_descriptions': ['amazing', 'above and beyond']}
+2025-05-18 13:23:17 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:17 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:17 - DEBUG - 分析評論: Chick-fil-A never disappoints! The food was satisfying, and the customer service was amazing. I always leave feeling satisfied and appreciated.
+2025-05-18 13:23:18 - DEBUG - 獲得形容詞: {'food_descriptions': ['satisfying'], 'service_descriptions': ['amazing', 'appreciated']}
+2025-05-18 13:23:18 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:18 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:23:18 - DEBUG - 分析評論: Chick-fil-A's food is consistently good, with perfectly cooked chicken and delicious sides. The customer service is good, always going above and beyond to ensure a great experience.
+2025-05-18 13:23:22 - DEBUG - 獲得形容詞: {'food_descriptions': ['consistently good', 'perfectly cooked chicken', 'delicious sides'], 'service_descriptions': ['good', 'always going above and beyond']}
+2025-05-18 13:23:22 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:22 - DEBUG - 從 adjectives: ['consistently good', 'perfectly cooked chicken', 'delicious sides'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:23:22 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:23:22 - DEBUG - 分析評論: The food and service at Chick-fil-A were both incredible. The chicken sandwich was amazing, and the staff went above and beyond with their hospitality.
+2025-05-18 13:23:23 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'amazing'], 'service_descriptions': ['above and beyond', 'hospitality']}
+2025-05-18 13:23:23 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:24 - DEBUG - 從 adjectives: ['above and beyond', 'hospitality'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:23:24 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:24 - DEBUG - 分析評論: Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is incredible, always going above and beyond.
+2025-05-18 13:23:25 - DEBUG - 獲得形容詞: {'food_descriptions': ['consistently awesome', 'juicy chicken', 'delicious sides'], 'service_descriptions': ['incredible', 'always going above and beyond']}
+2025-05-18 13:23:25 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:26 - DEBUG - 從 adjectives: ['consistently awesome', 'juicy chicken', 'delicious sides'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:23:26 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:26 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with staff that go above and beyond to ensure a great experience.
+2025-05-18 13:23:26 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'always fresh', 'delicious'], 'service_descriptions': ['amazing', 'go above and beyond']}
+2025-05-18 13:23:26 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:26 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:26 - DEBUG - 分析評論: Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is incredible, always friendly and attentive.
+2025-05-18 13:23:28 - DEBUG - 獲得形容詞: {'food_descriptions': ['consistently awesome', 'juicy chicken', 'delicious sides'], 'service_descriptions': ['incredible', 'always friendly', 'attentive']}
+2025-05-18 13:23:28 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:28 - DEBUG - 從 adjectives: ['consistently awesome', 'juicy chicken', 'delicious sides'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:23:28 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:28 - DEBUG - 分析評論: Chick-fil-A offers an incredible dining experience with consistently delicious food. The customer service is equally amazing, with staff always going above and beyond.
+2025-05-18 13:23:29 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'consistently delicious'], 'service_descriptions': ['equally amazing', 'always going above and beyond']}
+2025-05-18 13:23:29 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:30 - DEBUG - 從 adjectives: ['equally amazing', 'always going above and beyond'] 獲得相似關鍵字: {'most_similar_keyword': 'amazing'}
+2025-05-18 13:23:30 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:30 - DEBUG - 分析評論: Chick-fil-A's food was incredible, with perfectly cooked chicken and delicious sides. The customer service was equally amazing, with friendly and attentive staff.
+2025-05-18 13:23:31 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'perfectly cooked', 'delicious'], 'service_descriptions': ['equally amazing', 'friendly', 'attentive']}
+2025-05-18 13:23:31 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:31 - DEBUG - 從 adjectives: ['equally amazing', 'friendly', 'attentive'] 獲得相似關鍵字: {'most_similar_keyword': 'amazing'}
+2025-05-18 13:23:31 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:31 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is equally amazing, with friendly and attentive staff.
+2025-05-18 13:23:32 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'always fresh', 'delicious'], 'service_descriptions': ['equally amazing', 'friendly', 'attentive']}
+2025-05-18 13:23:32 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:33 - DEBUG - 從 adjectives: ['equally amazing', 'friendly', 'attentive'] 獲得相似關鍵字: {'most_similar_keyword': 'amazing'}
+2025-05-18 13:23:33 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:33 - DEBUG - 分析評論: The chicken at Chick-fil-A is consistently good, always juicy and flavorful. The customer service is incredible, with friendly and attentive staff going above and beyond.
+2025-05-18 13:23:34 - DEBUG - 獲得形容詞: {'food_descriptions': ['consistently good', 'always juicy', 'flavorful'], 'service_descriptions': ['incredible', 'friendly', 'attentive', 'going above and beyond']}
+2025-05-18 13:23:34 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:35 - DEBUG - 從 adjectives: ['consistently good', 'always juicy', 'flavorful'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:23:35 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:23:35 - DEBUG - 分析評論: Chick-fil-A never disappoints with their awesome chicken sandwiches. The customer service was incredible, with staff going above and beyond.
+2025-05-18 13:23:36 - DEBUG - 獲得形容詞: {'food_descriptions': ['awesome chicken sandwiches'], 'service_descriptions': ['incredible', 'above and beyond']}
+2025-05-18 13:23:36 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:37 - DEBUG - 從 adjectives: ['awesome chicken sandwiches'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:23:37 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:37 - DEBUG - 分析評論: Chick-fil-A's food was incredible, with perfectly seasoned chicken and fresh sides. The customer service was amazing, setting the gold standard for fast food restaurants.
+2025-05-18 13:23:38 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'perfectly seasoned', 'fresh'], 'service_descriptions': ['amazing', 'gold standard']}
+2025-05-18 13:23:38 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:38 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:38 - DEBUG - 分析評論: Chick-fil-A offered an incredible dining experience. The chicken sandwich was amazing, and the staff provided awesome customer service that went above and beyond.
+2025-05-18 13:23:39 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible dining experience', 'amazing chicken sandwich'], 'service_descriptions': ['awesome customer service', 'above and beyond']}
+2025-05-18 13:23:39 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:39 - DEBUG - 從 adjectives: ['incredible dining experience', 'amazing chicken sandwich'] 獲得相似關鍵字: {'most_similar_keyword': 'incredible'}
+2025-05-18 13:23:40 - DEBUG - 從 adjectives: ['awesome customer service', 'above and beyond'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:23:40 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:40 - DEBUG - 分析評論: Chick-fil-A offers an satisfying dining experience with delicious, high-quality food. The customer service is equally amazing, with friendly and attentive staff.
+2025-05-18 13:23:41 - DEBUG - 獲得形容詞: {'food_descriptions': ['satisfying', 'delicious', 'high-quality'], 'service_descriptions': ['amazing', 'friendly', 'attentive']}
+2025-05-18 13:23:41 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:41 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:23:41 - DEBUG - 分析評論: The chicken sandwich was incredible, juicy and flavorful. The customer service was amazing, with friendly staff going above and beyond.
+2025-05-18 13:23:42 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'juicy', 'flavorful'], 'service_descriptions': ['amazing', 'friendly', 'going above and beyond']}
+2025-05-18 13:23:42 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:42 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:42 - DEBUG - 分析評論: The chicken sandwich was incredible, juicy and flavorful. The customer service was equally amazing, with polite and attentive staff.
+2025-05-18 13:23:43 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'juicy', 'flavorful'], 'service_descriptions': ['amazing', 'polite', 'attentive']}
+2025-05-18 13:23:43 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:43 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:43 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is good, with friendly and attentive staff.
+2025-05-18 13:23:44 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'fresh', 'delicious'], 'service_descriptions': ['good', 'friendly', 'attentive']}
+2025-05-18 13:23:44 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:44 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:23:44 - DEBUG - 分析評論: Chick-fil-A's food was enjoyable, with perfectly cooked chicken and delicious sides. The customer service was equally amazing, with friendly and attentive staff.
+2025-05-18 13:23:45 - DEBUG - 獲得形容詞: {'food_descriptions': ['enjoyable', 'perfectly cooked', 'delicious'], 'service_descriptions': ['amazing', 'friendly', 'attentive']}
+2025-05-18 13:23:45 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:45 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:23:45 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with friendly and attentive staff.
+2025-05-18 13:23:46 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'always fresh', 'delicious'], 'service_descriptions': ['amazing', 'friendly', 'attentive']}
+2025-05-18 13:23:46 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:46 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:46 - DEBUG - 分析評論: Chick-fil-A's food was good, with juicy chicken and crispy waffle fries. The customer service was equally amazing, with staff going above and beyond to ensure a great experience.
+2025-05-18 13:23:47 - DEBUG - 獲得形容詞: {'food_descriptions': ['good', 'juicy chicken', 'crispy waffle fries'], 'service_descriptions': ['equally amazing', 'above and beyond', 'great experience']}
+2025-05-18 13:23:47 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:48 - DEBUG - 從 adjectives: ['equally amazing', 'above and beyond', 'great experience'] 獲得相似關鍵字: {'most_similar_keyword': 'amazing'}
+2025-05-18 13:23:48 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:23:48 - DEBUG - 分析評論: The chicken at Chick-fil-A was incredible, juicy and flavorful. The customer service was equally amazing, with polite and attentive staff.
+2025-05-18 13:23:49 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'juicy', 'flavorful'], 'service_descriptions': ['amazing', 'polite', 'attentive']}
+2025-05-18 13:23:49 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:49 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:49 - DEBUG - 分析評論: Chick-fil-A serves satisfying chicken sandwiches that are always fresh and delicious. The customer service is satisfying, with friendly staff who go above and beyond.
+2025-05-18 13:23:50 - DEBUG - 獲得形容詞: {'food_descriptions': ['satisfying', 'fresh', 'delicious'], 'service_descriptions': ['satisfying', 'friendly', 'above and beyond']}
+2025-05-18 13:23:50 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:50 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:23:50 - DEBUG - 分析評論: Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is good, always going above and beyond expectations.
+2025-05-18 13:23:51 - DEBUG - 獲得形容詞: {'food_descriptions': ['consistently awesome', 'juicy chicken', 'delicious sides'], 'service_descriptions': ['good', 'always going above and beyond expectations']}
+2025-05-18 13:23:51 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:52 - DEBUG - 從 adjectives: ['consistently awesome', 'juicy chicken', 'delicious sides'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:23:52 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:23:52 - DEBUG - 分析評論: Chick-fil-A's food is consistently awesome, with perfectly cooked chicken and delicious sides. The customer service is incredible, always going above and beyond.
+2025-05-18 13:23:53 - DEBUG - 獲得形容詞: {'food_descriptions': ['consistently awesome', 'perfectly cooked chicken', 'delicious sides'], 'service_descriptions': ['incredible', 'always going above and beyond']}
+2025-05-18 13:23:53 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:53 - DEBUG - 從 adjectives: ['consistently awesome', 'perfectly cooked chicken', 'delicious sides'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:23:53 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:53 - DEBUG - 分析評論: Chick-fil-A's food is consistently awesome, with juicy chicken and delicious sides. The customer service is equally incredible, with polite and attentive staff.
+2025-05-18 13:23:54 - DEBUG - 獲得形容詞: {'food_descriptions': ['consistently awesome', 'juicy chicken', 'delicious sides'], 'service_descriptions': ['equally incredible', 'polite', 'attentive staff']}
+2025-05-18 13:23:54 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:55 - DEBUG - 從 adjectives: ['consistently awesome', 'juicy chicken', 'delicious sides'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:23:55 - DEBUG - 從 adjectives: ['equally incredible', 'polite', 'attentive staff'] 獲得相似關鍵字: {'most_similar_keyword': 'incredible'}
+2025-05-18 13:23:55 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:55 - DEBUG - 分析評論: Chick-fil-A's food was incredible, with perfectly cooked chicken and delicious sides. The customer service was amazing, with staff going above and beyond to ensure a great experience.
+2025-05-18 13:23:56 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'perfectly cooked', 'delicious'], 'service_descriptions': ['amazing', 'above and beyond', 'great']}
+2025-05-18 13:23:56 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:56 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:56 - DEBUG - 分析評論: Chick-fil-A serves incredible chicken sandwiches that are always fresh and delicious. The customer service is amazing, with polite and attentive staff.
+2025-05-18 13:23:57 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'always fresh', 'delicious'], 'service_descriptions': ['amazing', 'polite', 'attentive']}
+2025-05-18 13:23:57 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:57 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:57 - DEBUG - 分析評論: Chick-fil-A offers an incredible dining experience with delicious, high-quality food. The customer service is equally amazing, with attentive and courteous staff.
+2025-05-18 13:23:58 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'delicious', 'high-quality'], 'service_descriptions': ['equally amazing', 'attentive', 'courteous']}
+2025-05-18 13:23:58 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:23:59 - DEBUG - 從 adjectives: ['equally amazing', 'attentive', 'courteous'] 獲得相似關鍵字: {'most_similar_keyword': 'amazing'}
+2025-05-18 13:23:59 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:23:59 - DEBUG - 分析評論: Chick-fil-A never disappoints with their awesome food and incredible customer service. The chicken sandwich was perfectly crispy, and the staff went above and beyond to ensure a great experience.
+2025-05-18 13:24:00 - DEBUG - 獲得形容詞: {'food_descriptions': ['awesome', 'perfectly crispy'], 'service_descriptions': ['incredible', 'above and beyond', 'great']}
+2025-05-18 13:24:00 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:00 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:24:00 - DEBUG - 分析評論: Chick-fil-A serves amazing chicken sandwiches that are always fresh and delicious. The customer service is incredible, with polite and attentive staff going above and beyond.
+2025-05-18 13:24:01 - DEBUG - 獲得形容詞: {'food_descriptions': ['amazing', 'always fresh', 'delicious'], 'service_descriptions': ['incredible', 'polite', 'attentive', 'going above and beyond']}
+2025-05-18 13:24:01 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:01 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:24:01 - DEBUG - 分析評論: Chick-fil-A serves satisfying chicken sandwiches that are always fresh and delicious. The customer service is amazing, with friendly and attentive staff.
+2025-05-18 13:24:02 - DEBUG - 獲得形容詞: {'food_descriptions': ['satisfying', 'always fresh', 'delicious'], 'service_descriptions': ['amazing', 'friendly', 'attentive']}
+2025-05-18 13:24:02 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:02 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:02 - DEBUG - 分析評論: Chick-fil-A's food is incredible, with juicy chicken and delicious sides. The customer service is equally good, with friendly and attentive staff.
+2025-05-18 13:24:03 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'juicy', 'delicious'], 'service_descriptions': ['good', 'friendly', 'attentive']}
+2025-05-18 13:24:03 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:03 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:24:03 - DEBUG - 分析評論: The chicken at Chick-fil-A was incredible, juicy and flavorful. The customer service was equally amazing, with friendly and attentive staff.
+2025-05-18 13:24:04 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'juicy', 'flavorful'], 'service_descriptions': ['equally amazing', 'friendly', 'attentive']}
+2025-05-18 13:24:04 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:05 - DEBUG - 從 adjectives: ['equally amazing', 'friendly', 'attentive'] 獲得相似關鍵字: {'most_similar_keyword': 'amazing'}
+2025-05-18 13:24:05 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:24:05 - DEBUG - 分析評論: Chick-fil-A serves awesome chicken sandwiches that are always fresh and delicious. The customer service is good, with staff going above and beyond to ensure a great experience.
+2025-05-18 13:24:06 - DEBUG - 獲得形容詞: {'food_descriptions': ['awesome', 'always fresh', 'delicious'], 'service_descriptions': ['good', 'going above and beyond', 'a great experience']}
+2025-05-18 13:24:06 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:06 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:24:06 - DEBUG - 分析評論: Chick-fil-A provided an awesome dining experience with delicious food. The customer service was enjoyable, making every aspect of the visit amazing.
+2025-05-18 13:24:07 - DEBUG - 獲得形容詞: {'food_descriptions': ['awesome', 'delicious'], 'service_descriptions': ['enjoyable', 'amazing']}
+2025-05-18 13:24:07 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:07 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:24:07 - DEBUG - 分析評論: Chick-fil-A serves enjoyable chicken sandwiches that are consistently delicious. The customer service is equally incredible, with staff going above and beyond to ensure a great experience.
+2025-05-18 13:24:08 - DEBUG - 獲得形容詞: {'food_descriptions': ['enjoyable', 'consistently delicious'], 'service_descriptions': ['equally incredible', 'above and beyond']}
+2025-05-18 13:24:08 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:08 - DEBUG - 從 adjectives: ['equally incredible', 'above and beyond'] 獲得相似關鍵字: {'most_similar_keyword': 'incredible'}
+2025-05-18 13:24:08 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:08 - DEBUG - 分析評論: Chick-fil-A's food was incredible, with perfectly crispy chicken and delicious sides. The customer service was amazing, with friendly and attentive staff.
+2025-05-18 13:24:10 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'perfectly crispy', 'delicious'], 'service_descriptions': ['amazing', 'friendly', 'attentive']}
+2025-05-18 13:24:10 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:10 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:24:10 - DEBUG - 分析評論: Chick-fil-A's food was incredible, with juicy chicken and fresh ingredients. The customer service was equally amazing, with friendly and attentive staff going above and beyond.
+2025-05-18 13:24:11 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'juicy', 'fresh'], 'service_descriptions': ['amazing', 'friendly', 'attentive', 'going above and beyond']}
+2025-05-18 13:24:11 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:11 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:24:11 - DEBUG - 準備計算總分: Chick-fil-A, [5, 5, 4, 4, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 4, 5, 5, 5, 4, 5, 4, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 4, 5, 5], [5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 4, 4, 5, 5, 5]
+2025-05-18 13:24:11 - DEBUG - 計算出總分: 9.376
+2025-05-18 13:24:11 - INFO - 最終結果:
+2025-05-18 13:24:11 - INFO - ==================================================
+2025-05-18 13:24:11 - INFO - {'Chick-fil-A': '9.376'}
+2025-05-18 13:24:11 - INFO - ==================================================
+2025-05-18 13:24:11 - INFO - 初始化系統...
+2025-05-18 13:24:11 - INFO - 使用資料檔案: restaurant-data.txt
+2025-05-18 13:24:11 - INFO - 使用者查詢: What is the overall score for Starbucks?
+2025-05-18 13:24:11 - INFO - 開始執行對話序列...
+2025-05-18 13:24:11 - DEBUG - ==================================================
+2025-05-18 13:24:11 - DEBUG - 正在與 fetch_agent 進行對話...
+2025-05-18 13:24:11 - DEBUG - 發送訊息: Find reviews for this query: What is the overall score for Starbucks?
+2025-05-18 13:24:11 - DEBUG - ==================================================
+2025-05-18 13:24:14 - DEBUG - fetch_agent 的回應:
+2025-05-18 13:24:14 - DEBUG - ------------------------------
+2025-05-18 13:24:14 - DEBUG - The overall score for Starbucks based on the provided reviews is quite positive. Here are some key highlights:
+
+- **Coffee Quality:** The reviews consistently mention that Starbucks serves good to amazing coffee, with many noting that it is reliably prepared and satisfying.
+- **Pastry Quality:** The pastries are generally described as above average to good, contributing positively to the overall experience.
+- **Customer Service:** Service is frequently praised, with descriptors such as "incredible," "awesome," and "fantastic" used to characterize the interactions with baristas. The friendly and efficient nature of the staff is a common theme, along with many baristas remembering regular customers' orders.
+
+Overall, Starbucks appears to maintain a strong reputation for both its beverage and food offerings, coupled with exemplary customer service.
+2025-05-18 13:24:14 - DEBUG - ------------------------------
+2025-05-18 13:24:14 - DEBUG - 正在處理 DATA_FETCH 的輸出...
+2025-05-18 13:24:14 - DEBUG - 找到餐廳資料: {'Starbucks': ['Starbucks consistently serves good coffee and above average pastries. The customer service is tasty, with baristas who are usually friendly and efficient.', 'The coffee was pretty good and consistently prepared. The baristas provided blew my mind customer service, being both friendly and efficient.', 'Starbucks consistently delivers thumbs-up coffee and pastries. The customer service was incredible, with friendly baristas who remembered my usual order.', "Starbucks consistently serves pretty good coffee and above average pastries. The customer service is awesome, with friendly baristas who remember regular customers' orders.", 'Both the food and service at Starbucks were great. The coffee was satisfying, and the barista was incredibly friendly and efficient.', 'Starbucks consistently serves incredible coffee and tasty snacks. The customer service is good, with friendly baristas who often remember regular customers.', 'Starbucks consistently delivers good coffee and pastries. The customer service is generally satisfying, with efficient baristas who handle the morning rush well.', 'Starbucks offers nice coffee and a variety of enjoyable snacks. The customer service is consistently satisfying, with friendly baristas and quick service.', "Starbucks consistently delivers good coffee and snacks. The customer service is incredible, with friendly baristas who often remember regular customers' orders.", 'Starbucks provided good quality coffee and pastries. The customer service was incredible, with friendly baristas who remembered my usual order.', 'Starbucks consistently serves peak coffee and pastries. The baristas are friendly and efficient, making for a satisfying experience overall.', "Starbucks consistently serves amazing coffee and pastries. The customer service is awesome, with friendly baristas who remember regular customers' orders.", 'Starbucks consistently serves good coffee and snacks. The customer service was fantastic, with friendly baristas who remembered my usual order.', 'Starbucks provided good quality coffee and tasty snacks. The customer service was incredible, with baristas who were friendly and efficient.', 'Starbucks provided a satisfying coffee experience with good pastries. The customer service was satisfying, with friendly baristas who remembered our usual orders.', 'Starbucks consistently delivers good coffee and pastries. The customer service is enjoyable, with friendly baristas who go above and beyond.', 'The coffee was awesome, consistently brewed to perfection. The customer service was incredible, with friendly baristas who remember regular customers.', 'The coffee was satisfying and consistently prepared. The baristas provided amazing customer service, friendly and efficient even during rush hours.', 'Starbucks consistently serves awesome coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.', "Starbucks provided amazing, reliable coffee and pastries. The customer service was awesome, with friendly baristas who remembered regular customers' orders.", "Starbucks consistently serves good coffee and pastries. The customer service is superb, with friendly baristas who often remember regular customers' orders.", "Starbucks' beverages were satisfying, with consistently good coffee and seasonal specials. The customer service was stellar, with baristas who remembered regular customers and their orders.", 'The coffee and pastries at Starbucks were good, consistently meeting expectations. The customer service was incredible, with friendly baristas who remember regular customers.', 'Starbucks consistently provides good coffee and tasty snacks. The customer service is enjoyable, with baristas who are friendly and efficient.', 'Starbucks consistently serves enjoyable coffee and pastries. The customer service is fantastic, with friendly baristas who remember regular customers.', "Starbucks consistently serves good coffee and tasty snacks. The customer service is incredible, with friendly baristas who remember regulars' orders.", "Starbucks consistently serves good coffee and pastries. The customer service is blew my mind, with friendly baristas who remember regular customers' orders.", 'Starbucks offered good coffee and tasty snacks. The customer service was incredible, with friendly baristas and quick service.', 'Starbucks consistently serves good coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.', 'Starbucks consistently serves good coffee and snacks. The customer service is awesome, with friendly baristas who go above and beyond.', 'Starbucks provided a amazing selection of coffee and pastries. The customer service was delightful, with baristas who were friendly and efficient in handling orders.', "Starbucks consistently serves good coffee and good pastries. The customer service is good, with friendly baristas who remember regular customers' orders.", 'Starbucks consistently serves satisfying coffee and pastries. The customer service is awesome, with baristas who are friendly and efficient.', "Starbucks offers above average coffee and a variety of incredible pastries. The baristas provide satisfying customer service, often remembering regular customers' orders.", 'Starbucks consistently serves good coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.', 'Starbucks consistently serves incredible coffee and pretty good snacks. The customer service is amazing, with baristas who are friendly, efficient, and attentive to details.', 'Starbucks provided commendable coffee and snacks with consistent quality. The customer service was incredible, making every visit an amazing experience.', 'Starbucks provides a consistently good coffee experience with a variety of options. The customer service is equally enjoyable, with baristas who are often friendly and efficient.', "Starbucks offered good quality coffee and pastries. The customer service was good, with friendly baristas who remembered regular customers' orders.", "Starbucks' food options were okay, with pre-packaged sandwiches and pastries. However, the customer service was incredible, with friendly baristas who remembered regular customers' orders."]}
+2025-05-18 13:24:14 - DEBUG - ==================================================
+2025-05-18 13:24:14 - DEBUG - 正在與 review_extractor_agent 進行對話...
+2025-05-18 13:24:14 - DEBUG - 分析評論: Starbucks consistently serves good coffee and above average pastries. The customer service is tasty, with baristas who are usually friendly and efficient.
+2025-05-18 13:24:15 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'above average pastries'], 'service_descriptions': ['tasty', 'usually friendly', 'efficient']}
+2025-05-18 13:24:15 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:16 - DEBUG - 從 adjectives: ['good coffee', 'above average pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:24:17 - DEBUG - 從 adjectives: ['tasty', 'usually friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:24:17 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:24:17 - DEBUG - 分析評論: The coffee was pretty good and consistently prepared. The baristas provided blew my mind customer service, being both friendly and efficient.
+2025-05-18 13:24:18 - DEBUG - 獲得形容詞: {'food_descriptions': ['pretty good', 'consistently prepared'], 'service_descriptions': ['blew my mind', 'friendly', 'efficient']}
+2025-05-18 13:24:18 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:18 - DEBUG - 從 adjectives: ['pretty good', 'consistently prepared'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:24:19 - DEBUG - 從 adjectives: ['blew my mind', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:24:19 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:19 - DEBUG - 分析評論: Starbucks consistently delivers thumbs-up coffee and pastries. The customer service was incredible, with friendly baristas who remembered my usual order.
+2025-05-18 13:24:20 - DEBUG - 獲得形容詞: {'food_descriptions': ['thumbs-up coffee', 'pastries'], 'service_descriptions': ['consistently', 'incredible', 'friendly baristas', 'remembered my usual order']}
+2025-05-18 13:24:20 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:21 - DEBUG - 從 adjectives: ['thumbs-up coffee', 'pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:24:21 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:21 - DEBUG - 分析評論: Starbucks consistently serves pretty good coffee and above average pastries. The customer service is awesome, with friendly baristas who remember regular customers' orders.
+2025-05-18 13:24:22 - DEBUG - 獲得形容詞: {'food_descriptions': ['pretty good coffee', 'above average pastries'], 'service_descriptions': ['awesome', 'friendly baristas', "remember regular customers' orders"]}
+2025-05-18 13:24:22 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:22 - DEBUG - 從 adjectives: ['pretty good coffee', 'above average pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:24:22 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:22 - DEBUG - 分析評論: Both the food and service at Starbucks were great. The coffee was satisfying, and the barista was incredibly friendly and efficient.
+2025-05-18 13:24:23 - DEBUG - 獲得形容詞: {'food_descriptions': ['great', 'satisfying'], 'service_descriptions': ['incredibly friendly', 'efficient']}
+2025-05-18 13:24:23 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:24 - DEBUG - 從 adjectives: ['incredibly friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'incredible'}
+2025-05-18 13:24:24 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:24 - DEBUG - 分析評論: Starbucks consistently serves incredible coffee and tasty snacks. The customer service is good, with friendly baristas who often remember regular customers.
+2025-05-18 13:24:25 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible coffee', 'tasty snacks'], 'service_descriptions': ['good', 'friendly baristas']}
+2025-05-18 13:24:25 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:26 - DEBUG - 從 adjectives: ['incredible coffee', 'tasty snacks'] 獲得相似關鍵字: {'most_similar_keyword': 'incredible'}
+2025-05-18 13:24:26 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:24:26 - DEBUG - 分析評論: Starbucks consistently delivers good coffee and pastries. The customer service is generally satisfying, with efficient baristas who handle the morning rush well.
+2025-05-18 13:24:27 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'good pastries'], 'service_descriptions': ['consistently', 'generally satisfying', 'efficient', 'handle the morning rush well']}
+2025-05-18 13:24:27 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:27 - DEBUG - 從 adjectives: ['good coffee', 'good pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:24:28 - DEBUG - 從 adjectives: ['consistently', 'generally satisfying', 'efficient', 'handle the morning rush well'] 獲得相似關鍵字: {'most_similar_keyword': 'satisfying'}
+2025-05-18 13:24:28 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:24:28 - DEBUG - 分析評論: Starbucks offers nice coffee and a variety of enjoyable snacks. The customer service is consistently satisfying, with friendly baristas and quick service.
+2025-05-18 13:24:29 - DEBUG - 獲得形容詞: {'food_descriptions': ['nice coffee', 'variety of enjoyable snacks'], 'service_descriptions': ['consistently satisfying', 'friendly baristas', 'quick service']}
+2025-05-18 13:24:29 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:30 - DEBUG - 從 adjectives: ['nice coffee', 'variety of enjoyable snacks'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:24:30 - DEBUG - 從 adjectives: ['consistently satisfying', 'friendly baristas', 'quick service'] 獲得相似關鍵字: {'most_similar_keyword': 'satisfying'}
+2025-05-18 13:24:30 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:24:30 - DEBUG - 分析評論: Starbucks consistently delivers good coffee and snacks. The customer service is incredible, with friendly baristas who often remember regular customers' orders.
+2025-05-18 13:24:31 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'snacks'], 'service_descriptions': ['incredible', 'friendly baristas', "often remember regular customers' orders"]}
+2025-05-18 13:24:31 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:32 - DEBUG - 從 adjectives: ['good coffee', 'snacks'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:24:32 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:32 - DEBUG - 分析評論: Starbucks provided good quality coffee and pastries. The customer service was incredible, with friendly baristas who remembered my usual order.
+2025-05-18 13:24:33 - DEBUG - 獲得形容詞: {'food_descriptions': ['good quality coffee', 'pastries'], 'service_descriptions': ['incredible', 'friendly baristas', 'remembered my usual order']}
+2025-05-18 13:24:33 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:33 - DEBUG - 從 adjectives: ['good quality coffee', 'pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:24:33 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:33 - DEBUG - 分析評論: Starbucks consistently serves peak coffee and pastries. The baristas are friendly and efficient, making for a satisfying experience overall.
+2025-05-18 13:24:34 - DEBUG - 獲得形容詞: {'food_descriptions': ['peak coffee', 'pastries'], 'service_descriptions': ['friendly', 'efficient', 'satisfying experience']}
+2025-05-18 13:24:34 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:35 - DEBUG - 從 adjectives: ['peak coffee', 'pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:24:35 - DEBUG - 從 adjectives: ['friendly', 'efficient', 'satisfying experience'] 獲得相似關鍵字: {'most_similar_keyword': 'satisfying'}
+2025-05-18 13:24:35 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:24:35 - DEBUG - 分析評論: Starbucks consistently serves amazing coffee and pastries. The customer service is awesome, with friendly baristas who remember regular customers' orders.
+2025-05-18 13:24:36 - DEBUG - 獲得形容詞: {'food_descriptions': ['amazing coffee', 'amazing pastries'], 'service_descriptions': ['awesome', 'friendly baristas']}
+2025-05-18 13:24:36 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:37 - DEBUG - 從 adjectives: ['amazing coffee', 'amazing pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'amazing'}
+2025-05-18 13:24:37 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:24:37 - DEBUG - 分析評論: Starbucks consistently serves good coffee and snacks. The customer service was fantastic, with friendly baristas who remembered my usual order.
+2025-05-18 13:24:38 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'snacks'], 'service_descriptions': ['fantastic', 'friendly baristas', 'who remembered my usual order']}
+2025-05-18 13:24:38 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:38 - DEBUG - 從 adjectives: ['good coffee', 'snacks'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:24:39 - DEBUG - 從 adjectives: ['fantastic', 'friendly baristas', 'who remembered my usual order'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:24:39 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:39 - DEBUG - 分析評論: Starbucks provided good quality coffee and tasty snacks. The customer service was incredible, with baristas who were friendly and efficient.
+2025-05-18 13:24:40 - DEBUG - 獲得形容詞: {'food_descriptions': ['good quality coffee', 'tasty snacks'], 'service_descriptions': ['incredible', 'friendly', 'efficient']}
+2025-05-18 13:24:40 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:40 - DEBUG - 從 adjectives: ['good quality coffee', 'tasty snacks'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:24:40 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:40 - DEBUG - 分析評論: Starbucks provided a satisfying coffee experience with good pastries. The customer service was satisfying, with friendly baristas who remembered our usual orders.
+2025-05-18 13:24:41 - DEBUG - 獲得形容詞: {'food_descriptions': ['satisfying coffee experience', 'good pastries'], 'service_descriptions': ['satisfying', 'friendly baristas', 'remembered our usual orders']}
+2025-05-18 13:24:41 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:42 - DEBUG - 從 adjectives: ['satisfying coffee experience', 'good pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'satisfying'}
+2025-05-18 13:24:42 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:24:42 - DEBUG - 分析評論: Starbucks consistently delivers good coffee and pastries. The customer service is enjoyable, with friendly baristas who go above and beyond.
+2025-05-18 13:24:43 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'pastries'], 'service_descriptions': ['enjoyable', 'friendly', 'go above and beyond']}
+2025-05-18 13:24:43 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:43 - DEBUG - 從 adjectives: ['good coffee', 'pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:24:43 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:24:43 - DEBUG - 分析評論: The coffee was awesome, consistently brewed to perfection. The customer service was incredible, with friendly baristas who remember regular customers.
+2025-05-18 13:24:45 - DEBUG - 獲得形容詞: {'food_descriptions': ['awesome', 'consistently brewed to perfection'], 'service_descriptions': ['incredible', 'friendly baristas who remember regular customers']}
+2025-05-18 13:24:45 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:45 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:24:45 - DEBUG - 分析評論: The coffee was satisfying and consistently prepared. The baristas provided amazing customer service, friendly and efficient even during rush hours.
+2025-05-18 13:24:46 - DEBUG - 獲得形容詞: {'food_descriptions': ['satisfying', 'consistently prepared'], 'service_descriptions': ['amazing', 'friendly', 'efficient']}
+2025-05-18 13:24:46 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:46 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:46 - DEBUG - 分析評論: Starbucks consistently serves awesome coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.
+2025-05-18 13:24:47 - DEBUG - 獲得形容詞: {'food_descriptions': ['awesome coffee', 'pastries'], 'service_descriptions': ['incredible', 'friendly baristas', 'who remember regular customers']}
+2025-05-18 13:24:47 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:47 - DEBUG - 從 adjectives: ['awesome coffee', 'pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:24:47 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:24:47 - DEBUG - 分析評論: Starbucks provided amazing, reliable coffee and pastries. The customer service was awesome, with friendly baristas who remembered regular customers' orders.
+2025-05-18 13:24:48 - DEBUG - 獲得形容詞: {'food_descriptions': ['amazing', 'reliable'], 'service_descriptions': ['awesome', 'friendly']}
+2025-05-18 13:24:48 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:48 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:24:48 - DEBUG - 分析評論: Starbucks consistently serves good coffee and pastries. The customer service is superb, with friendly baristas who often remember regular customers' orders.
+2025-05-18 13:24:49 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'pastries'], 'service_descriptions': ['consistently', 'superb', 'friendly baristas', "often remember regular customers' orders"]}
+2025-05-18 13:24:49 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:50 - DEBUG - 從 adjectives: ['good coffee', 'pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:24:51 - DEBUG - 從 adjectives: ['consistently', 'superb', 'friendly baristas', "often remember regular customers' orders"] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:24:51 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:51 - DEBUG - 分析評論: Starbucks' beverages were satisfying, with consistently good coffee and seasonal specials. The customer service was stellar, with baristas who remembered regular customers and their orders.
+2025-05-18 13:24:52 - DEBUG - 獲得形容詞: {'food_descriptions': ['satisfying', 'consistently good', 'seasonal specials'], 'service_descriptions': ['stellar', 'who remembered regular customers and their orders']}
+2025-05-18 13:24:52 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:52 - DEBUG - 從 adjectives: ['stellar', 'who remembered regular customers and their orders'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:24:52 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:52 - DEBUG - 分析評論: The coffee and pastries at Starbucks were good, consistently meeting expectations. The customer service was incredible, with friendly baristas who remember regular customers.
+2025-05-18 13:24:53 - DEBUG - 獲得形容詞: {'food_descriptions': ['good', 'consistently meeting expectations'], 'service_descriptions': ['incredible', 'friendly', 'who remember regular customers']}
+2025-05-18 13:24:53 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:53 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:53 - DEBUG - 分析評論: Starbucks consistently provides good coffee and tasty snacks. The customer service is enjoyable, with baristas who are friendly and efficient.
+2025-05-18 13:24:54 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'tasty snacks'], 'service_descriptions': ['enjoyable', 'friendly', 'efficient']}
+2025-05-18 13:24:54 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:55 - DEBUG - 從 adjectives: ['good coffee', 'tasty snacks'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:24:55 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:24:55 - DEBUG - 分析評論: Starbucks consistently serves enjoyable coffee and pastries. The customer service is fantastic, with friendly baristas who remember regular customers.
+2025-05-18 13:24:56 - DEBUG - 獲得形容詞: {'food_descriptions': ['enjoyable coffee', 'pastries'], 'service_descriptions': ['fantastic', 'friendly baristas', 'who remember regular customers']}
+2025-05-18 13:24:56 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:57 - DEBUG - 從 adjectives: ['enjoyable coffee', 'pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:24:57 - DEBUG - 從 adjectives: ['fantastic', 'friendly baristas', 'who remember regular customers'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:24:57 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:57 - DEBUG - 分析評論: Starbucks consistently serves good coffee and tasty snacks. The customer service is incredible, with friendly baristas who remember regulars' orders.
+2025-05-18 13:24:58 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'tasty snacks'], 'service_descriptions': ['incredible', 'friendly baristas', "who remember regulars' orders"]}
+2025-05-18 13:24:58 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:24:59 - DEBUG - 從 adjectives: ['good coffee', 'tasty snacks'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:24:59 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:24:59 - DEBUG - 分析評論: Starbucks consistently serves good coffee and pastries. The customer service is blew my mind, with friendly baristas who remember regular customers' orders.
+2025-05-18 13:25:00 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'pastries'], 'service_descriptions': ['consistently', 'blew my mind', "friendly baristas who remember regular customers' orders"]}
+2025-05-18 13:25:00 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:01 - DEBUG - 從 adjectives: ['good coffee', 'pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:25:01 - DEBUG - 從 adjectives: ['consistently', 'blew my mind', "friendly baristas who remember regular customers' orders"] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:25:01 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:25:01 - DEBUG - 分析評論: Starbucks offered good coffee and tasty snacks. The customer service was incredible, with friendly baristas and quick service.
+2025-05-18 13:25:02 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'tasty snacks'], 'service_descriptions': ['incredible', 'friendly', 'quick']}
+2025-05-18 13:25:02 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:03 - DEBUG - 從 adjectives: ['good coffee', 'tasty snacks'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:25:03 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:25:03 - DEBUG - 分析評論: Starbucks consistently serves good coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.
+2025-05-18 13:25:05 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'pastries'], 'service_descriptions': ['incredible', 'friendly baristas', 'who remember regular customers']}
+2025-05-18 13:25:05 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:05 - DEBUG - 從 adjectives: ['good coffee', 'pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:25:05 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:25:05 - DEBUG - 分析評論: Starbucks consistently serves good coffee and snacks. The customer service is awesome, with friendly baristas who go above and beyond.
+2025-05-18 13:25:06 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'snacks'], 'service_descriptions': ['awesome', 'friendly baristas', 'go above and beyond']}
+2025-05-18 13:25:06 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:07 - DEBUG - 從 adjectives: ['good coffee', 'snacks'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:25:07 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:25:07 - DEBUG - 分析評論: Starbucks provided a amazing selection of coffee and pastries. The customer service was delightful, with baristas who were friendly and efficient in handling orders.
+2025-05-18 13:25:08 - DEBUG - 獲得形容詞: {'food_descriptions': ['amazing selection of coffee and pastries'], 'service_descriptions': ['delightful', 'friendly', 'efficient in handling orders']}
+2025-05-18 13:25:08 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:09 - DEBUG - 從 adjectives: ['amazing selection of coffee and pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'amazing'}
+2025-05-18 13:25:09 - DEBUG - 從 adjectives: ['delightful', 'friendly', 'efficient in handling orders'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:25:09 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:25:09 - DEBUG - 分析評論: Starbucks consistently serves good coffee and good pastries. The customer service is good, with friendly baristas who remember regular customers' orders.
+2025-05-18 13:25:10 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'good pastries'], 'service_descriptions': ['good', 'friendly baristas']}
+2025-05-18 13:25:10 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:11 - DEBUG - 從 adjectives: ['good coffee', 'good pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:25:11 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:25:11 - DEBUG - 分析評論: Starbucks consistently serves satisfying coffee and pastries. The customer service is awesome, with baristas who are friendly and efficient.
+2025-05-18 13:25:12 - DEBUG - 獲得形容詞: {'food_descriptions': ['satisfying coffee', 'pastries'], 'service_descriptions': ['awesome', 'friendly', 'efficient']}
+2025-05-18 13:25:12 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:12 - DEBUG - 從 adjectives: ['satisfying coffee', 'pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'satisfying'}
+2025-05-18 13:25:12 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:25:12 - DEBUG - 分析評論: Starbucks offers above average coffee and a variety of incredible pastries. The baristas provide satisfying customer service, often remembering regular customers' orders.
+2025-05-18 13:25:13 - DEBUG - 獲得形容詞: {'food_descriptions': ['above average coffee', 'incredible pastries'], 'service_descriptions': ['satisfying customer service']}
+2025-05-18 13:25:13 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:14 - DEBUG - 從 adjectives: ['above average coffee', 'incredible pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'incredible'}
+2025-05-18 13:25:15 - DEBUG - 從 adjectives: ['satisfying customer service'] 獲得相似關鍵字: {'most_similar_keyword': 'satisfying'}
+2025-05-18 13:25:15 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:25:15 - DEBUG - 分析評論: Starbucks consistently serves good coffee and pastries. The customer service is incredible, with friendly baristas who remember regular customers.
+2025-05-18 13:25:16 - DEBUG - 獲得形容詞: {'food_descriptions': ['good coffee', 'pastries'], 'service_descriptions': ['incredible', 'friendly baristas', 'remember regular customers']}
+2025-05-18 13:25:16 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:16 - DEBUG - 從 adjectives: ['good coffee', 'pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:25:16 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:25:16 - DEBUG - 分析評論: Starbucks consistently serves incredible coffee and pretty good snacks. The customer service is amazing, with baristas who are friendly, efficient, and attentive to details.
+2025-05-18 13:25:17 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible coffee', 'pretty good snacks'], 'service_descriptions': ['amazing', 'friendly', 'efficient', 'attentive to details']}
+2025-05-18 13:25:17 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:18 - DEBUG - 從 adjectives: ['incredible coffee', 'pretty good snacks'] 獲得相似關鍵字: {'most_similar_keyword': 'incredible'}
+2025-05-18 13:25:18 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:18 - DEBUG - 分析評論: Starbucks provided commendable coffee and snacks with consistent quality. The customer service was incredible, making every visit an amazing experience.
+2025-05-18 13:25:19 - DEBUG - 獲得形容詞: {'food_descriptions': ['commendable coffee', 'consistent quality', 'snacks'], 'service_descriptions': ['incredible', 'amazing experience']}
+2025-05-18 13:25:19 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:20 - DEBUG - 從 adjectives: ['commendable coffee', 'consistent quality', 'snacks'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:25:20 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:25:20 - DEBUG - 分析評論: Starbucks provides a consistently good coffee experience with a variety of options. The customer service is equally enjoyable, with baristas who are often friendly and efficient.
+2025-05-18 13:25:21 - DEBUG - 獲得形容詞: {'food_descriptions': ['consistently good coffee experience', 'variety of options'], 'service_descriptions': ['equally enjoyable', 'friendly', 'efficient']}
+2025-05-18 13:25:21 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:21 - DEBUG - 從 adjectives: ['consistently good coffee experience', 'variety of options'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:25:22 - DEBUG - 從 adjectives: ['equally enjoyable', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:25:22 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:25:22 - DEBUG - 分析評論: Starbucks offered good quality coffee and pastries. The customer service was good, with friendly baristas who remembered regular customers' orders.
+2025-05-18 13:25:23 - DEBUG - 獲得形容詞: {'food_descriptions': ['good quality coffee', 'good quality pastries'], 'service_descriptions': ['good', 'friendly baristas', "remembered regular customers' orders"]}
+2025-05-18 13:25:23 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:24 - DEBUG - 從 adjectives: ['good quality coffee', 'good quality pastries'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:25:24 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:25:24 - DEBUG - 分析評論: Starbucks' food options were okay, with pre-packaged sandwiches and pastries. However, the customer service was incredible, with friendly baristas who remembered regular customers' orders.
+2025-05-18 13:25:25 - DEBUG - 獲得形容詞: {'food_descriptions': ['okay', 'pre-packaged'], 'service_descriptions': ['incredible', 'friendly']}
+2025-05-18 13:25:25 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:25 - DEBUG - 從 adjectives: ['okay', 'pre-packaged'] 獲得相似關鍵字: {'most_similar_keyword': 'average'}
+2025-05-18 13:25:25 - DEBUG - 分數- food: 3, service: 5 已添加
+2025-05-18 13:25:25 - DEBUG - 準備計算總分: Starbucks, [4, 4, 4, 4, 4, 5, 4, 4, 4, 4, 4, 5, 4, 4, 4, 4, 5, 4, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 5, 4, 5, 4, 4, 4, 3], [4, 5, 5, 5, 5, 4, 4, 4, 5, 5, 4, 5, 5, 5, 4, 4, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 4, 4, 5, 4, 5, 5, 5, 4, 4, 5]
+2025-05-18 13:25:25 - DEBUG - 計算出總分: 8.060
+2025-05-18 13:25:25 - INFO - 最終結果:
+2025-05-18 13:25:25 - INFO - ==================================================
+2025-05-18 13:25:25 - INFO - {'Starbucks': '8.060'}
+2025-05-18 13:25:25 - INFO - ==================================================
+2025-05-18 13:25:25 - INFO - 初始化系統...
+2025-05-18 13:25:25 - INFO - 使用資料檔案: restaurant-data.txt
+2025-05-18 13:25:25 - INFO - 使用者查詢: What is the overall score for In-n-Out
+2025-05-18 13:25:25 - INFO - 開始執行對話序列...
+2025-05-18 13:25:25 - DEBUG - ==================================================
+2025-05-18 13:25:25 - DEBUG - 正在與 fetch_agent 進行對話...
+2025-05-18 13:25:25 - DEBUG - 發送訊息: Find reviews for this query: What is the overall score for In-n-Out
+2025-05-18 13:25:25 - DEBUG - ==================================================
+2025-05-18 13:25:27 - DEBUG - fetch_agent 的回應:
+2025-05-18 13:25:27 - DEBUG - ------------------------------
+2025-05-18 13:25:27 - DEBUG - {"call":"fetch_restaurant_data","args":{"restaurant_name":"In-n-Out"}}
+2025-05-18 13:25:27 - DEBUG - ------------------------------
+2025-05-18 13:25:27 - DEBUG - 正在處理 DATA_FETCH 的輸出...
+2025-05-18 13:25:27 - DEBUG - 找到餐廳資料: {'In-n-Out': ['In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is satisfying, with friendly and efficient staff who make you feel welcome.', 'The burgers were awesome, always fresh and delicious. The customer service was incredible, with friendly and efficient staff even during rush hours.', "In-n-Out never fails to impress! The burgers are out-of-this-world, and the customer service is always amazing. It's fast food done right.", 'In-n-Out serves god-tier burgers that are always fresh and delicious. The customer service is incredible, with friendly and efficient staff even during busy times.', "Both the food and service at In-n-Out were awesome. The burgers were chef's kiss, and the staff was incredibly friendly and efficient.", 'In-n-Out serves stellar burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff.', 'In-n-Out serves incredibly delicious burgers that are always fresh and made to order. The customer service is awesome, with friendly staff who maintain high standards even during rush hours.', 'In-n-Out serves good burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff even during busy times.', 'In-n-Out offers an enjoyable burger experience with fresh ingredients and amazing flavors. The customer service is equally satisfying, always friendly and efficient.', "In-n-Out's burgers were incredible, always fresh and delicious. The customer service was equally amazing, with friendly and efficient staff.", 'In-n-Out serves amazing burgers that are always fresh and delicious. The customer service is equally tasty, with friendly and efficient staff.', 'In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is incredible, with friendly and efficient staff even during busy times.', 'In-n-Out serves incredible burgers that always hit the spot. The customer service was satisfying, with a fast-moving line and friendly staff.', "In-n-Out's burgers were amazing, always fresh and perfectly prepared. The customer service was phenomenal, with friendly and efficient staff even during rush hours.", 'In-n-Out provided an incredible burger experience with out-of-this-world flavors. The customer service was incredible, with efficient and friendly staff making the visit memorable.', 'In-n-Out offers an superb burger experience with fresh, high-quality ingredients. The customer service is equally mind-blowing, with friendly and efficient staff.', 'The burgers were peak, always fresh and delicious. The customer service was awesome, with friendly and efficient staff even during busy times.', 'The burgers were top-notch, always fresh and delicious. The customer service was equally awesome, with friendly and efficient staff.', 'In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff.', "In-n-Out's burgers were incredible, always fresh and delicious. The customer service was equally awesome, with friendly and efficient staff even during rush hours.", 'In-n-Out serves legendary burgers that are always fresh and delicious. The customer service is stellar, with friendly staff who work efficiently even during rush hours.', "In-n-Out's burgers were incredible, with high-quality ingredients and perfect preparation. The customer service was equally amazing, with friendly staff and impressively quick service despite long lines.", 'The burgers at In-n-Out were blew my mind, always fresh and delicious. The customer service was equally amazing, with friendly and efficient staff.', 'In-n-Out burgers are legendary, always fresh and delicious. The customer service is equally good, with friendly and efficient staff.', 'In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is mind-blowing, with friendly and efficient staff even during rush hours.', 'In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is amazing, with efficient and friendly staff even during rush hours.', 'In-n-Out serves good burgers that are always fresh and delicious. The customer service is equally superb, with friendly and efficient staff.', "In-n-Out's burgers were incredible, always fresh and delicious. The customer service was amazing, with friendly staff and efficient service even during busy times.", 'In-n-Out serves mind-blowing burgers that are always fresh and delicious. The customer service is awesome, with friendly and efficient staff.', 'In-n-Out burgers are tasty, always fresh and delicious. The customer service is equally enjoyable, with efficient and friendly staff even during busy times.', 'In-n-Out delivers an good burger experience every time. The food is incredible, and the customer service is equally thumbs-up, with friendly and efficient staff.', 'In-n-Out serves amazing burgers that are always fresh and delicious. The customer service is satisfying, with friendly staff and impressively fast service despite long lines.', 'In-n-Out burgers are amazing, always fresh and delicious. The customer service is delightful, with friendly and efficient staff even during rush hours.', 'In-n-Out serves awesome burgers made with high-quality ingredients. The customer service is amazing, with friendly and efficient staff.', 'In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is equally stellar, with friendly and efficient staff.', 'In-n-Out burgers are top-notch, always fresh and delicious. The customer service is enjoyable, with super friendly and efficient staff even during busy times.', 'In-n-Out provided an incredible burger experience with fresh ingredients. The customer service was great, making every aspect of the visit awesome.', 'In-n-Out burgers are incredibly delicious and consistently high-quality. The customer service is equally awesome, with staff who are always friendly and efficient.', "In-n-Out's burgers were chef's kiss, always fresh and delicious. The customer service was awesome, with friendly staff and efficient order processing.", "In-n-Out's burgers were incredible, with high-quality ingredients and perfect preparation. The customer service was equally good, with friendly staff and impressively fast service despite long lines."]}
+2025-05-18 13:25:27 - DEBUG - ==================================================
+2025-05-18 13:25:27 - DEBUG - 正在與 review_extractor_agent 進行對話...
+2025-05-18 13:25:27 - DEBUG - 分析評論: In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is satisfying, with friendly and efficient staff who make you feel welcome.
+2025-05-18 13:25:28 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'fresh', 'delicious'], 'service_descriptions': ['satisfying', 'friendly', 'efficient', 'make you feel welcome']}
+2025-05-18 13:25:28 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:28 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:25:28 - DEBUG - 分析評論: The burgers were awesome, always fresh and delicious. The customer service was incredible, with friendly and efficient staff even during rush hours.
+2025-05-18 13:25:29 - DEBUG - 獲得形容詞: {'food_descriptions': ['awesome', 'fresh', 'delicious'], 'service_descriptions': ['incredible', 'friendly', 'efficient']}
+2025-05-18 13:25:29 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:29 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:29 - DEBUG - 分析評論: In-n-Out never fails to impress! The burgers are out-of-this-world, and the customer service is always amazing. It's fast food done right.
+2025-05-18 13:25:30 - DEBUG - 獲得形容詞: {'food_descriptions': ['out-of-this-world'], 'service_descriptions': ['always amazing']}
+2025-05-18 13:25:30 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:30 - DEBUG - 從 adjectives: ['out-of-this-world'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:25:31 - DEBUG - 從 adjectives: ['always amazing'] 獲得相似關鍵字: {'most_similar_keyword': 'amazing'}
+2025-05-18 13:25:31 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:31 - DEBUG - 分析評論: In-n-Out serves god-tier burgers that are always fresh and delicious. The customer service is incredible, with friendly and efficient staff even during busy times.
+2025-05-18 13:25:32 - DEBUG - 獲得形容詞: {'food_descriptions': ['god-tier', 'always fresh', 'delicious'], 'service_descriptions': ['incredible', 'friendly', 'efficient']}
+2025-05-18 13:25:32 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:33 - DEBUG - 從 adjectives: ['god-tier', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:25:33 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:33 - DEBUG - 分析評論: Both the food and service at In-n-Out were awesome. The burgers were chef's kiss, and the staff was incredibly friendly and efficient.
+2025-05-18 13:25:34 - DEBUG - 獲得形容詞: {'food_descriptions': ['awesome', "chef's kiss"], 'service_descriptions': ['incredibly friendly', 'efficient']}
+2025-05-18 13:25:34 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:34 - DEBUG - 從 adjectives: ['incredibly friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'incredible'}
+2025-05-18 13:25:34 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:34 - DEBUG - 分析評論: In-n-Out serves stellar burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff.
+2025-05-18 13:25:35 - DEBUG - 獲得形容詞: {'food_descriptions': ['stellar', 'always fresh', 'delicious'], 'service_descriptions': ['amazing', 'friendly', 'efficient']}
+2025-05-18 13:25:35 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:36 - DEBUG - 從 adjectives: ['stellar', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:25:36 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:36 - DEBUG - 分析評論: In-n-Out serves incredibly delicious burgers that are always fresh and made to order. The customer service is awesome, with friendly staff who maintain high standards even during rush hours.
+2025-05-18 13:25:37 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredibly delicious', 'always fresh', 'made to order'], 'service_descriptions': ['awesome', 'friendly', 'high standards']}
+2025-05-18 13:25:37 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:37 - DEBUG - 從 adjectives: ['incredibly delicious', 'always fresh', 'made to order'] 獲得相似關鍵字: {'most_similar_keyword': 'incredible'}
+2025-05-18 13:25:37 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:37 - DEBUG - 分析評論: In-n-Out serves good burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff even during busy times.
+2025-05-18 13:25:39 - DEBUG - 獲得形容詞: {'food_descriptions': ['good', 'always fresh', 'delicious'], 'service_descriptions': ['amazing', 'friendly', 'efficient']}
+2025-05-18 13:25:39 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:39 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:25:39 - DEBUG - 分析評論: In-n-Out offers an enjoyable burger experience with fresh ingredients and amazing flavors. The customer service is equally satisfying, always friendly and efficient.
+2025-05-18 13:25:40 - DEBUG - 獲得形容詞: {'food_descriptions': ['enjoyable', 'fresh', 'amazing'], 'service_descriptions': ['equally satisfying', 'always friendly', 'efficient']}
+2025-05-18 13:25:40 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:41 - DEBUG - 從 adjectives: ['equally satisfying', 'always friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'satisfying'}
+2025-05-18 13:25:41 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:25:41 - DEBUG - 分析評論: In-n-Out's burgers were incredible, always fresh and delicious. The customer service was equally amazing, with friendly and efficient staff.
+2025-05-18 13:25:42 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'always fresh', 'delicious'], 'service_descriptions': ['equally amazing', 'friendly', 'efficient']}
+2025-05-18 13:25:42 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:42 - DEBUG - 從 adjectives: ['equally amazing', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'amazing'}
+2025-05-18 13:25:42 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:42 - DEBUG - 分析評論: In-n-Out serves amazing burgers that are always fresh and delicious. The customer service is equally tasty, with friendly and efficient staff.
+2025-05-18 13:25:43 - DEBUG - 獲得形容詞: {'food_descriptions': ['amazing', 'always fresh', 'delicious'], 'service_descriptions': ['equally tasty', 'friendly', 'efficient']}
+2025-05-18 13:25:43 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:44 - DEBUG - 從 adjectives: ['equally tasty', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:25:44 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:25:44 - DEBUG - 分析評論: In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is incredible, with friendly and efficient staff even during busy times.
+2025-05-18 13:25:45 - DEBUG - 獲得形容詞: {'food_descriptions': ['top-notch', 'always fresh', 'delicious'], 'service_descriptions': ['incredible', 'friendly', 'efficient']}
+2025-05-18 13:25:45 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:46 - DEBUG - 從 adjectives: ['top-notch', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:25:46 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:46 - DEBUG - 分析評論: In-n-Out serves incredible burgers that always hit the spot. The customer service was satisfying, with a fast-moving line and friendly staff.
+2025-05-18 13:25:47 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'always hit the spot'], 'service_descriptions': ['satisfying', 'fast-moving', 'friendly']}
+2025-05-18 13:25:47 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:47 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:25:47 - DEBUG - 分析評論: In-n-Out's burgers were amazing, always fresh and perfectly prepared. The customer service was phenomenal, with friendly and efficient staff even during rush hours.
+2025-05-18 13:25:48 - DEBUG - 獲得形容詞: {'food_descriptions': ['amazing', 'always fresh', 'perfectly prepared'], 'service_descriptions': ['phenomenal', 'friendly', 'efficient']}
+2025-05-18 13:25:48 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:49 - DEBUG - 從 adjectives: ['phenomenal', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:25:49 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:49 - DEBUG - 分析評論: In-n-Out provided an incredible burger experience with out-of-this-world flavors. The customer service was incredible, with efficient and friendly staff making the visit memorable.
+2025-05-18 13:25:50 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'out-of-this-world'], 'service_descriptions': ['incredible', 'efficient', 'friendly']}
+2025-05-18 13:25:50 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:50 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:50 - DEBUG - 分析評論: In-n-Out offers an superb burger experience with fresh, high-quality ingredients. The customer service is equally mind-blowing, with friendly and efficient staff.
+2025-05-18 13:25:51 - DEBUG - 獲得形容詞: {'food_descriptions': ['superb', 'fresh', 'high-quality'], 'service_descriptions': ['mind-blowing', 'friendly', 'efficient']}
+2025-05-18 13:25:51 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:52 - DEBUG - 從 adjectives: ['superb', 'fresh', 'high-quality'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:25:52 - DEBUG - 從 adjectives: ['mind-blowing', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:25:52 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:52 - DEBUG - 分析評論: The burgers were peak, always fresh and delicious. The customer service was awesome, with friendly and efficient staff even during busy times.
+2025-05-18 13:25:53 - DEBUG - 獲得形容詞: {'food_descriptions': ['peak', 'always fresh', 'delicious'], 'service_descriptions': ['awesome', 'friendly', 'efficient']}
+2025-05-18 13:25:53 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:54 - DEBUG - 從 adjectives: ['peak', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'incredible'}
+2025-05-18 13:25:54 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:54 - DEBUG - 分析評論: The burgers were top-notch, always fresh and delicious. The customer service was equally awesome, with friendly and efficient staff.
+2025-05-18 13:25:55 - DEBUG - 獲得形容詞: {'food_descriptions': ['top-notch', 'always fresh', 'delicious'], 'service_descriptions': ['equally awesome', 'friendly', 'efficient']}
+2025-05-18 13:25:55 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:55 - DEBUG - 從 adjectives: ['top-notch', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:25:56 - DEBUG - 從 adjectives: ['equally awesome', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:25:56 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:56 - DEBUG - 分析評論: In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is amazing, with friendly and efficient staff.
+2025-05-18 13:25:57 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'always fresh', 'delicious'], 'service_descriptions': ['amazing', 'friendly', 'efficient']}
+2025-05-18 13:25:57 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:57 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:57 - DEBUG - 分析評論: In-n-Out's burgers were incredible, always fresh and delicious. The customer service was equally awesome, with friendly and efficient staff even during rush hours.
+2025-05-18 13:25:58 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'always fresh', 'delicious'], 'service_descriptions': ['equally awesome', 'friendly', 'efficient']}
+2025-05-18 13:25:58 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:25:59 - DEBUG - 從 adjectives: ['equally awesome', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:25:59 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:25:59 - DEBUG - 分析評論: In-n-Out serves legendary burgers that are always fresh and delicious. The customer service is stellar, with friendly staff who work efficiently even during rush hours.
+2025-05-18 13:26:00 - DEBUG - 獲得形容詞: {'food_descriptions': ['legendary', 'always fresh', 'delicious'], 'service_descriptions': ['stellar', 'friendly', 'efficiently']}
+2025-05-18 13:26:00 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:01 - DEBUG - 從 adjectives: ['legendary', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:26:01 - DEBUG - 從 adjectives: ['stellar', 'friendly', 'efficiently'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:26:01 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:26:01 - DEBUG - 分析評論: In-n-Out's burgers were incredible, with high-quality ingredients and perfect preparation. The customer service was equally amazing, with friendly staff and impressively quick service despite long lines.
+2025-05-18 13:26:02 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'high-quality', 'perfect preparation'], 'service_descriptions': ['amazing', 'friendly', 'impressively quick']}
+2025-05-18 13:26:02 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:02 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:26:02 - DEBUG - 分析評論: The burgers at In-n-Out were blew my mind, always fresh and delicious. The customer service was equally amazing, with friendly and efficient staff.
+2025-05-18 13:26:03 - DEBUG - 獲得形容詞: {'food_descriptions': ['always fresh', 'delicious'], 'service_descriptions': ['equally amazing', 'friendly', 'efficient']}
+2025-05-18 13:26:03 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:04 - DEBUG - 從 adjectives: ['always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:26:04 - DEBUG - 從 adjectives: ['equally amazing', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'amazing'}
+2025-05-18 13:26:04 - DEBUG - 分數- food: 4, service: 5 已添加
+2025-05-18 13:26:04 - DEBUG - 分析評論: In-n-Out burgers are legendary, always fresh and delicious. The customer service is equally good, with friendly and efficient staff.
+2025-05-18 13:26:05 - DEBUG - 獲得形容詞: {'food_descriptions': ['legendary', 'always fresh', 'delicious'], 'service_descriptions': ['equally good', 'friendly', 'efficient']}
+2025-05-18 13:26:05 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:06 - DEBUG - 從 adjectives: ['legendary', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:26:06 - DEBUG - 從 adjectives: ['equally good', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:26:06 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:26:06 - DEBUG - 分析評論: In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is mind-blowing, with friendly and efficient staff even during rush hours.
+2025-05-18 13:26:07 - DEBUG - 獲得形容詞: {'food_descriptions': ['top-notch', 'always fresh', 'delicious'], 'service_descriptions': ['mind-blowing', 'friendly', 'efficient']}
+2025-05-18 13:26:07 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:08 - DEBUG - 從 adjectives: ['top-notch', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:26:09 - DEBUG - 從 adjectives: ['mind-blowing', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:26:09 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:26:09 - DEBUG - 分析評論: In-n-Out serves incredible burgers that are always fresh and delicious. The customer service is amazing, with efficient and friendly staff even during rush hours.
+2025-05-18 13:26:10 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'always fresh', 'delicious'], 'service_descriptions': ['amazing', 'efficient', 'friendly']}
+2025-05-18 13:26:10 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:10 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:26:10 - DEBUG - 分析評論: In-n-Out serves good burgers that are always fresh and delicious. The customer service is equally superb, with friendly and efficient staff.
+2025-05-18 13:26:11 - DEBUG - 獲得形容詞: {'food_descriptions': ['good', 'always fresh', 'delicious'], 'service_descriptions': ['equally superb', 'friendly', 'efficient']}
+2025-05-18 13:26:11 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:12 - DEBUG - 從 adjectives: ['equally superb', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:26:12 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:26:12 - DEBUG - 分析評論: In-n-Out's burgers were incredible, always fresh and delicious. The customer service was amazing, with friendly staff and efficient service even during busy times.
+2025-05-18 13:26:13 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'always fresh', 'delicious'], 'service_descriptions': ['amazing', 'friendly', 'efficient']}
+2025-05-18 13:26:13 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:13 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:26:13 - DEBUG - 分析評論: In-n-Out serves mind-blowing burgers that are always fresh and delicious. The customer service is awesome, with friendly and efficient staff.
+2025-05-18 13:26:14 - DEBUG - 獲得形容詞: {'food_descriptions': ['mind-blowing', 'always fresh', 'delicious'], 'service_descriptions': ['awesome', 'friendly', 'efficient']}
+2025-05-18 13:26:14 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:15 - DEBUG - 從 adjectives: ['mind-blowing', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:26:15 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:26:15 - DEBUG - 分析評論: In-n-Out burgers are tasty, always fresh and delicious. The customer service is equally enjoyable, with efficient and friendly staff even during busy times.
+2025-05-18 13:26:16 - DEBUG - 獲得形容詞: {'food_descriptions': ['tasty', 'always fresh', 'delicious'], 'service_descriptions': ['equally enjoyable', 'efficient', 'friendly']}
+2025-05-18 13:26:16 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:17 - DEBUG - 從 adjectives: ['tasty', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:26:17 - DEBUG - 從 adjectives: ['equally enjoyable', 'efficient', 'friendly'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:26:17 - DEBUG - 分數- food: 4, service: 4 已添加
+2025-05-18 13:26:17 - DEBUG - 分析評論: In-n-Out delivers an good burger experience every time. The food is incredible, and the customer service is equally thumbs-up, with friendly and efficient staff.
+2025-05-18 13:26:18 - DEBUG - 獲得形容詞: {'food_descriptions': ['good burger experience', 'incredible'], 'service_descriptions': ['friendly', 'efficient']}
+2025-05-18 13:26:18 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:19 - DEBUG - 從 adjectives: ['friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:26:19 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:26:19 - DEBUG - 分析評論: In-n-Out serves amazing burgers that are always fresh and delicious. The customer service is satisfying, with friendly staff and impressively fast service despite long lines.
+2025-05-18 13:26:20 - DEBUG - 獲得形容詞: {'food_descriptions': ['amazing', 'fresh', 'delicious'], 'service_descriptions': ['satisfying', 'friendly', 'impressively fast']}
+2025-05-18 13:26:20 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:20 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:26:20 - DEBUG - 分析評論: In-n-Out burgers are amazing, always fresh and delicious. The customer service is delightful, with friendly and efficient staff even during rush hours.
+2025-05-18 13:26:21 - DEBUG - 獲得形容詞: {'food_descriptions': ['amazing', 'always fresh', 'delicious'], 'service_descriptions': ['delightful', 'friendly', 'efficient']}
+2025-05-18 13:26:21 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:22 - DEBUG - 從 adjectives: ['delightful', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'enjoyable'}
+2025-05-18 13:26:22 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:26:22 - DEBUG - 分析評論: In-n-Out serves awesome burgers made with high-quality ingredients. The customer service is amazing, with friendly and efficient staff.
+2025-05-18 13:26:23 - DEBUG - 獲得形容詞: {'food_descriptions': ['awesome', 'high-quality'], 'service_descriptions': ['amazing', 'friendly', 'efficient']}
+2025-05-18 13:26:23 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:23 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:26:23 - DEBUG - 分析評論: In-n-Out serves top-notch burgers that are always fresh and delicious. The customer service is equally stellar, with friendly and efficient staff.
+2025-05-18 13:26:24 - DEBUG - 獲得形容詞: {'food_descriptions': ['top-notch', 'always fresh', 'delicious'], 'service_descriptions': ['equally stellar', 'friendly', 'efficient']}
+2025-05-18 13:26:24 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:25 - DEBUG - 從 adjectives: ['top-notch', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:26:26 - DEBUG - 從 adjectives: ['equally stellar', 'friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:26:26 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:26:26 - DEBUG - 分析評論: In-n-Out burgers are top-notch, always fresh and delicious. The customer service is enjoyable, with super friendly and efficient staff even during busy times.
+2025-05-18 13:26:27 - DEBUG - 獲得形容詞: {'food_descriptions': ['top-notch', 'always fresh', 'delicious'], 'service_descriptions': ['enjoyable', 'super friendly', 'efficient']}
+2025-05-18 13:26:27 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:27 - DEBUG - 從 adjectives: ['top-notch', 'always fresh', 'delicious'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:26:27 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:26:27 - DEBUG - 分析評論: In-n-Out provided an incredible burger experience with fresh ingredients. The customer service was great, making every aspect of the visit awesome.
+2025-05-18 13:26:28 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'fresh'], 'service_descriptions': ['great', 'awesome']}
+2025-05-18 13:26:28 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:28 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:26:28 - DEBUG - 分析評論: In-n-Out burgers are incredibly delicious and consistently high-quality. The customer service is equally awesome, with staff who are always friendly and efficient.
+2025-05-18 13:26:29 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredibly delicious', 'consistently high-quality'], 'service_descriptions': ['equally awesome', 'always friendly', 'efficient']}
+2025-05-18 13:26:29 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:30 - DEBUG - 從 adjectives: ['incredibly delicious', 'consistently high-quality'] 獲得相似關鍵字: {'most_similar_keyword': 'incredible'}
+2025-05-18 13:26:30 - DEBUG - 從 adjectives: ['equally awesome', 'always friendly', 'efficient'] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:26:30 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:26:30 - DEBUG - 分析評論: In-n-Out's burgers were chef's kiss, always fresh and delicious. The customer service was awesome, with friendly staff and efficient order processing.
+2025-05-18 13:26:31 - DEBUG - 獲得形容詞: {'food_descriptions': ['always fresh', 'delicious', "chef's kiss"], 'service_descriptions': ['awesome', 'friendly', 'efficient order processing']}
+2025-05-18 13:26:31 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:32 - DEBUG - 從 adjectives: ['always fresh', 'delicious', "chef's kiss"] 獲得相似關鍵字: {'most_similar_keyword': 'awesome'}
+2025-05-18 13:26:32 - DEBUG - 分數- food: 5, service: 5 已添加
+2025-05-18 13:26:32 - DEBUG - 分析評論: In-n-Out's burgers were incredible, with high-quality ingredients and perfect preparation. The customer service was equally good, with friendly staff and impressively fast service despite long lines.
+2025-05-18 13:26:33 - DEBUG - 獲得形容詞: {'food_descriptions': ['incredible', 'high-quality ingredients', 'perfect preparation'], 'service_descriptions': ['equally good', 'friendly', 'impressively fast service']}
+2025-05-18 13:26:33 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:34 - DEBUG - 從 adjectives: ['equally good', 'friendly', 'impressively fast service'] 獲得相似關鍵字: {'most_similar_keyword': 'good'}
+2025-05-18 13:26:34 - DEBUG - 分數- food: 5, service: 4 已添加
+2025-05-18 13:26:34 - DEBUG - 準備計算總分: In-n-Out, [5, 5, 5, 5, 5, 5, 5, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 4, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], [4, 5, 5, 5, 5, 5, 5, 5, 4, 5, 4, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 4, 5, 5, 4, 4, 4, 4, 5, 4, 4, 5, 5, 5, 4]
+2025-05-18 13:26:34 - DEBUG - 計算出總分: 9.423
+2025-05-18 13:26:34 - INFO - 最終結果:
+2025-05-18 13:26:34 - INFO - ==================================================
+2025-05-18 13:26:34 - INFO - {'In-n-Out': '9.423'}
+2025-05-18 13:26:34 - INFO - ==================================================
+2025-05-18 13:26:34 - INFO - 初始化系統...
+2025-05-18 13:26:34 - INFO - 使用資料檔案: restaurant-data.txt
+2025-05-18 13:26:34 - INFO - 使用者查詢: What is the overall score for McDonald's?
+2025-05-18 13:26:34 - INFO - 開始執行對話序列...
+2025-05-18 13:26:34 - DEBUG - ==================================================
+2025-05-18 13:26:34 - DEBUG - 正在與 fetch_agent 進行對話...
+2025-05-18 13:26:34 - DEBUG - 發送訊息: Find reviews for this query: What is the overall score for McDonald's?
+2025-05-18 13:26:34 - DEBUG - ==================================================
+2025-05-18 13:26:37 - DEBUG - fetch_agent 的回應:
+2025-05-18 13:26:37 - DEBUG - ------------------------------
+2025-05-18 13:26:37 - DEBUG - The overall score for McDonald's based on the reviews is low, primarily due to persistent complaints about customer service. Here are some summarized insights from the reviews:
+
+- Food Quality: 
+  - Generally rated as average to mediocre, with descriptors like "forgettable," "uninspiring," and "nothing special" used frequently.
+- Customer Service: 
+  - Consistently criticized as unpleasant, with mentions of "disinterested" and "rude" staff, long wait times, and overall poor service experiences.
+
+Due to these factors, the overall impression of McDonald's from the reviews can be considered below average.
+2025-05-18 13:26:37 - DEBUG - ------------------------------
+2025-05-18 13:26:37 - DEBUG - 正在處理 DATA_FETCH 的輸出...
+2025-05-18 13:26:37 - DEBUG - 找到餐廳資料: {"McDonald's": ["The food at McDonald's was good, but the customer service was unpleasant. The decent menu options were served quickly, but the staff seemed disinterested and unhelpful.", 'The food was average, but the customer service was unpleasant. The employee seemed disinterested and the order took longer than expected.', 'The food was middling, but the customer service was unpleasant. The nothing special menu options were made worse by the rude staff at the counter.', "The food at McDonald's was forgettable, but fair. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.", 'The food was passable, but the customer service was unpleasant. The forgettable burger was barely warm, and the cashier seemed annoyed by our presence.', "The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and a disinterested staff.", "The food at McDonald's was average, but the customer service was unpleasant. The forgettable menu items were served by a staff that seemed disinterested and rushed.", "The food at McDonald's was average, but the customer service was unpleasant. The uninspiring menu options were served quickly, but the staff seemed disinterested and unhelpful.", "The food at McDonald's was average, nothing special to write home about. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was average, but nothing special. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was average, neither impressive nor disappointing. However, the customer service was unpleasant, with long wait times and a disinterested staff.", "The food at McDonald's was average, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was average, as expected. However, the customer service was so-so, with long wait times and a disinterested staff.", "The food at McDonald's was average, but passable. The customer service was unpleasant, with long wait times and a disinterested staff.", "The food at McDonald's was uninspiring, but the customer service was unpleasant. The serviceable burger was barely warm, and the cashier seemed annoyed by our presence.", "The food at McDonald's was nothing special, but uninspiring. Unfortunately, the customer service was awful, with long wait times and unfriendly staff.", 'The food was meh, nothing special to write home about. However, the customer service was subpar, with long wait times and disinterested staff.', 'The food was nothing special, nothing special to write home about. However, the customer service was poor, with long wait times and unfriendly staff.', "The food at McDonald's was average, nothing special to write home about. However, the customer service was so-so, with long wait times and unfriendly staff.", "The food at McDonald's was average, but decent. Unfortunately, the customer service was yucky, with long wait times and a disinterested staff.", "The food at McDonald's was forgettable, but the customer service was not great. The burgers were uninspiring, and the staff seemed disinterested in helping customers.", "The food at McDonald's was unpleasant, with greasy burgers and soggy fries. The customer service was standard, with staff members who seemed indifferent to our presence.", "The food at McDonald's was uninspiring, nothing special to write home about. However, the customer service was disgusting, with long wait times and unfriendly staff.", "The food at McDonald's was uninspiring, but the customer service was unpleasant. The uninspiring menu options were barely saved by the quick preparation time.", "The food at McDonald's was uninspiring, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was average, but nothing special. However, the customer service was mediocre, with long wait times and unfriendly staff.", "The food at McDonald's was fine, but nothing special. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was okay, but uninspiring. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was forgettable, but nothing special. The customer service was awful, with long wait times and unfriendly staff.", "The food at McDonald's was average, nothing special to write home about. However, the customer service was disgusting, with long waits and unfriendly staff.", "The food at McDonald's was okay, but the customer service was unpleasant. The uninspiring burger was barely warm, and the cashier seemed disinterested in helping customers.", "The food at McDonald's was average, fair to write home about. However, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was passable, nothing special but edible. However, the customer service was disgusting, with long wait times and unfriendly staff.", "The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and a less than friendly staff.", "The food at McDonald's was uninspiring, decent but edible. However, the customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was average, but the customer service was unpleasant. The uninspiring meal was made worse by the rude staff at the counter.", "The food at McDonald's was average, but the customer service was unpleasant. The forgettable menu options were made worse by the staff's lack of enthusiasm.", "The food at McDonald's was middling, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.", "The food at McDonald's was not great, with greasy burgers and soggy fries. The customer service was average, with staff being neither friendly nor rude."]}
+2025-05-18 13:26:37 - DEBUG - ==================================================
+2025-05-18 13:26:37 - DEBUG - 正在與 review_extractor_agent 進行對話...
+2025-05-18 13:26:37 - DEBUG - 分析評論: The food at McDonald's was good, but the customer service was unpleasant. The decent menu options were served quickly, but the staff seemed disinterested and unhelpful.
+2025-05-18 13:26:38 - DEBUG - 獲得形容詞: {'food_descriptions': ['good', 'decent menu options', 'served quickly'], 'service_descriptions': ['unpleasant', 'disinterested', 'unhelpful']}
+2025-05-18 13:26:38 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:38 - DEBUG - 分數- food: 4, service: 2 已添加
+2025-05-18 13:26:38 - DEBUG - 分析評論: The food was average, but the customer service was unpleasant. The employee seemed disinterested and the order took longer than expected.
+2025-05-18 13:26:39 - DEBUG - 獲得形容詞: {'food_descriptions': ['average'], 'service_descriptions': ['unpleasant', 'disinterested', 'longer than expected']}
+2025-05-18 13:26:39 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:39 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:39 - DEBUG - 分析評論: The food was middling, but the customer service was unpleasant. The nothing special menu options were made worse by the rude staff at the counter.
+2025-05-18 13:26:40 - DEBUG - 獲得形容詞: {'food_descriptions': ['middling', 'nothing special'], 'service_descriptions': ['unpleasant', 'worse', 'rude']}
+2025-05-18 13:26:40 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:40 - DEBUG - 從 adjectives: ['middling', 'nothing special'] 獲得相似關鍵字: {'most_similar_keyword': 'average'}
+2025-05-18 13:26:40 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:40 - DEBUG - 分析評論: The food at McDonald's was forgettable, but fair. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-18 13:26:42 - DEBUG - 獲得形容詞: {'food_descriptions': ['forgettable', 'fair'], 'service_descriptions': ['unpleasant', 'long wait times', 'unfriendly']}
+2025-05-18 13:26:42 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:42 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:42 - DEBUG - 分析評論: The food was passable, but the customer service was unpleasant. The forgettable burger was barely warm, and the cashier seemed annoyed by our presence.
+2025-05-18 13:26:42 - DEBUG - 獲得形容詞: {'food_descriptions': ['passable', 'forgettable', 'barely warm'], 'service_descriptions': ['unpleasant', 'seemed annoyed']}
+2025-05-18 13:26:42 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:42 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:42 - DEBUG - 分析評論: The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and a disinterested staff.
+2025-05-18 13:26:44 - DEBUG - 獲得形容詞: {'food_descriptions': ['forgettable', 'nothing special'], 'service_descriptions': ['unpleasant', 'long wait times', 'disinterested']}
+2025-05-18 13:26:44 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:44 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:44 - DEBUG - 分析評論: The food at McDonald's was average, but the customer service was unpleasant. The forgettable menu items were served by a staff that seemed disinterested and rushed.
+2025-05-18 13:26:45 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'forgettable'], 'service_descriptions': ['unpleasant', 'disinterested', 'rushed']}
+2025-05-18 13:26:45 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:45 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:45 - DEBUG - 分析評論: The food at McDonald's was average, but the customer service was unpleasant. The uninspiring menu options were served quickly, but the staff seemed disinterested and unhelpful.
+2025-05-18 13:26:46 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'uninspiring menu options'], 'service_descriptions': ['unpleasant', 'disinterested', 'unhelpful']}
+2025-05-18 13:26:46 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:46 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:46 - DEBUG - 分析評論: The food at McDonald's was average, nothing special to write home about. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-18 13:26:48 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'nothing special to write home about'], 'service_descriptions': ['unpleasant', 'long wait times', 'unfriendly']}
+2025-05-18 13:26:48 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:48 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:48 - DEBUG - 分析評論: The food at McDonald's was average, but nothing special. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-18 13:26:49 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'nothing special'], 'service_descriptions': ['unpleasant', 'long wait times', 'unfriendly']}
+2025-05-18 13:26:49 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:49 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:49 - DEBUG - 分析評論: The food at McDonald's was average, neither impressive nor disappointing. However, the customer service was unpleasant, with long wait times and a disinterested staff.
+2025-05-18 13:26:50 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'neither impressive nor disappointing'], 'service_descriptions': ['unpleasant', 'long wait times', 'disinterested staff']}
+2025-05-18 13:26:50 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:50 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:50 - DEBUG - 分析評論: The food at McDonald's was average, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-18 13:26:51 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'nothing special'], 'service_descriptions': ['unpleasant', 'long wait times', 'unfriendly']}
+2025-05-18 13:26:51 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:51 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:51 - DEBUG - 分析評論: The food at McDonald's was average, as expected. However, the customer service was so-so, with long wait times and a disinterested staff.
+2025-05-18 13:26:52 - DEBUG - 獲得形容詞: {'food_descriptions': ['average'], 'service_descriptions': ['so-so', 'long wait times', 'disinterested staff']}
+2025-05-18 13:26:52 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:52 - DEBUG - 從 adjectives: ['so-so', 'long wait times', 'disinterested staff'] 獲得相似關鍵字: {'most_similar_keyword': 'average'}
+2025-05-18 13:26:52 - DEBUG - 分數- food: 3, service: 3 已添加
+2025-05-18 13:26:52 - DEBUG - 分析評論: The food at McDonald's was average, but passable. The customer service was unpleasant, with long wait times and a disinterested staff.
+2025-05-18 13:26:53 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'passable'], 'service_descriptions': ['unpleasant', 'long wait times', 'disinterested']}
+2025-05-18 13:26:53 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:53 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:53 - DEBUG - 分析評論: The food at McDonald's was uninspiring, but the customer service was unpleasant. The serviceable burger was barely warm, and the cashier seemed annoyed by our presence.
+2025-05-18 13:26:54 - DEBUG - 獲得形容詞: {'food_descriptions': ['uninspiring', 'serviceable', 'barely warm'], 'service_descriptions': ['unpleasant', 'annoyed']}
+2025-05-18 13:26:54 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:54 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:54 - DEBUG - 分析評論: The food at McDonald's was nothing special, but uninspiring. Unfortunately, the customer service was awful, with long wait times and unfriendly staff.
+2025-05-18 13:26:55 - DEBUG - 獲得形容詞: {'food_descriptions': ['nothing special', 'uninspiring'], 'service_descriptions': ['awful', 'long wait times', 'unfriendly']}
+2025-05-18 13:26:55 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:55 - DEBUG - 分數- food: 3, service: 1 已添加
+2025-05-18 13:26:55 - DEBUG - 分析評論: The food was meh, nothing special to write home about. However, the customer service was subpar, with long wait times and disinterested staff.
+2025-05-18 13:26:56 - DEBUG - 獲得形容詞: {'food_descriptions': ['meh', 'nothing special'], 'service_descriptions': ['subpar', 'long wait times', 'disinterested staff']}
+2025-05-18 13:26:56 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:57 - DEBUG - 從 adjectives: ['meh', 'nothing special'] 獲得相似關鍵字: {'most_similar_keyword': 'uninspiring'}
+2025-05-18 13:26:58 - DEBUG - 從 adjectives: ['subpar', 'long wait times', 'disinterested staff'] 獲得相似關鍵字: {'most_similar_keyword': 'bad'}
+2025-05-18 13:26:58 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:26:58 - DEBUG - 分析評論: The food was nothing special, nothing special to write home about. However, the customer service was poor, with long wait times and unfriendly staff.
+2025-05-18 13:26:59 - DEBUG - 獲得形容詞: {'food_descriptions': ['nothing special', 'nothing special to write home about'], 'service_descriptions': ['poor', 'long wait times', 'unfriendly']}
+2025-05-18 13:26:59 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:26:59 - DEBUG - 從 adjectives: ['nothing special', 'nothing special to write home about'] 獲得相似關鍵字: {'most_similar_keyword': 'uninspiring'}
+2025-05-18 13:27:00 - DEBUG - 從 adjectives: ['poor', 'long wait times', 'unfriendly'] 獲得相似關鍵字: {'most_similar_keyword': 'unpleasant'}
+2025-05-18 13:27:00 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:00 - DEBUG - 分析評論: The food at McDonald's was average, nothing special to write home about. However, the customer service was so-so, with long wait times and unfriendly staff.
+2025-05-18 13:27:01 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'nothing special'], 'service_descriptions': ['so-so', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:01 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:02 - DEBUG - 從 adjectives: ['so-so', 'long wait times', 'unfriendly'] 獲得相似關鍵字: {'most_similar_keyword': 'average'}
+2025-05-18 13:27:02 - DEBUG - 分數- food: 3, service: 3 已添加
+2025-05-18 13:27:02 - DEBUG - 分析評論: The food at McDonald's was average, but decent. Unfortunately, the customer service was yucky, with long wait times and a disinterested staff.
+2025-05-18 13:27:03 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'decent'], 'service_descriptions': ['yucky', 'long wait times', 'disinterested']}
+2025-05-18 13:27:03 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:03 - DEBUG - 從 adjectives: ['yucky', 'long wait times', 'disinterested'] 獲得相似關鍵字: {'most_similar_keyword': 'disgusting'}
+2025-05-18 13:27:03 - DEBUG - 分數- food: 3, service: 1 已添加
+2025-05-18 13:27:03 - DEBUG - 分析評論: The food at McDonald's was forgettable, but the customer service was not great. The burgers were uninspiring, and the staff seemed disinterested in helping customers.
+2025-05-18 13:27:05 - DEBUG - 獲得形容詞: {'food_descriptions': ['forgettable', 'uninspiring'], 'service_descriptions': ['not great', 'disinterested']}
+2025-05-18 13:27:05 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:05 - DEBUG - 從 adjectives: ['not great', 'disinterested'] 獲得相似關鍵字: {'most_similar_keyword': 'uninspiring'}
+2025-05-18 13:27:05 - DEBUG - 分數- food: 3, service: 3 已添加
+2025-05-18 13:27:05 - DEBUG - 分析評論: The food at McDonald's was unpleasant, with greasy burgers and soggy fries. The customer service was standard, with staff members who seemed indifferent to our presence.
+2025-05-18 13:27:06 - DEBUG - 獲得形容詞: {'food_descriptions': ['unpleasant', 'greasy burgers', 'soggy fries'], 'service_descriptions': ['standard', 'indifferent']}
+2025-05-18 13:27:06 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:07 - DEBUG - 從 adjectives: ['standard', 'indifferent'] 獲得相似關鍵字: {'most_similar_keyword': 'average'}
+2025-05-18 13:27:07 - DEBUG - 分數- food: 2, service: 3 已添加
+2025-05-18 13:27:07 - DEBUG - 分析評論: The food at McDonald's was uninspiring, nothing special to write home about. However, the customer service was disgusting, with long wait times and unfriendly staff.
+2025-05-18 13:27:08 - DEBUG - 獲得形容詞: {'food_descriptions': ['uninspiring', 'nothing special'], 'service_descriptions': ['disgusting', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:08 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:08 - DEBUG - 分數- food: 3, service: 1 已添加
+2025-05-18 13:27:08 - DEBUG - 分析評論: The food at McDonald's was uninspiring, but the customer service was unpleasant. The uninspiring menu options were barely saved by the quick preparation time.
+2025-05-18 13:27:09 - DEBUG - 獲得形容詞: {'food_descriptions': ['uninspiring', 'uninspiring menu options', 'barely saved'], 'service_descriptions': ['unpleasant']}
+2025-05-18 13:27:09 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:09 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:09 - DEBUG - 分析評論: The food at McDonald's was uninspiring, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-18 13:27:10 - DEBUG - 獲得形容詞: {'food_descriptions': ['uninspiring', 'nothing special'], 'service_descriptions': ['unpleasant', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:10 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:10 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:10 - DEBUG - 分析評論: The food at McDonald's was average, but nothing special. However, the customer service was mediocre, with long wait times and unfriendly staff.
+2025-05-18 13:27:12 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'nothing special'], 'service_descriptions': ['mediocre', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:12 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:12 - DEBUG - 從 adjectives: ['mediocre', 'long wait times', 'unfriendly'] 獲得相似關鍵字: {'most_similar_keyword': 'average'}
+2025-05-18 13:27:12 - DEBUG - 分數- food: 3, service: 3 已添加
+2025-05-18 13:27:12 - DEBUG - 分析評論: The food at McDonald's was fine, but nothing special. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-18 13:27:13 - DEBUG - 獲得形容詞: {'food_descriptions': ['fine', 'nothing special'], 'service_descriptions': ['unpleasant', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:13 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:14 - DEBUG - 從 adjectives: ['fine', 'nothing special'] 獲得相似關鍵字: {'most_similar_keyword': 'average'}
+2025-05-18 13:27:14 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:14 - DEBUG - 分析評論: The food at McDonald's was okay, but uninspiring. Unfortunately, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-18 13:27:15 - DEBUG - 獲得形容詞: {'food_descriptions': ['okay', 'uninspiring'], 'service_descriptions': ['unpleasant', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:15 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:15 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:15 - DEBUG - 分析評論: The food at McDonald's was forgettable, but nothing special. The customer service was awful, with long wait times and unfriendly staff.
+2025-05-18 13:27:16 - DEBUG - 獲得形容詞: {'food_descriptions': ['forgettable', 'nothing special'], 'service_descriptions': ['awful', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:16 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:16 - DEBUG - 分數- food: 3, service: 1 已添加
+2025-05-18 13:27:16 - DEBUG - 分析評論: The food at McDonald's was average, nothing special to write home about. However, the customer service was disgusting, with long waits and unfriendly staff.
+2025-05-18 13:27:17 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'nothing special'], 'service_descriptions': ['disgusting', 'long waits', 'unfriendly']}
+2025-05-18 13:27:17 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:17 - DEBUG - 分數- food: 3, service: 1 已添加
+2025-05-18 13:27:17 - DEBUG - 分析評論: The food at McDonald's was okay, but the customer service was unpleasant. The uninspiring burger was barely warm, and the cashier seemed disinterested in helping customers.
+2025-05-18 13:27:18 - DEBUG - 獲得形容詞: {'food_descriptions': ['okay', 'uninspiring', 'barely warm'], 'service_descriptions': ['unpleasant', 'disinterested']}
+2025-05-18 13:27:18 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:18 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:18 - DEBUG - 分析評論: The food at McDonald's was average, fair to write home about. However, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-18 13:27:19 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'fair to write home about'], 'service_descriptions': ['unpleasant', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:19 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:19 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:19 - DEBUG - 分析評論: The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-18 13:27:20 - DEBUG - 獲得形容詞: {'food_descriptions': ['forgettable', 'nothing special'], 'service_descriptions': ['unpleasant', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:20 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:20 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:20 - DEBUG - 分析評論: The food at McDonald's was passable, nothing special but edible. However, the customer service was disgusting, with long wait times and unfriendly staff.
+2025-05-18 13:27:21 - DEBUG - 獲得形容詞: {'food_descriptions': ['passable', 'nothing special', 'edible'], 'service_descriptions': ['disgusting', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:21 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:21 - DEBUG - 從 adjectives: ['passable', 'nothing special', 'edible'] 獲得相似關鍵字: {'most_similar_keyword': 'average'}
+2025-05-18 13:27:21 - DEBUG - 分數- food: 3, service: 1 已添加
+2025-05-18 13:27:21 - DEBUG - 分析評論: The food at McDonald's was forgettable, but nothing special. The customer service was unpleasant, with long wait times and a less than friendly staff.
+2025-05-18 13:27:23 - DEBUG - 獲得形容詞: {'food_descriptions': ['forgettable', 'nothing special'], 'service_descriptions': ['unpleasant', 'long wait times', 'less than friendly']}
+2025-05-18 13:27:23 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:23 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:23 - DEBUG - 分析評論: The food at McDonald's was uninspiring, decent but edible. However, the customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-18 13:27:24 - DEBUG - 獲得形容詞: {'food_descriptions': ['uninspiring', 'decent but edible'], 'service_descriptions': ['unpleasant', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:24 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:24 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:24 - DEBUG - 分析評論: The food at McDonald's was average, but the customer service was unpleasant. The uninspiring meal was made worse by the rude staff at the counter.
+2025-05-18 13:27:25 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'uninspiring'], 'service_descriptions': ['unpleasant', 'rude']}
+2025-05-18 13:27:25 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:25 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:25 - DEBUG - 分析評論: The food at McDonald's was average, but the customer service was unpleasant. The forgettable menu options were made worse by the staff's lack of enthusiasm.
+2025-05-18 13:27:26 - DEBUG - 獲得形容詞: {'food_descriptions': ['average', 'forgettable'], 'service_descriptions': ['unpleasant', 'lack of enthusiasm']}
+2025-05-18 13:27:26 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:26 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:26 - DEBUG - 分析評論: The food at McDonald's was middling, but nothing special. The customer service was unpleasant, with long wait times and unfriendly staff.
+2025-05-18 13:27:27 - DEBUG - 獲得形容詞: {'food_descriptions': ['middling', 'nothing special'], 'service_descriptions': ['unpleasant', 'long wait times', 'unfriendly']}
+2025-05-18 13:27:27 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:28 - DEBUG - 從 adjectives: ['middling', 'nothing special'] 獲得相似關鍵字: {'most_similar_keyword': 'average'}
+2025-05-18 13:27:28 - DEBUG - 分數- food: 3, service: 2 已添加
+2025-05-18 13:27:28 - DEBUG - 分析評論: The food at McDonald's was not great, with greasy burgers and soggy fries. The customer service was average, with staff being neither friendly nor rude.
+2025-05-18 13:27:29 - DEBUG - 獲得形容詞: {'food_descriptions': ['not great', 'greasy burgers', 'soggy fries'], 'service_descriptions': ['neither friendly nor rude', 'average']}
+2025-05-18 13:27:29 - DEBUG - 所有形容詞都在評論中找到相似匹配
+2025-05-18 13:27:29 - DEBUG - 從 adjectives: ['not great', 'greasy burgers', 'soggy fries'] 獲得相似關鍵字: {'most_similar_keyword': 'disgusting'}
+2025-05-18 13:27:29 - DEBUG - 分數- food: 1, service: 3 已添加
+2025-05-18 13:27:29 - DEBUG - 準備計算總分: McDonald's, [4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 1, 2, 2, 3, 1, 3, 3, 1, 2, 2, 3, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 3]
+2025-05-18 13:27:29 - DEBUG - 計算出總分: 3.671
+2025-05-18 13:27:29 - INFO - 最終結果:
+2025-05-18 13:27:29 - INFO - ==================================================
+2025-05-18 13:27:29 - INFO - {"McDonald's": '3.671'}
+2025-05-18 13:27:29 - INFO - ==================================================
+
+
+------
+[V] Test 0 Passed. Pyautogen 0.9.0
+[V] Test 1 Passed. Expected: 3.000  Predicted: 2.982  Query: How good is the restaurant taco bell overall?
+[V] Test 2 Passed. Expected: 9.350  Predicted: 9.376  Query: How good is the restaurant Chick-fil-A overall?
+[V] Test 3 Passed. Expected: 8.060  Predicted: 8.060  Query: What is the overall score for Starbucks?
+[V] Test 4 Passed. Expected: 9.540  Predicted: 9.423  Query: What is the overall score for In-n-Out
+[V] Test 5 Passed. Expected: 3.650  Predicted: 3.671  Query: What is the overall score for McDonald's?
+---------- 5/5 Tests Passed. MAE: 0.0364 ----------

@@ -4,6 +4,7 @@ import os, sys, re, ast
 from typing import Dict, List, get_type_hints
 import logging
 from datetime import datetime
+from difflib import SequenceMatcher
 
 # 設定 logging
 log_filename = f"logs/logger_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
@@ -67,6 +68,18 @@ def calculate_overall_score(restaurant_name: str, food_scores: List[int], custom
     logger.debug(f"計算出總分: {total:.3f}")
     return {restaurant_name: f"{total:.3f}"}
 
+def string_similarity(a: str, b: str) -> float:
+    """計算兩個字串的相似度
+    
+    Args:
+        a: 第一個字串
+        b: 第二個字串
+    
+    Returns:
+        相似度 (0-1 之間的浮點數)
+    """
+    return SequenceMatcher(None, a.lower(), b.lower()).ratio()
+
 # register functions
 fetch_restaurant_data.__annotations__ = get_type_hints(fetch_restaurant_data)
 calculate_overall_score.__annotations__ = get_type_hints(calculate_overall_score)
@@ -100,16 +113,23 @@ SIMILARITY_AGENT = build_agent(
 REVIEW_EXTRACTOR = build_agent(
     "review_extractor_agent",
     """You are a professional review extractor. Your task is:
-    1. Extract ONLY the food and customer service related adjectives that are EXPLICITLY mentioned in the review
-    2. DO NOT generate or infer any adjectives that are not directly present in the review
-    3. Response format must strictly follow this JSON format:
+    1. Extract descriptive elements related to food and customer service from the review, including:
+       - Adjectives (e.g., "delicious", "friendly")
+       - Adverbs (e.g., "consistently", "quickly")
+       - Descriptive phrases (e.g., "above and beyond", "out of this world")
+       - Short descriptive fragments (e.g., "made with care", "worth the wait")
+    2. DO NOT generate or infer any descriptions that are not directly present in the review
+    3. IMPORTANT: Pay special attention to negative modifiers before adjectives (e.g., "not delicious", "never friendly")
+       - If an adjective is preceded by a negative word, include the negative word as part of the description
+       - This helps maintain the true sentiment of the review
+    4. Response format must strictly follow this JSON format:
     {
-        "food_adjectives": ["<adjective1>", "<adjective2>", ...],
-        "service_adjectives": ["<adjective1>", "<adjective2>", ...]
+        "food_descriptions": ["<description1>", "<description2>", ...],
+        "service_descriptions": ["<description1>", "<description2>", ...]
     }
-    4. Only return the JSON, no additional text
-    5. If no adjectives are found for a category, return an empty list
-    6. IMPORTANT: Only extract adjectives that are explicitly present in the review text"""
+    5. Only return the JSON, no additional text
+    6. If no descriptions are found for a category, return an empty list
+    7. IMPORTANT: Only extract descriptions that are explicitly present in the review text"""
 )
 ENTRY = build_agent("entry", "Coordinator")
 
@@ -134,16 +154,6 @@ register_function(
 # 3. Conversation helpers
 # ────────────────────────────────────────────────────────────────
 
-def parse_scores(chat_summary: str, logger) -> dict:
-    """解析聊天摘要中的分數"""
-    try:
-        if "-1" in chat_summary:
-            logger.error(f"有無法解析的分數(有-1): {chat_summary}")
-            return None
-        return ast.literal_eval(chat_summary)
-    except:
-        logger.error(f"無法解析分數: {chat_summary}")
-        return None
 
 def parse_data_fetch_response(chat_history: list, logger) -> dict:
     """解析 DATA_FETCH 的回應"""
@@ -158,10 +168,10 @@ def parse_data_fetch_response(chat_history: list, logger) -> dict:
     return None
 
 def get_score_from_adjectives(adjectives: list[str], entry: ConversableAgent, logger) -> int | None:
-    """從形容詞列表中獲取評分
+    """從描述詞列表中獲取評分
     
     Args:
-        adjectives: 形容詞列表
+        adjectives: 描述詞列表
         entry: 對話代理
         logger: 日誌記錄器
     
@@ -215,7 +225,7 @@ def run_chat_sequence(entry: ConversableAgent, sequence: list[dict]) -> str:
             
             for review in reviews:
                 logger.debug(f"分析評論: {review}")
-                msg = f"Analyze this review: {review}"
+                msg = f"Extract all descriptive elements from this review: {review}"
                 retry_count = 0
                 adjectives = None
                 
@@ -227,22 +237,65 @@ def run_chat_sequence(entry: ConversableAgent, sequence: list[dict]) -> str:
                     )
                     try:
                         adjectives = ast.literal_eval(chat.summary)
-                        logger.debug(f"獲得形容詞: {adjectives}")
-                        if not isinstance(adjectives, dict) or "food_adjectives" not in adjectives or "service_adjectives" not in adjectives:
+                        logger.debug(f"獲得描述詞: {adjectives}")
+                        if not isinstance(adjectives, dict) or "food_descriptions" not in adjectives or "service_descriptions" not in adjectives:
                             raise ValueError("Invalid response format")
+                        
+                        # 檢查每個描述詞是否在原始評論中有相似匹配
+                        review_text = review.lower()
+                        all_adjectives = adjectives["food_descriptions"] + adjectives["service_descriptions"]
+                        
+                        for adj in all_adjectives:
+                            # 將描述詞轉為小寫
+                            adj_lower = adj.lower()
+                            
+                            # 檢查描述詞是否直接出現在評論中
+                            if adj_lower in review_text:
+                                continue
+                            
+                            # 如果描述詞包含多個字，檢查是否有足夠相似的部分
+                            adj_words = adj_lower.split()
+                            if len(adj_words) > 1:
+                                # 計算描述詞中每個字在評論中的相似度
+                                word_similarities = []
+                                for word in adj_words:
+                                    # 在評論中尋找最相似的單字
+                                    max_similarity = max(
+                                        (string_similarity(word, review_word) for review_word in review_text.split()),
+                                        default=0
+                                    )
+                                    word_similarities.append(max_similarity)
+                                
+                                # 如果所有字的平均相似度超過 80%，則認為匹配成功
+                                if sum(word_similarities) / len(word_similarities) >= 0.8:
+                                    continue
+                            
+                            # 如果單字描述詞，檢查是否有任何單字與描述詞的相似度超過 80%
+                            if len(adj_words) == 1:
+                                has_match = any(string_similarity(adj_lower, word) >= 0.8 for word in review_text.split())
+                                if has_match:
+                                    continue
+                            
+                            # 如果以上檢查都失敗，記錄錯誤並重試
+                            logger.error(f"描述詞 '{adj}' 在評論中找不到相似匹配")
+                            if retry_count < 2:
+                                adjectives = None
+                            raise ValueError("Adjective not found in review")
+                        
+                        logger.debug("所有描述詞都在評論中找到相似匹配")
                     except:
                         retry_count += 1
                         if retry_count < 3:
-                            logger.error(f"無法解析形容詞 (嘗試 {retry_count}/3): {chat.summary}")
-                            msg = f"Analyze this review again: {review}"
+                            logger.error(f"無法解析描述詞 (嘗試 {retry_count}/3): {chat.summary}")
+                            # msg = f"Extract all descriptive elements from this review again: {review}"
                         else:
-                            logger.error(f"無法解析形容詞，已達最大重試次數")
+                            logger.error(f"無法解析描述詞，已達最大重試次數")
                             continue
                 
                 if adjectives is not None:
-                    # 處理食物和服務形容詞
-                    food_score = get_score_from_adjectives(adjectives["food_adjectives"], entry, logger)
-                    service_score = get_score_from_adjectives(adjectives["service_adjectives"], entry, logger)
+                    # 處理食物和服務描述詞
+                    food_score = get_score_from_adjectives(adjectives["food_descriptions"], entry, logger)
+                    service_score = get_score_from_adjectives(adjectives["service_descriptions"], entry, logger)
                     
                     if food_score is not None and service_score is not None:
                         all_scores.append({"food_score": food_score, "service_score": service_score})
