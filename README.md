@@ -11,8 +11,8 @@ This is a system that uses PyAutoGen and OpenAI API to analyze restaurant review
 
 1. Clone the repository:
 ```bash
-git clone [your-repository-url]
-cd [project-directory]
+git clone git@github.com:tsaiyenc/Multi-Agent-Restaurant-Rater.git
+cd Multi-Agent-Restaurant-Rater
 ```
 
 2. Install required packages:
